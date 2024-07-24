@@ -63,7 +63,11 @@
   * {
     @apply border-border;
   }
+  html {
+    font-size: 62.5%; /* This sets 1rem to 10px, making calculations easier */
+  }
   body {
+    font-size: 1.6rem;
     @apply bg-m3-sys-light-surface text-foreground;
   }
 }
