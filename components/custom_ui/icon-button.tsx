@@ -1,9 +1,11 @@
 import { Button } from "../ui/button";
 
-const IconButton = () => {
+const IconButton = ({children}) => {
  return (
   <>
-    <Button variant="ghost">:(</Button>
+    <Button variant="ghost" className="text-title-large">
+      {children}
+    </Button>
   </> 
  ) 
 }
