@@ -17,6 +17,7 @@ import { CiDark } from "react-icons/ci";
 import { TbMoonFilled } from "react-icons/tb";
 import { FaYoutube, FaMoon } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
+import CtaButton from "./custom_ui/cta-button";
 
 const Nav = () => {
   return (
@@ -25,7 +26,7 @@ const Nav = () => {
     className="top-4 sticky flex max-w-none"
   >
     <NavigationMenuList
-      className="flex bg-m3-sys-light-surface-variant opacity-95 p-9 rounded-4xl items-center justify-center"
+      className="p-2 flex bg-m3-sys-light-surface-variant opacity-95  rounded-4xl items-center justify-center pr-3"
     >
       
       <NavigationMenuItem>
@@ -42,26 +43,49 @@ const Nav = () => {
       </NavigationMenuItem>
       
       <NavigationMenuItem>
-        <IconButton>
-          <TbMoonFilled />
-        </IconButton>
+        <Link href="/" legacyBehavior passHref>
+          <NavigationMenuLink
+            className={cn(
+               navigationMenuTriggerStyle(),
+               'bg-transparent antialiased',
+            )
+            }
+          >
+            <TbMoonFilled className="text-title-large"/>
+          </NavigationMenuLink>
+        </Link>
       </NavigationMenuItem>
       
-      <NavigationMenuItem>
-        <NavigationMenuLink>
-            <IconButton>
-              <FaYoutube />
-            </IconButton>
-          </NavigationMenuLink>
-      </NavigationMenuItem>
-      <NavigationMenuItem>
-        <NavigationMenuLink>
-          <IconButton>
-            <MdEmail />
-          </IconButton>
-        </NavigationMenuLink>
-      </NavigationMenuItem>
-      <NavigationMenuItem>
+      <div className="hidden flex-row gap-0 md:flex">
+        <NavigationMenuItem
+        >
+          <Link href="/" legacyBehavior passHref>
+            <NavigationMenuLink className={cn(
+              navigationMenuTriggerStyle(),
+              'bg-transparent antialiased',
+            )
+            }>
+              <FaYoutube  className="text-title-medium"/>
+            </NavigationMenuLink>
+          </Link>
+        </NavigationMenuItem>
+        
+        <NavigationMenuItem>
+          <Link href="/" legacyBehavior passHref>
+            <NavigationMenuLink className={cn(
+              navigationMenuTriggerStyle(),
+              'bg-transparent antialiased',
+            )
+            }>
+              <MdEmail className="text-title-medium"/>
+            </NavigationMenuLink>
+          </Link>
+        </NavigationMenuItem>
+      </div>
+        
+      <NavigationMenuItem
+        className="hidden xs:block"
+      >
         <Link href="/" legacyBehavior passHref>
           <NavigationMenuLink
             className={cn(
@@ -72,6 +96,23 @@ const Nav = () => {
             }
           >
             SelfMastery   
+          </NavigationMenuLink>
+        </Link>
+      </NavigationMenuItem>
+      
+      <NavigationMenuItem>
+        <Link href="/" legacyBehavior passHref>
+          <NavigationMenuLink
+            className={cn(
+              `${gloria.className}`,
+               navigationMenuTriggerStyle(),
+               'bg-transparent antialiased p-0 round-4xl',
+            )
+            }
+          >
+            <CtaButton>
+              OneExercise
+            </CtaButton>
           </NavigationMenuLink>
         </Link>
       </NavigationMenuItem>
