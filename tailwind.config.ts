@@ -214,6 +214,9 @@ const config = {
         'm-3-elevation-dark-4': 'var(--m-3-elevation-dark-4)',
         'm-3-elevation-dark-5': 'var(--m-3-elevation-dark-5)',
       },
+      screens: {
+        "xs": "475px"
+      }
     },
   },
   plugins: [require("tailwindcss-animate")],
