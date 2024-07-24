@@ -5,6 +5,7 @@ import { Roboto_Mono, Gloria_Hallelujah, Freehand } from "next/font/google"
 import "../styles/globals.css";
 import "../styles/fonts.css"
 import "../styles/colors.css"
+import "../styles/elevation.css"
 
 import { cn } from "@/lib/utils";
 
