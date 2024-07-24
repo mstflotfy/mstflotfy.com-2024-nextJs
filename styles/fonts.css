@@ -17,7 +17,7 @@
   --font-size-label-large: 1.4rem;
   --font-size-label-medium: 1.2rem;
   --font-size-label-small: 1.1rem;
-  --font-size-mstf-headline-large: 10.2rem;
+  --font-size-mstf-headline-large: 26vw;
 
   --font-weight-normal: 400;
   --font-weight-medium: 500;
@@ -38,7 +38,7 @@
   --line-height-label-large: 20px;
   --line-height-label-medium: 16px;
   --line-height-label-small: 16px;
-  --line-height-mstf-headline-large: 112px;
+  --line-height-mstf-headline-large: 1.2;
 
   --letter-spacing-display-large: -0.25px;
   --letter-spacing-title-medium: 0.15px;
