@@ -13,6 +13,10 @@ import { navigationMenuTriggerStyle } from "@/components/ui/navigation-menu"
 import IconButton from "@/components/custom_ui/icon-button";
 import { cn } from "@/lib/utils";
 import { gloria, freehand } from "@/app/layout";
+import { CiDark } from "react-icons/ci";
+import { TbMoonFilled } from "react-icons/tb";
+import { FaYoutube, FaMoon } from "react-icons/fa6";
+import { MdEmail } from "react-icons/md";
 
 const Nav = () => {
   return (
@@ -21,7 +25,7 @@ const Nav = () => {
     className="top-4 sticky flex max-w-none"
   >
     <NavigationMenuList
-      className="bg-m3-sys-light-surface-variant opacity-95 p-10"
+      className="flex bg-m3-sys-light-surface-variant opacity-95 p-9 rounded-4xl items-center justify-center"
     >
       
       <NavigationMenuItem>
@@ -38,18 +42,24 @@ const Nav = () => {
       </NavigationMenuItem>
       
       <NavigationMenuItem>
-            <IconButton />
+        <IconButton>
+          <TbMoonFilled />
+        </IconButton>
       </NavigationMenuItem>
       
       <NavigationMenuItem>
         <NavigationMenuLink>
-            <IconButton />
+            <IconButton>
+              <FaYoutube />
+            </IconButton>
           </NavigationMenuLink>
       </NavigationMenuItem>
       <NavigationMenuItem>
         <NavigationMenuLink>
-            <IconButton />
-          </NavigationMenuLink>
+          <IconButton>
+            <MdEmail />
+          </IconButton>
+        </NavigationMenuLink>
       </NavigationMenuItem>
       <NavigationMenuItem>
         <Link href="/" legacyBehavior passHref>
