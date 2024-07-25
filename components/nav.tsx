@@ -20,6 +20,10 @@ import { MdEmail } from "react-icons/md";
 import CtaButton from "./custom_ui/cta-button";
 
 const Nav = () => {
+  const yt = 'https://www.youtube.com/c/mstflotfyindieDev'
+  const one = 'https://oneexercise.mstflotfy.com'
+  const email = 'mailto:contact@mstflotfy.com'
+  
   return (
   <>
   <NavigationMenu 
@@ -59,8 +63,10 @@ const Nav = () => {
       <div className="hidden flex-row gap-0 md:flex">
         <NavigationMenuItem
         >
-          <Link href="/" legacyBehavior passHref>
-            <NavigationMenuLink className={cn(
+          <Link href={yt} legacyBehavior passHref>
+            <NavigationMenuLink 
+              target="_blank"
+              className={cn(
               navigationMenuTriggerStyle(),
               'bg-transparent antialiased',
             )
@@ -71,8 +77,10 @@ const Nav = () => {
         </NavigationMenuItem>
         
         <NavigationMenuItem>
-          <Link href="/" legacyBehavior passHref>
-            <NavigationMenuLink className={cn(
+          <Link href={email} legacyBehavior passHref>
+            <NavigationMenuLink 
+              target="_blank"
+              className={cn(
               navigationMenuTriggerStyle(),
               'bg-transparent antialiased',
             )
@@ -86,7 +94,7 @@ const Nav = () => {
       <NavigationMenuItem
         className="hidden xs:block"
       >
-        <Link href="/" legacyBehavior passHref>
+        <Link href="/selfmastery" legacyBehavior passHref>
           <NavigationMenuLink
             className={cn(
               `${gloria.className}`,
@@ -101,8 +109,9 @@ const Nav = () => {
       </NavigationMenuItem>
       
       <NavigationMenuItem>
-        <Link href="/" legacyBehavior passHref>
+        <Link href={one} legacyBehavior passHref>
           <NavigationMenuLink
+            target="_blank"
             className={cn(
               `${gloria.className}`,
                navigationMenuTriggerStyle(),
