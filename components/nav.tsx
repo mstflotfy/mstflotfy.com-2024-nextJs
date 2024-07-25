@@ -107,6 +107,8 @@ const Nav = () => {
               `${gloria.className}`,
                navigationMenuTriggerStyle(),
                'bg-transparent antialiased p-0 round-4xl',
+               'hover:shadow-m-3-elevation-light-1 ',
+               'focus:border-m3-black'
             )
             }
           >
