@@ -13,16 +13,13 @@ import { navigationMenuTriggerStyle } from "@/components/ui/navigation-menu"
 import IconButton from "@/components/custom_ui/icon-button";
 import { cn } from "@/lib/utils";
 import { gloria, freehand } from "@/app/layout";
-import { CiDark } from "react-icons/ci";
 import { TbMoonFilled } from "react-icons/tb";
-import { FaYoutube, FaMoon } from "react-icons/fa6";
+import { FaYoutube} from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import CtaButton from "./custom_ui/cta-button";
+import externalLinks from '@/lib/external-links'
 
 const Nav = () => {
-  const yt = 'https://www.youtube.com/c/mstflotfyindieDev'
-  const one = 'https://oneexercise.mstflotfy.com'
-  const email = 'mailto:contact@mstflotfy.com'
   
   return (
   <>
@@ -63,7 +60,7 @@ const Nav = () => {
       <div className="hidden flex-row gap-0 md:flex">
         <NavigationMenuItem
         >
-          <Link href={yt} legacyBehavior passHref>
+          <Link href={externalLinks.indieDev} legacyBehavior passHref>
             <NavigationMenuLink 
               target="_blank"
               className={cn(
@@ -77,7 +74,7 @@ const Nav = () => {
         </NavigationMenuItem>
         
         <NavigationMenuItem>
-          <Link href={email} legacyBehavior passHref>
+          <Link href={externalLinks.contact} legacyBehavior passHref>
             <NavigationMenuLink 
               target="_blank"
               className={cn(
@@ -109,7 +106,7 @@ const Nav = () => {
       </NavigationMenuItem>
       
       <NavigationMenuItem>
-        <Link href={one} legacyBehavior passHref>
+        <Link href={externalLinks.OneExercise} legacyBehavior passHref>
           <NavigationMenuLink
             target="_blank"
             className={cn(
