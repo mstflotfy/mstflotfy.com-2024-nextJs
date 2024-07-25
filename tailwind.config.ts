@@ -3,6 +3,7 @@ const { fontFamily } = require("tailwindcss/defaultTheme");
 
 const config = {
   darkMode: ["class"],
+  mode: 'jit',
   content: [
     './pages/**/*.{ts,tsx}',
     './components/**/*.{ts,tsx}',
@@ -10,8 +11,6 @@ const config = {
     './src/**/*.{ts,tsx}',
   ],
   prefix: "",
-  mode: 'jit',
-  purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   theme: {
     container: {
       center: true,
@@ -179,7 +178,48 @@ const config = {
             'inverse-on-surface': 'var(--m-3-sys-dark-inverse-on-surface)',
             'inverse-primary': 'var(--m-3-sys-dark-inverse-primary)',
             'surface-tint': 'var(--m-3-sys-dark-surface-tint)',
-          }
+          },
+          // State layers
+          'state-layers': {
+            'dark': {
+              'surface-container-high-opacity-0-12': 'var(--m-3-state-layers-dark-surface-container-high-opacity-0-12)',
+              'surface-container-high-opacity-0-16': 'var(--m-3-state-layers-dark-surface-container-high-opacity-0-16)',
+              'surface-container-opacity-0-08': 'var(--m-3-state-layers-dark-surface-container-opacity-0-08)',
+              'surface-container-opacity-0-12': 'var(--m-3-state-layers-dark-surface-container-opacity-0-12)',
+              'surface-container-opacity-0-16': 'var(--m-3-state-layers-dark-surface-container-opacity-0-16)',
+              'surface-container-low-opacity-0-08': 'var(--m-3-state-layers-dark-surface-container-low-opacity-0-08)',
+              'surface-container-low-opacity-0-12': 'var(--m-3-state-layers-dark-surface-container-low-opacity-0-12)',
+              'surface-container-low-opacity-0-16': 'var(--m-3-state-layers-dark-surface-container-low-opacity-0-16)',
+              'surface-container-lowest-opacity-0-08': 'var(--m-3-state-layers-dark-surface-container-lowest-opacity-0-08)',
+              'surface-container-lowest-opacity-0-12': 'var(--m-3-state-layers-dark-surface-container-lowest-opacity-0-12)',
+              'surface-container-lowest-opacity-0-16': 'var(--m-3-state-layers-dark-surface-container-lowest-opacity-0-16)',
+              'surface-bright-opacity-0-08': 'var(--m-3-state-layers-dark-surface-bright-opacity-0-08)',
+              'surface-bright-opacity-0-12': 'var(--m-3-state-layers-dark-surface-bright-opacity-0-12)',
+              'surface-bright-opacity-0-16': 'var(--m-3-state-layers-dark-surface-bright-opacity-0-16)',
+              'surface-dim-opacity-0-08': 'var(--m-3-state-layers-dark-surface-dim-opacity-0-08)',
+              'surface-dim-opacity-0-12': 'var(--m-3-state-layers-dark-surface-dim-opacity-0-12)',
+              'surface-dim-opacity-0-16': 'var(--m-3-state-layers-dark-surface-dim-opacity-0-16)',
+            },
+            'light': {
+              'surface-container-high-opacity-0-12': 'var(--m-3-state-layers-light-surface-container-high-opacity-0-12)',
+              'surface-container-high-opacity-0-16': 'var(--m-3-state-layers-light-surface-container-high-opacity-0-16)',
+              'surface-container-opacity-0-08': 'var(--m-3-state-layers-light-surface-container-opacity-0-08)',
+              'surface-container-opacity-0-12': 'var(--m-3-state-layers-light-surface-container-opacity-0-12)',
+              'surface-container-opacity-0-16': 'var(--m-3-state-layers-light-surface-container-opacity-0-16)',
+              'surface-container-low-opacity-0-08': 'var(--m-3-state-layers-light-surface-container-low-opacity-0-08)',
+              'surface-container-low-opacity-0-12': 'var(--m-3-state-layers-light-surface-container-low-opacity-0-12)',
+              'surface-container-low-opacity-0-16': 'var(--m-3-state-layers-light-surface-container-low-opacity-0-16)',
+              'surface-container-lowest-opacity-0-08': 'var(--m-3-state-layers-light-surface-container-lowest-opacity-0-08)',
+              'surface-container-lowest-opacity-0-12': 'var(--m-3-state-layers-light-surface-container-lowest-opacity-0-12)',
+              'surface-container-lowest-opacity-0-16': 'var(--m-3-state-layers-light-surface-container-lowest-opacity-0-16)',
+              'surface-bright-opacity-0-08': 'var(--m-3-state-layers-light-surface-bright-opacity-0-08)',
+              'surface-bright-opacity-0-12': 'var(--m-3-state-layers-light-surface-bright-opacity-0-12)',
+              'surface-bright-opacity-0-16': 'var(--m-3-state-layers-light-surface-bright-opacity-0-16)',
+              'surface-dim-opacity-0-08': 'var(--m-3-state-layers-light-surface-dim-opacity-0-08)',
+              'surface-dim-opacity-0-12': 'var(--m-3-state-layers-light-surface-dim-opacity-0-12)',
+              'surface-dim-opacity-0-16': 'var(--m-3-state-layers-light-surface-dim-opacity-0-16)',
+            },
+          },
         },
       },
       borderRadius: {
