@@ -2,14 +2,8 @@ import externalLinks from "@/lib/external-links"
 import { FaYoutube, FaGithub } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import { IoLogoFigma } from "react-icons/io5";
+import CustomLink from "@/components/custom_ui/custom-external-link-icon"
 
-const CustomLink = ({children, href="/", target="_blank", rel="noopener", ariaLabel=""}) => {
-  return (
-    <a href={href} target={target} rel={rel} aria-label={ariaLabel} className="hover:text-m3-white active:text-m3-white focus:text-m3-white transition-colors duration-200">
-      {children}
-    </a>
-  )
-}
 const Footer = () => {
   
   return (
