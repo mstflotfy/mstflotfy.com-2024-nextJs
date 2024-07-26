@@ -9,7 +9,7 @@ const Footer = () => {
   
   return (
     <footer
-      className="bg-m3-sys-light-surface-variant h-[41rem] mt-44 pt-[6.4rem] pb-[1.8rem] text-center text-m3-sys-light-on-surface-variant flex flex-col justify-between"
+      className="bg-m3-sys-light-surface-variant h-[41rem] mt-44 pt-[6.4rem] p-[1.8rem] text-center text-m3-sys-light-on-surface-variant flex flex-col justify-between"
     >
     
     <FooterNav />
