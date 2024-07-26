@@ -5,7 +5,7 @@ const LogoDisplay = ({children, description=''}) => {
     >
       {children}
       <p
-        className="text-label-small mt-2 max-w-xs"
+        className="text-label-small mt-2 max-w-[22rem]"
       >
         {description}
       </p>
