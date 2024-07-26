@@ -57,6 +57,25 @@
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
   }
+  
+  .logo-display:hover *
+  {
+    /* how can I pass this style to the slot???? */
+    fill: var(--m-3-white) !important;
+    transition: fill 0.2s ease-in-out;
+  }
+  .logo-display:focus *
+  {
+    /* how can I pass this style to the slot???? */
+    fill: var(--m-3-white) !important;
+    transition: fill 0.2s ease-in-out;
+  }
+  .logo-display:active *
+  {
+    /* how can I pass this style to the slot???? */
+    fill: var(--m-3-white) !important;
+    transition: fill 0.2s ease-in-out;
+  }
 }
 
 @layer base {
