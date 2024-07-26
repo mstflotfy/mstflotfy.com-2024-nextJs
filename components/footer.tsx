@@ -9,7 +9,7 @@ const Footer = () => {
   
   return (
     <footer
-      className="bg-m3-sys-light-surface-variant min-h-[41rem] mt-44 pt-[6.4rem] p-[1.8rem] text-center text-m3-sys-light-on-surface-variant flex gap-[8.5rem] flex-col justify-between"
+      className="bg-m3-sys-light-surface-variant min-h-[41rem] !mt-44 pt-[6.4rem] p-[1.8rem] text-center text-m3-sys-light-on-surface-variant flex gap-[8.5rem] flex-col justify-between"
       aria-label="Site footer"
     >
     

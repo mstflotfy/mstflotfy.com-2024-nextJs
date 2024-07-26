@@ -3,12 +3,12 @@ import { freehand, gloria } from "@/app/layout"
 
 const Hero = () => {
  return (
-   <header aria-label="Page header">
+   <header aria-label="Page header" className="space-y-32">
     <h1 
       className={
         cn(
           freehand.className,
-          "text-mstf-headline-large leading-mstf-healine-large tracking-mstflotfy-headline-large", 
+          "text-mstf-headline-large leading-mstf-headline-large tracking-mstflotfy-headline-large", 
           "text-center mt-0 mb-[2rem]",
         )
       }
