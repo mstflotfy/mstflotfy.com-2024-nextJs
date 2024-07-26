@@ -1,9 +1,8 @@
 const DeviceFrame = ({src='/', title='', name='', ariaLabel='an iframe that showcases an app i created'}) => {
   return (
-    <div className="relative w-[300px] mx-auto">
+    <div className="relative w-[320px] mx-auto md:w-[368px]">
       <svg
-        width="300"
-        height="600"
+        className="w-full h-full"
         viewBox="0 0 428 908"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -56,9 +55,9 @@ const DeviceFrame = ({src='/', title='', name='', ariaLabel='an iframe that show
           </clipPath>
         </defs>
       </svg>
-      <div className="absolute top-0 left-0 bottom-0">
+      <div className="absolute top-24 bottom-16 left-0 right-0">
         <iframe 
-          className="w-full h-full p-[4.3rem_1.4rem_3.2rem_1.4rem]"
+          className="w-full h-full pl-3 pr-[0.7rem]"
           src={src}
           title={title}
           name={name}
