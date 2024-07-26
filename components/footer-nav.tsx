@@ -14,6 +14,7 @@ import { cn } from "@/lib/utils";
 import { gloria, freehand, roboto_mono } from "@/app/layout";
 import LogoDisplay from "./custom_ui/logo-display";
 import OneExerciseLogo from "./custom_ui/oneexercise-logo";
+import IDLogo from "./custom_ui/theIndieDev-logo";
 
 const FooterNav = () => {
   
@@ -56,9 +57,9 @@ const FooterNav = () => {
             }
           >
             <LogoDisplay
-              description="OneExercise workout tracker. Start slow and build up."
+              description="Sharing some of the lessons I learn while building my own apps."
             >
-              <p>The indieDev</p>
+              <IDLogo />
             </LogoDisplay>
           </NavigationMenuLink>
         </Link>
