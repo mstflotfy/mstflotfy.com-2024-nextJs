@@ -3,6 +3,7 @@ import { FaYoutube, FaGithub } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import { IoLogoFigma } from "react-icons/io5";
 import CustomLink from "@/components/custom_ui/custom-external-link-icon"
+import FooterNav from "./footer-nav";
 
 const Footer = () => {
   
@@ -10,6 +11,8 @@ const Footer = () => {
     <footer
       className="bg-m3-sys-light-surface-variant h-[41rem] mt-44 py-[6.4rem] text-center text-m3-sys-light-on-surface-variant"
     >
+    
+    <FooterNav />
     
     <section className="flex space-x-8 text-title-large p-10 justify-center">
       <CustomLink href={externalLinks.indieDev} target="_blank" rel="noopener" aria-label="youtube">
