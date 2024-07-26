@@ -19,24 +19,19 @@ const Hero = () => {
       className={
         cn(
           gloria.className,
-          "leading-display-small text-center"
+          "leading-display-small text-center space-y-3"
         )
       }
     >
       <h2
-        className="text-display-small tracking-display-large"
+        className="text-title-large tracking-title-large leading-title-large md:text-display-small md:leading-display-small md:tracking-display-small"
       >
         Hi, I&apos;m Mostafa Lotfy
       </h2>
       <h2
-        className={
-          cn(
-            "text-title-medium tracking-body-large",
-            "text-m3-sys-light-primary"
-          )
-        }
+        className="text-m3-sys-light-primary text-title-small tracking-title-small leading-title-small md:text-title-medium md:tracking-title-medium md:leading-title-medium"
       >
-        I explore & build tools for Productivity and SelfMastery
+        I explore & build tools for Productivity & SelfMastery
       </h2>
     </div>
    </header>
