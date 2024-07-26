@@ -9,11 +9,12 @@ const Footer = () => {
   
   return (
     <footer
-      className="bg-m3-sys-light-surface-variant h-[41rem] mt-44 py-[6.4rem] text-center text-m3-sys-light-on-surface-variant"
+      className="bg-m3-sys-light-surface-variant h-[41rem] mt-44 pt-[6.4rem] pb-[1.8rem] text-center text-m3-sys-light-on-surface-variant flex flex-col justify-between"
     >
     
     <FooterNav />
     
+    <div>
     <section className="flex space-x-8 text-title-large p-10 justify-center">
       <CustomLink href={externalLinks.indieDev} target="_blank" rel="noopener" aria-label="youtube">
         <FaYoutube />
@@ -30,6 +31,7 @@ const Footer = () => {
       </section>
       
       <small>&copy; Mostafa Lotfy (mstflotfy) 2024. All rights reserved.</small>
+      </div>
     </footer>
   )
 }

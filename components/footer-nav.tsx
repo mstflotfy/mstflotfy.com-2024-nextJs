@@ -23,12 +23,12 @@ const FooterNav = () => {
     className={
       cn(
         roboto_mono.className,
-        "flex max-w-none text-title-large antialiased"
+        "flex max-w-none text-title-large antialiased items-start"
       )
       }
   >
     <NavigationMenuList
-      className="p-2 flex bg-m3-sys-light-surface-variant items-center justify-center"
+      className="p-2 flex bg-m3-sys-light-surface-variant items-start justify-center"
     >
       
       <NavigationMenuItem>
