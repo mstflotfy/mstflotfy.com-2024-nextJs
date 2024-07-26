@@ -14,7 +14,7 @@ import IconButton from "@/components/custom_ui/icon-button";
 import { cn } from "@/lib/utils";
 import { gloria, freehand } from "@/app/layout";
 import { TbMoonFilled } from "react-icons/tb";
-import { FaYoutube} from "react-icons/fa6";
+import { FaYoutube, FaEnvelope } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import CtaButton from "./custom_ui/cta-button";
 import externalLinks from '@/lib/external-links'
@@ -82,7 +82,7 @@ const Nav = () => {
               'bg-transparent antialiased',
             )
             }>
-              <MdEmail className="text-title-medium"/>
+              <FaEnvelope className="text-title-medium"/>
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
