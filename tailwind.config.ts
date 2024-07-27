@@ -79,9 +79,9 @@ const config = {
         'mstf-headline-large': 'var(--letter-spacing-mstf-headline-large)',
       },
       colors: {
-        border: "hsl(var(--border))",
+        border: "var(--m-3-sys-light-outline)",
         input: "hsl(var(--input))",
-        ring: "hsl(var(--ring))",
+        ring: "var(--m-3-sys-light-outline-variant",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {

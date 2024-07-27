@@ -72,21 +72,22 @@ const DeviceFrame = ({src='/', title='', name='', ariaLabel='an iframe that show
       </div>
     </div> 
     <div
-        className={
-          cn(
-            gloria.className,
-            "text-m3-sys-light-primary flex flex-row gap-6 items-center justify-center"
-            )
-        }
+      className="flex flex-row items-center justify-center !mt-[2.2rem]"
     >
      <a
        href={src}
        target="_blank"
        rel="no-opener"
+       className={
+         cn(
+           gloria.className,
+           "text-m3-sys-light-primary flex flex-row gap-6 items-center justify-center hover:text-m3-sys-light-secondary focus:text-m3-sys-light-secondary p-2"
+           )
+       }
      >
         Open {name} App
+        <FaExternalLinkAlt />
      </a> 
-     <FaExternalLinkAlt />
     </div>
   </>
   )
