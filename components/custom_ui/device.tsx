@@ -1,5 +1,10 @@
+import { gloria } from "@/app/layout"
+import { cn } from "@/lib/utils"
+import { FaExternalLinkAlt } from "react-icons/fa"
+
 const DeviceFrame = ({src='/', title='', name='', ariaLabel='an iframe that showcases an app i created'}) => {
   return (
+    <>
     <div className="relative w-[320px] mx-auto md:w-[368px]">
       <svg
         className="w-full h-full"
@@ -66,6 +71,24 @@ const DeviceFrame = ({src='/', title='', name='', ariaLabel='an iframe that show
         </iframe>
       </div>
     </div> 
+    <div
+        className={
+          cn(
+            gloria.className,
+            "text-m3-sys-light-primary flex flex-row gap-6 items-center justify-center"
+            )
+        }
+    >
+     <a
+       href={src}
+       target="_blank"
+       rel="no-opener"
+     >
+        Open {name} App
+     </a> 
+     <FaExternalLinkAlt />
+    </div>
+  </>
   )
 }
 export default DeviceFrame
