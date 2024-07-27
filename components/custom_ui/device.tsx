@@ -4,7 +4,10 @@ import { FaExternalLinkAlt } from "react-icons/fa"
 
 const DeviceFrame = ({src='/', title='', name='', ariaLabel='an iframe that showcases an app i created'}) => {
   return (
-    <div>
+    <div
+      aria-label={`${name} app`}
+      className="z-10"
+    >
       <div className="relative w-[320px] mx-auto md:w-[368px]">
         <svg
           className="w-full h-full"
