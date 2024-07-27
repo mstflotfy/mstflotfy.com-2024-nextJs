@@ -1,14 +1,28 @@
 import DeviceFrame from "./custom_ui/device"
 import externalLinks from "@/lib/external-links"
 
-const AppShowCase = ({src='/', title='', name='', ariaLabel='an iframe that showcases an app i created'}) => {
+const AppShowCase = ({src='/', title='', name='', ariaLabel='an iframe that showcases an app i created', left, right}) => {
   return (
-    <DeviceFrame 
-      src={externalLinks.OneExercise}
-      title="Try 1Xercise (OneExercise)"
-      name="OneExercise"
-      aria-label="This iframe showcases my workout tracker app (1Xercsie)"
-    />
+    <div
+      className="relative flex flex-row items-center justify-center gap-[2.6rem]"
+    >
+      {left}
+      
+      <DeviceFrame 
+        src={src}
+        title={title}
+        name={name}
+        aria-label={ariaLabel}
+      />
+      
+      {right}
+      
+      <div
+        className="border-2 absolute top-[17.8rem] bottom-[17.8rem] right-[5.7rem] left-[5.7rem]"
+      >
+      </div>
+      
+    </div>
   )
 }
 export default AppShowCase
