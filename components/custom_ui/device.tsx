@@ -81,7 +81,7 @@ const DeviceFrame = ({src='/', title='', name='', ariaLabel='an iframe that show
        className={
          cn(
            gloria.className,
-           "text-m3-sys-light-primary flex flex-row gap-6 items-center justify-center hover:text-m3-sys-light-secondary focus:text-m3-sys-light-secondary p-2"
+           "text-m3-sys-light-primary flex flex-row gap-6 items-center justify-center hover:text-m3-sys-light-secondary focus:text-m3-sys-light-secondary p-2 transition"
            )
        }
      >
