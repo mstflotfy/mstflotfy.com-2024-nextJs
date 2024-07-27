@@ -15,6 +15,7 @@ import { gloria, freehand, roboto_mono } from "@/app/layout";
 import LogoDisplay from "./custom_ui/logo-display";
 import OneExerciseLogo from "./custom_ui/oneexercise-logo";
 import IDLogo from "./custom_ui/theIndieDev-logo";
+import SelfMasteryLogo from "./custom_ui/selfMastery-log";
 
 const FooterNav = () => {
   
@@ -29,20 +30,37 @@ const FooterNav = () => {
       }
   >
     <NavigationMenuList
-      className="p-2 flex bg-m3-sys-light-surface-variant justify-center flex-col space-y-[5.2rem] md:space-y-0 md:flex-row"
+      className="p-2 flex bg-m3-sys-light-surface-variant justify-center flex-col gap-[5.2rem] md:space-y-0 md:flex-row"
     >
       
       <NavigationMenuItem>
         <Link href="/oneexercise" legacyBehavior passHref>
           <NavigationMenuLink className={cn(
              navigationMenuTriggerStyle(),
-             roboto_mono.className,
           )
            }>
             <LogoDisplay
               description="OneExercise workout tracker. Start slow and build up."
             >
               <OneExerciseLogo />
+            </LogoDisplay>
+          </NavigationMenuLink>
+        </Link>
+      </NavigationMenuItem>
+      
+      <NavigationMenuItem>
+        <Link href="/selfmastery" legacyBehavior passHref>
+          <NavigationMenuLink
+            className={cn(
+               navigationMenuTriggerStyle(),
+               "justify-center"
+            )
+            }
+          >
+            <LogoDisplay
+              description="Sharing practical productivity & self lessons."
+            >
+              <SelfMasteryLogo />
             </LogoDisplay>
           </NavigationMenuLink>
         </Link>
