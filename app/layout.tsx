@@ -8,6 +8,7 @@ import "../styles/colors.css"
 import "../styles/elevation.css"
 
 import { cn } from "@/lib/utils";
+import { ThemeProvider } from "@/components/theme-provider";
 
 export const roboto_mono = Roboto_Mono({
   subsets: ['latin'],
@@ -48,7 +49,14 @@ export default function RootLayout({
           roboto_mono.className
         )}
       >
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
