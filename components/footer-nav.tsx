@@ -30,7 +30,7 @@ const FooterNav = () => {
       }
   >
     <NavigationMenuList
-      className="p-2 flex bg-m3-sys-light-surface-variant justify-center flex-col gap-[5.2rem] md:space-y-0 md:flex-row"
+      className="p-2 flex bg-m3-sys-light-surface-variant justify-center gap-[5.2rem] lg:space-y-0 flex-col lg:flex-row"
     >
       
       <NavigationMenuItem>
