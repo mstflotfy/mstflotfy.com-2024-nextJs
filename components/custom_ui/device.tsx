@@ -41,7 +41,7 @@ const DeviceFrame = ({src='/', title='', name='', ariaLabel='an iframe that show
             <rect x="160" y="886" width="108" height="4" rx="2" fill="#202124"></rect>
           </g>
           <rect
-            className="stroke-m3-black"
+            className="stroke-m3-black dark:stroke-m3-sys-light-outline-variant"
             x="4"
             y="4"
             width="420"
