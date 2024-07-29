@@ -18,6 +18,7 @@ import { FaYoutube, FaEnvelope } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import CtaButton from "./custom_ui/cta-button";
 import externalLinks from '@/lib/external-links'
+import { ModeToggle } from "./mode-toggle";
 
 const Nav = () => {
   
@@ -43,18 +44,14 @@ const Nav = () => {
         </Link>
       </NavigationMenuItem>
       
-      <NavigationMenuItem>
-        <Link href="/" legacyBehavior passHref>
-          <NavigationMenuLink
-            className={cn(
-               navigationMenuTriggerStyle(),
-               'bg-transparent antialiased',
-            )
-            }
-          >
-            <TbMoonFilled className="text-title-large"/>
-          </NavigationMenuLink>
-        </Link>
+      <NavigationMenuItem
+        className={cn(
+           navigationMenuTriggerStyle(),
+           'bg-transparent antialiased',
+        )
+        }
+      >
+        <ModeToggle />
       </NavigationMenuItem>
       
       <div className="hidden flex-row gap-0 md:flex">
@@ -114,7 +111,7 @@ const Nav = () => {
                navigationMenuTriggerStyle(),
                'bg-transparent antialiased p-0 round-4xl',
                'hover:shadow-m-3-elevation-light-1 ',
-               'focus:border-m3-black'
+               'focus:shadow-m-3-elevation-light-1'
             )
             }
           >
