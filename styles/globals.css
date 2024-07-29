@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    --background: rgba(244, 250, 251, 1);
+    --background: rgba(255, 255, 255, 1);
     --foreground: 240 10% 3.9%;
     --card: 0 0% 100%;
     --card-foreground: 240 10% 3.9%;
@@ -32,7 +32,7 @@
   }
 
   .dark {
-    --background: 240 10% 3.9%;
+    --background: rgba(0, 0, 0, 1);
     --foreground: 0 0% 98%;
     --card: 240 10% 3.9%;
     --card-foreground: 0 0% 98%;
@@ -61,19 +61,19 @@
   .logo-display:hover *
   {
     /* how can I pass this style to the slot???? */
-    fill: var(--m-3-white) !important;
-    transition: fill 0.2s ease-in-out;
+    fill: var(--m-3-sys-light-secondary) !important;
+    transition: fill 0.1s ease-in;
   }
   .logo-display:focus *
   {
     /* how can I pass this style to the slot???? */
-    fill: var(--m-3-white) !important;
-    transition: fill 0.2s ease-in-out;
+    fill: var(--m-3-sys-light-secondary) !important;
+    transition: fill 0.1s ease-in;
   }
   .logo-display:active *
   {
     /* how can I pass this style to the slot???? */
-    fill: var(--m-3-white) !important;
+    fill: var(--m-3-sys-light-secondary) !important;
     transition: fill 0.2s ease-in-out;
   }
 }
@@ -87,6 +87,6 @@
   }
   body {
     font-size: 1.6rem;
-    @apply bg-m3-sys-light-surface text-foreground;
+    /* @apply bg-m3-sys-light-surface text-foreground; */
   }
 }
