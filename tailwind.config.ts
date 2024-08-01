@@ -42,6 +42,7 @@ const config = {
         'label-medium': 'var(--font-size-label-medium)',
         'label-small': 'var(--font-size-label-small)',
         'mstf-headline-large': 'var(--font-size-mstf-headline-large)',
+        'mstf-h2': 'var(--font-size-mstf-h2)'
       },
       fontWeight: {
         normal: 'var(--font-weight-normal)',
