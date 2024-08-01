@@ -21,7 +21,7 @@ export function ModeToggle() {
   return (
     <Button
       variant="ghost"
-      className="text-title-large"
+      className="text-title-large focus:text-m3-sys-light-secondary"
       onClick={toggle}
     >
       <TbMoonFilled 
