@@ -81,7 +81,7 @@ const config = {
       colors: {
         border: "var(--m-3-sys-light-outline)",
         input: "hsl(var(--input))",
-        ring: "var(--m-3-sys-light-outline-variant",
+        ring: "var(--m-3-sys-light-outline-variant)",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
