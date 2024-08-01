@@ -44,6 +44,33 @@ export default function OneExercise() {
           }
         >
         </AppShowCase>
+        
+        <section
+         className="bg-zinc-50" 
+        >
+          <h2
+          className={
+            cn(
+              "text-mstf-h2 text-center",
+              gloria.className
+              )
+          }
+          >Features</h2>
+        </section>
+
+        <section
+         className="bg-zinc-50" 
+        >
+          <h2
+          className={
+            cn(
+              "text-mstf-h2 text-center",
+              gloria.className
+              )
+          }
+          >How To Use OneExercise</h2>
+          
+        </section>
       </main>
   )
 }
