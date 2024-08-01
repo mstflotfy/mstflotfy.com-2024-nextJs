@@ -19,6 +19,7 @@ export default function OneExercise() {
           name="OneExercise"
           aria-label="This iframe showcases my workout tracker app (1Xercsie)"
           border={false}
+          small = { true }
           left={
             <div
               className="flex flex-col place-items-end gap-[0.6rem]"

@@ -2,13 +2,33 @@ import { gloria } from "@/app/layout"
 import { cn } from "@/lib/utils"
 import { FaExternalLinkAlt } from "react-icons/fa"
 
-const DeviceFrame = ({src='/', title='', name='', ariaLabel='an iframe that showcases an app i created'}) => {
+interface DeviceFrameProps {
+  src?: string;
+  title?: string;
+  name?: string;
+  ariaLabel?: string;
+  small?: boolean;
+}
+
+const DeviceFrame: React.FC<DeviceFrameProps> = ({
+  src='/', 
+  title='', 
+  name='', 
+  ariaLabel='an iframe that showcases an app i created',
+  small = false
+}) => {
   return (
     <div
       aria-label={`${name} app`}
       className="z-10"
     >
-      <div className="relative w-[320px] mx-auto md:w-[368px]">
+      <div className={
+        cn(
+          "relative w-[320px] mx-auto",
+          !small && "md:w-[368px]"
+          )
+      }
+      >
         <svg
           className="w-full h-full"
           viewBox="0 0 428 908"

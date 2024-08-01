@@ -10,6 +10,7 @@ interface AppShowCaseProps {
   left?: ReactNode;
   right?: ReactNode;
   border: boolean;
+  small: boolean;
 }
 
 const AppShowCase: React.FC<AppShowCaseProps> = ({
@@ -19,7 +20,8 @@ const AppShowCase: React.FC<AppShowCaseProps> = ({
   ariaLabel='an iframe that showcases an app I created', 
   left = null, 
   right = null,
-  border = true
+  border = true,
+  small 
 }) => {
   return (
     <div
@@ -37,6 +39,7 @@ const AppShowCase: React.FC<AppShowCaseProps> = ({
         title={title}
         name={name}
         aria-label={ariaLabel}
+        small = {small ?? false}
       />
       
       {right}
