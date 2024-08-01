@@ -12,7 +12,6 @@ export default function Home() {
     <main
       className="space-y-12"
     >
-      <Nav />
       <Hero />
       
       <AppShowCase 
@@ -55,7 +54,6 @@ export default function Home() {
         
       </AppShowCase>
       
-      <Footer />
     </main>
   );
 }

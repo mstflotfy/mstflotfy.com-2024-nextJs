@@ -10,6 +10,9 @@ import "../styles/elevation.css"
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/theme-provider";
 
+import Nav from "@/components/nav";
+import Footer from "@/components/footer";
+
 export const roboto_mono = Roboto_Mono({
   subsets: ['latin'],
   display: 'swap',
@@ -54,7 +57,9 @@ export default function RootLayout({
           defaultTheme="light"
           disableTransitionOnChange
         >
+          <Nav />
           {children}
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
