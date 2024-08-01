@@ -45,7 +45,7 @@ export default function Home() {
           >
             <p
               className="text-m3-sys-light-primary text-[18px]"
-            >Start slow and build up progress</p>
+            >Start slow & build up</p>
             <p>Master one exercise at a time</p>
             <p>Color coded feedback</p>
           </div>
