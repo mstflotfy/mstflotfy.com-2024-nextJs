@@ -1,7 +1,23 @@
 import DeviceFrame from "./custom_ui/device"
-import externalLinks from "@/lib/external-links"
+import { ReactNode } from "react"
 
-const AppShowCase = ({src='/', title='', name='', ariaLabel='an iframe that showcases an app i created', left, right}) => {
+interface AppShowCaseProps {
+  src?: string;
+  title?: string;
+  name?: string;
+  ariaLabel?: string;
+  left?: ReactNode;
+  right?: ReactNode;
+}
+
+const AppShowCase: React.FC<AppShowCaseProps> = ({
+  src='/', 
+  title='', 
+  name='', 
+  ariaLabel='an iframe that showcases an app I created', 
+  left = null, 
+  right = null
+}) => {
   return (
     <div
       className="relative flex flex-col items-center justify-center lg:flex-row gap-[3.6rem] border-2 xl:border-none py-[3.4rem] mx-12 text-center xl:text-left"
