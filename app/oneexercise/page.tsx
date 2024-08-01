@@ -1,4 +1,8 @@
 import OneExerciseLogo from "@/components/custom_ui/oneexercise-logo"
+import AppShowCase from "@/components/app-showcase"
+import { cn } from "@/lib/utils"
+import externalLinks from "@/lib/external-links"
+import { gloria } from "../layout";
 
 export default function OneExercise() {
   return (
@@ -9,6 +13,36 @@ export default function OneExercise() {
         >
           <OneExerciseLogo  full />
         </header>
+        <AppShowCase 
+          src={externalLinks.OneExercise}
+          title="Try 1Xercise (OneExercise)"
+          name="OneExercise"
+          aria-label="This iframe showcases my workout tracker app (1Xercsie)"
+          border={false}
+          left={
+            <div
+              className="flex flex-col place-items-end gap-[0.6rem]"
+            >
+              <p
+                className={
+                  cn(
+                    gloria.className,
+                    "text-m3-sys-light-primary"
+                  )
+                }
+              >The single-exercise workout tracker</p>
+              <p
+                className={
+                  cn(
+                    gloria.className,
+                    "text-m3-sys-light-primary"
+                  )
+                }
+              >A practical application of the ‘Start slow and build up’ mindset</p>
+            </div>
+          }
+        >
+        </AppShowCase>
       </main>
   )
 }
