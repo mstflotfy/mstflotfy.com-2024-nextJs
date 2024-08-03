@@ -47,12 +47,12 @@ export default function OneExercise() {
         </AppShowCase>
         
         <section
-         className="bg-[#F2F2E8]" 
+         className="bg-[#F2F2E8] pt-[10rem] pb-[21.8rem]" 
         >
           <h2
           className={
             cn(
-              "text-headline-large md:text-mstf-h2 text-center",
+              "text-headline-large md:text-mstf-h2 text-center mb-[7.8rem]",
               gloria.className
               )
           }
@@ -62,7 +62,7 @@ export default function OneExercise() {
         </section>
 
         <section
-         className="bg-[#F2E8EA]" 
+         className="bg-[#F2E8EA] pt-[10rem] pb-[21.8rem]" 
         >
           <h2
           className={
