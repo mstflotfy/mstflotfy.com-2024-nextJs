@@ -3,6 +3,7 @@ import AppShowCase from "@/components/app-showcase"
 import { cn } from "@/lib/utils"
 import externalLinks from "@/lib/external-links"
 import { gloria } from "../layout";
+import FeatureShowcase from "@/components/feature-showcase";
 
 export default function OneExercise() {
   return (
@@ -46,7 +47,7 @@ export default function OneExercise() {
         </AppShowCase>
         
         <section
-         className="bg-[#FFFCFB]" 
+         className="bg-[#F2F2E8]" 
         >
           <h2
           className={
@@ -56,6 +57,8 @@ export default function OneExercise() {
               )
           }
           >Features</h2>
+          
+          <FeatureShowcase />
         </section>
 
         <section
@@ -69,7 +72,6 @@ export default function OneExercise() {
               )
           }
           >How To Use OneExercise</h2>
-          
         </section>
       </main>
   )
