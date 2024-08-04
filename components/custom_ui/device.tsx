@@ -29,7 +29,9 @@ const DeviceFrame: React.FC<DeviceFrameProps> = ({
           )
       }
     >
-      <small>{labelTop}</small>
+      <small
+        className="text-center"
+      >{labelTop}</small>
       <div className={
         cn(
           "relative w-[320px] mx-auto",
