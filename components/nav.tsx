@@ -103,9 +103,8 @@ const Nav = () => {
       </NavigationMenuItem>
       
       <NavigationMenuItem>
-        <Link href={externalLinks.OneExercise} legacyBehavior passHref>
+        <Link href="/oneexercise" legacyBehavior passHref>
           <NavigationMenuLink
-            target="_blank"
             className={cn(
               `${gloria.className}`,
                navigationMenuTriggerStyle(),
