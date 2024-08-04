@@ -8,6 +8,7 @@ interface DeviceFrameProps {
   name?: string;
   ariaLabel?: string;
   small?: boolean;
+  labelTop?: string;
 }
 
 const DeviceFrame: React.FC<DeviceFrameProps> = ({
@@ -15,13 +16,20 @@ const DeviceFrame: React.FC<DeviceFrameProps> = ({
   title='', 
   name='', 
   ariaLabel='an iframe that showcases an app i created',
-  small = false
+  small = false,
+  labelTop = ''
 }) => {
   return (
     <div
       aria-label={`${name} app`}
-      className="z-10"
+      className={
+        cn(
+          "z-10 flex flex-col gap-[2.2rem]",
+          gloria.className
+          )
+      }
     >
+      <small>{labelTop}</small>
       <div className={
         cn(
           "relative w-[320px] mx-auto",
@@ -29,6 +37,8 @@ const DeviceFrame: React.FC<DeviceFrameProps> = ({
           )
       }
       >
+      
+        
         <svg
           className="w-full h-full"
           viewBox="0 0 428 908"
@@ -83,6 +93,7 @@ const DeviceFrame: React.FC<DeviceFrameProps> = ({
             </clipPath>
           </defs>
         </svg>
+        
         <div className="absolute top-24 bottom-16 left-0 right-0">
           <iframe 
             className="w-full h-full pl-3 pr-[0.7rem]"
@@ -94,8 +105,9 @@ const DeviceFrame: React.FC<DeviceFrameProps> = ({
           </iframe>
         </div>
       </div> 
+      
     <div
-      className="flex flex-row items-center justify-center !mt-[2.2rem]"
+      className="flex flex-row items-center justify-center"
     >
      <a
        href={src}

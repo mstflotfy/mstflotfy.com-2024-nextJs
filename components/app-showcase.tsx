@@ -11,6 +11,7 @@ interface AppShowCaseProps {
   right?: ReactNode;
   border?: boolean;
   small?: boolean;
+  labelTop?: string;
 }
 
 const AppShowCase: React.FC<AppShowCaseProps> = ({
@@ -21,7 +22,8 @@ const AppShowCase: React.FC<AppShowCaseProps> = ({
   left = null, 
   right = null,
   border = true,
-  small = false 
+  small = false,
+  labelTop = ''
 }) => {
   return (
     <div
@@ -40,6 +42,7 @@ const AppShowCase: React.FC<AppShowCaseProps> = ({
         name={name}
         aria-label={ariaLabel}
         small = {small ?? false}
+        labelTop={labelTop}
       />
       
       {right}
