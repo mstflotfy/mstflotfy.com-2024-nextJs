@@ -94,9 +94,9 @@ const DeviceFrame: React.FC<DeviceFrameProps> = ({
           </defs>
         </svg>
         
-        <div className="absolute top-24 bottom-16 left-0 right-0">
+        <div className="absolute flex px-3 justify-center top-24 bottom-16 left-0 right-0">
           <iframe 
-            className="w-full h-full pl-3 pr-[0.7rem]"
+            className="w-full h-full"
             src={src}
             title={title}
             name={name}
