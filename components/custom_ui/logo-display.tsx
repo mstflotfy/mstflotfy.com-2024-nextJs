@@ -1,4 +1,11 @@
-const LogoDisplay = ({children, description=''}) => {
+import React from "react"
+
+interface LogoDisplayProps {
+  children: React.ReactNode
+  description?: string
+}
+
+const LogoDisplay: React.FC<LogoDisplayProps> = ({children, description=''}) => {
   return (
     <div
       className="flex flex-col items-center space-y-4"

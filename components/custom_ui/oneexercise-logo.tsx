@@ -1,4 +1,10 @@
-const OneExerciseLogo = ({full=false}) => {
+import React from "react"
+
+interface OneExerciseLogoProps {
+  full?: boolean
+}
+
+const OneExerciseLogo: React.FC<OneExerciseLogoProps> = ({full=false}) => {
   return (
     <svg 
       width={full ? '100vw' : 146} 
