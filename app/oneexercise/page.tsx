@@ -8,44 +8,51 @@ import FeatureShowcase from "@/components/feature-showcase";
 export default function OneExercise() {
   return (
       <main>
+        
+        <div
+          className="bg-[#E8F2F0] -mt-[7rem] pt-[10rem] pb-[6.8rem]" 
+        >
         <header 
           aria-label="Page header"
           className="flex items-center p-16 mt-[1.6rem]"
         >
           <OneExerciseLogo  full />
         </header>
-        <AppShowCase 
-          src={externalLinks.OneExercise}
-          title="Try 1Xercise (OneExercise)"
-          name="OneExercise"
-          aria-label="This iframe showcases my workout tracker app (1Xercsie)"
-          small
-          border = {false}
-          labelTop="Try it here!"
-          left={
-            <div
-              className="flex flex-col place-items-end gap-[0.6rem]"
-            >
-              <p
-                className={
-                  cn(
-                    gloria.className,
-                    "text-m3-sys-light-primary"
-                  )
-                }
-              >The single-exercise workout tracker</p>
-              <p
-                className={
-                  cn(
-                    gloria.className,
-                    "text-m3-sys-light-primary"
-                  )
-                }
-              >A practical application of the ‘Start slow and build up’ mindset</p>
-            </div>
-          }
-        >
-        </AppShowCase>
+        
+          <AppShowCase 
+            src={externalLinks.OneExercise}
+            title="Try 1Xercise (OneExercise)"
+            name="OneExercise"
+            aria-label="This iframe showcases my workout tracker app (1Xercsie)"
+            small
+            border = {false}
+            labelTop="Try it here!"
+            left={
+              <div
+                className="flex flex-col place-items-end gap-[0.6rem]"
+              >
+                <p
+                  className={
+                    cn(
+                      gloria.className,
+                      "text-m3-sys-light-primary"
+                    )
+                  }
+                >The single-exercise workout tracker</p>
+                <p
+                  className={
+                    cn(
+                      gloria.className,
+                      "text-m3-sys-light-primary"
+                    )
+                  }
+                >A practical application of the ‘Start slow and build up’ mindset</p>
+              </div>
+            }
+          >
+          </AppShowCase>
+          
+          </div>
         
         <section
          className="bg-[#F2F2E8] pt-[10rem] pb-[21.8rem]" 
