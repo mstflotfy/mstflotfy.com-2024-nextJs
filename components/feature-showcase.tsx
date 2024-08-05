@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/card"
 import { gloria, roboto_mono } from "@/app/layout"
 import { Button } from "./ui/button"
+import DeviceFrame from "./custom_ui/device"
 
 const oneexerciseFeatures = [
   {
@@ -106,19 +107,19 @@ export default function FeatureShowcase()  {
       aria-label="OneExercise features"
       className="flex place-items-center gap-[5.2rem] min-h-[77.8rem] px-[3.2rem] justify-center"
     >
-      <figure
-        className="min-w-96"
+      <DeviceFrame 
+        src={externalLinks.OneExercise}
+        small
+        name="OneExercise"
       >
-        <Image
-          src="/images/OneExercise-workouts-page.jpg"
-          alt="OneExercise app feature"
-          width={278}
-          height={600}
-        />
-        <figcaption>
-          <a href={externalLinks.OneExercise}>Open OneExercise App</a>
-        </figcaption>
-      </figure>
+          <Image
+            src="/images/OneExercise-workouts-page.jpg"
+            alt="OneExercise app feature"
+            width={428}
+            height={908}
+          />
+      </DeviceFrame>
+      
       <div
         aria-label="features"
         className="flex flex-wrap font-gloria gap-[0.6rem] max-w-[61.8rem]"

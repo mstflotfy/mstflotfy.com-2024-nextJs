@@ -1,5 +1,6 @@
 import { gloria } from "@/app/layout"
 import { cn } from "@/lib/utils"
+import React from "react";
 import { FaExternalLinkAlt } from "react-icons/fa"
 
 interface DeviceFrameProps {
@@ -9,6 +10,7 @@ interface DeviceFrameProps {
   ariaLabel?: string;
   small?: boolean;
   labelTop?: string;
+  children?: React.ReactNode
 }
 
 const DeviceFrame: React.FC<DeviceFrameProps> = ({
@@ -17,7 +19,8 @@ const DeviceFrame: React.FC<DeviceFrameProps> = ({
   name='', 
   ariaLabel='an iframe that showcases an app i created',
   small = false,
-  labelTop = ''
+  labelTop = '',
+  children 
 }) => {
   return (
     <div
@@ -97,14 +100,21 @@ const DeviceFrame: React.FC<DeviceFrameProps> = ({
         </svg>
         
         <div className="absolute flex px-3 justify-center top-24 bottom-16 left-0 right-0">
-          <iframe 
-            className="w-full h-full"
-            src={src}
-            title={title}
-            name={name}
-            aria-label={ariaLabel}
-          >
-          </iframe>
+          {
+            !children ?
+            
+            <iframe 
+              className="w-full h-full"
+              src={src}
+              title={title}
+              name={name}
+              aria-label={ariaLabel}
+            >
+            </iframe>
+            :
+            
+            children
+          }
         </div>
       </div> 
       
