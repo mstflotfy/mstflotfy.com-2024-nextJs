@@ -11,7 +11,7 @@ import {
 import Link from "next/link";
 import { navigationMenuTriggerStyle } from "@/components/ui/navigation-menu"
 import { cn } from "@/lib/utils";
-import { gloria, freehand, roboto_mono } from "@/app/layout";
+import { gloria, freehand, roboto_mono } from "@/lib/fonts";
 import LogoDisplay from "./custom_ui/logo-display";
 import OneExerciseLogo from "./custom_ui/oneexercise-logo";
 import IDLogo from "./custom_ui/theIndieDev-logo";

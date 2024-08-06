@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { Roboto_Mono, Gloria_Hallelujah, Freehand } from "next/font/google"
+
+import { roboto_mono, gloria, freehand } from "@/lib/fonts"
 
 // import style files
 import "../styles/globals.css";
@@ -13,23 +14,6 @@ import { ThemeProvider } from "@/components/theme-provider";
 import Nav from "@/components/nav";
 import Footer from "@/components/footer";
 
-export const roboto_mono = Roboto_Mono({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-roboto-mono',
-})
-export const gloria = Gloria_Hallelujah({
-  weight: '400',
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-gloria',
-})
-export const freehand = Freehand({
-  weight: '400',
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-freehand',
-})
 
 export const metadata: Metadata = {
   title: "mstflotfy",

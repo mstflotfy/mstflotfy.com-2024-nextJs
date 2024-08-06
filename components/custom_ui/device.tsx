@@ -1,4 +1,4 @@
-import { gloria } from "@/app/layout"
+import { gloria } from "@/lib/fonts"
 import { cn } from "@/lib/utils"
 import React from "react";
 import { FaExternalLinkAlt } from "react-icons/fa"

@@ -12,7 +12,7 @@ import Link from "next/link";
 import { navigationMenuTriggerStyle } from "@/components/ui/navigation-menu"
 import IconButton from "@/components/custom_ui/icon-button";
 import { cn } from "@/lib/utils";
-import { gloria, freehand } from "@/app/layout";
+import { gloria, freehand } from "@/lib/fonts";
 import { TbMoonFilled } from "react-icons/tb";
 import { FaYoutube, FaEnvelope } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";

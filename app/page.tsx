@@ -4,7 +4,7 @@ import Footer from "@/components/footer";
 import Hero from "@/components/hero";
 import Nav from "@/components/nav";
 import externalLinks from "@/lib/external-links";
-import { gloria } from "./layout";
+import { gloria } from "@/lib/fonts";
 import { cn } from "@/lib/utils";
 
 export default function Home() {

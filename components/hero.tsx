@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils"
-import { freehand, gloria } from "@/app/layout"
+import { freehand, gloria } from "@/lib/fonts"
 
 const Hero = () => {
  return (

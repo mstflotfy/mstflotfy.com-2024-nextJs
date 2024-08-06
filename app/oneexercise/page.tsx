@@ -2,7 +2,7 @@ import OneExerciseLogo from "@/components/custom_ui/oneexercise-logo"
 import AppShowCase from "@/components/app-showcase"
 import { cn } from "@/lib/utils"
 import externalLinks from "@/lib/external-links"
-import { gloria } from "../layout";
+import { gloria } from "@/lib/fonts";
 import FeatureShowcase from "@/components/feature-showcase";
 
 export default function OneExercise() {
