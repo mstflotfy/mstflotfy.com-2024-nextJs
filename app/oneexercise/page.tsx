@@ -10,7 +10,7 @@ export default function OneExercise() {
       <main>
         
         <div
-          className="bg-[#E8F2F0] -mt-[7rem] pt-[10rem] pb-[6.8rem]" 
+          className="bg-m3-custom-light-green -mt-[7rem] pt-[10rem] pb-[6.8rem]" 
         >
         <header 
           aria-label="Page header"
@@ -55,7 +55,7 @@ export default function OneExercise() {
           </div>
         
         <section
-         className="bg-[#F2F2E8] pt-[10rem] pb-[21.8rem]" 
+         className="bg-m3-custom-light-yellow pt-[10rem] pb-[21.8rem]" 
         >
           <h2
           className={
@@ -70,7 +70,7 @@ export default function OneExercise() {
         </section>
 
         <section
-         className="bg-[#F2E8EA] pt-[10rem] pb-[21.8rem]" 
+         className="bg-m3-custom-light-red pt-[10rem] pb-[21.8rem]" 
         >
           <h2
           className={

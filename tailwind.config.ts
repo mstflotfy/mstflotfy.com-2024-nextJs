@@ -114,6 +114,13 @@ const config = {
           foreground: "hsl(var(--card-foreground))",
         },
         m3: {
+          'custom': {
+            'light': {
+              'yellow': 'var(--m-3-custom-light-yellow)',
+              'red': 'var(--m-3-custom-light-red)',
+              'green': 'var(--m-3-custom-light-green)'
+            },
+          },
           'white': 'var(--m-3-white)',
           'black': 'var(--m-3-black)',
           'sys-light': {

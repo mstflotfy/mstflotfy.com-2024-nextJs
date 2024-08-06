@@ -425,6 +425,9 @@
   --m-3-state-layers-light-surface-dim-opacity-0-12: rgba(222, 216, 225, 0.120);
   --m-3-state-layers-light-surface-dim-opacity-0-16: rgba(222, 216, 225, 0.160);
 
+  --m-3-custom-light-green: rgba(232, 242, 240, 1);
+  --m-3-custom-light-yellow: rgba(242, 242, 232, 1);
+  --m-3-custom-light-red: rgba(242, 232, 234, 1);
 }
 
 .dark {
@@ -731,4 +734,8 @@
     --m-3-state-layers-light-surface-dim-opacity-0-08: rgba(20, 18, 24, 0.080);
     --m-3-state-layers-light-surface-dim-opacity-0-12: rgba(20, 18, 24, 0.120);
     --m-3-state-layers-light-surface-dim-opacity-0-16: rgba(20, 18, 24, 0.160);
+    
+    --m-3-custom-light-green: rgba(17, 26, 24, 1);
+    --m-3-custom-light-yellow: rgba(25, 24, 16, 1);
+    --m-3-custom-light-red: rgba(19, 12, 12, 1);
 }
