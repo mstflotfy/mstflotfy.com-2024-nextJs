@@ -13,6 +13,7 @@ export default function FeatureShowcase()  {
   return (
     <div
       aria-label="OneExercise features"
+      role="region"
       className="flex place-items-center gap-[5.2rem] min-h-[77.8rem] px-[3.2rem] justify-center"
     >
       <DeviceFrame 
@@ -22,7 +23,7 @@ export default function FeatureShowcase()  {
       >
         <Image
           src={oneexerciseFeatures[activeFeature].src}
-          alt="OneExercise app feature"
+          alt={`OneExercise app feature: ${oneexerciseFeatures[activeFeature].name}`}
           width={313.7}
           height={594.44}
         />
