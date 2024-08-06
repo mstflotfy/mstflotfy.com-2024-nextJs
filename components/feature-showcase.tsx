@@ -1,3 +1,5 @@
+'use client'
+
 import externalLinks from "@/lib/external-links"
 import Image from "next/image"
 import { cn } from "@/lib/utils"
@@ -130,6 +132,8 @@ export default function FeatureShowcase()  {
               key={index}
               feature={feat.name}
               description={feat.description}
+              onclick={() => setActiveFeature(index)}
+              active = {index === activeFeature}
             /> 
           ))
         }
