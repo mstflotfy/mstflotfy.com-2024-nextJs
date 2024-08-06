@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils"
 import externalLinks from "@/lib/external-links"
 import { gloria } from "@/lib/fonts";
 import FeatureShowcase from "@/components/feature-showcase";
+import InfoDisplay from "@/components/infoDisplay";
 
 export default function OneExercise() {
   return (
@@ -75,11 +76,14 @@ export default function OneExercise() {
           <h2
           className={
             cn(
-              "text-headline-large md:text-mstf-h2 text-center max-w-[650px] leading-mstf-headline-large tracking-mstf-headline-large mx-auto",
+              "text-headline-large md:text-mstf-h2 text-center max-w-[650px] leading-mstf-headline-large tracking-mstf-headline-large mx-auto mb-[7.8rem]",
               gloria.className
               )
           }
           >How To Use OneExercise</h2>
+          
+          <InfoDisplay />
+          
         </section>
       </main>
   )
