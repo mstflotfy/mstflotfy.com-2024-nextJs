@@ -13,7 +13,7 @@ export default function InfoDisplay()  {
     <div
       aria-label="OneExercise features"
       role="region"
-      className="flex place-items-center gap-[5.2rem] min-h-[77.8rem] px-[3.2rem] justify-center"
+      className="flex place-items-center gap-[5.2rem] min-h-[77.8rem] px-[3.2rem] justify-center" 
     >
     
       <div
@@ -30,8 +30,8 @@ export default function InfoDisplay()  {
             oneExerciseContent.map((content, index) => (
               <li
                 className={`
-                    text-nowrap cursor-pointer hover:text-m3-sys-light-secondary
-                    ${index === activeContent && 'transition-all text-m3-sys-light-primary hover:text-m3-sys-light-primary'}
+                    text-nowrap cursor-pointer hover:text-m3-sys-light-secondary transition-all duration-100 ease-in-out"
+                    ${index === activeContent && 'text-m3-sys-light-primary hover:text-m3-sys-light-primary'}
                     ${index === activeContent && 'text-label-large'}
                   `}
                 key={index}
