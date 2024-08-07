@@ -67,16 +67,16 @@ export default function OneExercise() {
           }
           >Features</h2>
           
-          <FeatureShowcase />
+          {/* <FeatureShowcase /> */}
         </section>
 
         <section
-         className="bg-m3-custom-light-red pt-[10rem] pb-[21.8rem]" 
+         className="bg-m3-custom-light-red pt-[6.3rem] space-y-[4.6rem] pb-[4.6rem] md:pt-[10rem] md:pb-[21.8rem]" 
         >
           <h2
           className={
             cn(
-              "text-headline-large md:text-mstf-h2 text-center max-w-[650px] leading-mstf-headline-large tracking-mstf-headline-large mx-auto mb-[7.8rem]",
+              "text-headline-large md:text-mstf-h2 text-center max-w-[650px] leading-mstf-headline-large tracking-mstf-headline-large mx-auto md:mb-[7.8rem]",
               gloria.className
               )
           }
