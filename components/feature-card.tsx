@@ -7,12 +7,15 @@ interface FeatureButtonProps {
   description: string
   onclick: React.MouseEventHandler
   active: boolean
+  className?: string
 }
 const FeatureCard: React.FC<FeatureButtonProps> = ({
   feature, 
   description, 
   onclick, 
-  active = false
+  active = false,
+  className
+  
 }) => {
   return (
     <>
@@ -22,7 +25,8 @@ const FeatureCard: React.FC<FeatureButtonProps> = ({
       className={
         cn(
           "flex flex-col gap-[1.6rem] p-[0.9rem] py-[2.1rem] h-auto rounded-[1.2rem] w-[30.6rem] hover:bg-m3-sys-light-secondary-container transition-colors",
-          active && "bg-m3-sys-light-primary-container hover:bg-m3-sys-light-primary-container"
+          active && "bg-m3-sys-light-primary-container hover:bg-m3-sys-light-primary-container",
+          className,
           )
       }
     >
