@@ -51,3 +51,16 @@ export const oneexerciseFeatures: Feature[] = [
     src: '/images/OneExercise-feat-free.jpg'
   }
 ]
+
+export const oneExerciseContent: Feature[] = [
+  {
+    name: 'Intro',
+    description: 'OneExercise is a single exercise workout tracker. \nThe idea is to master one exercise at a time. The ...',
+    src: '/images/OneExercise-feat-free.jpg'
+  },
+  {
+    name: 'Add a new workout',
+    description: 'Go to the date you want to add the workout in (you can change this later from the info tab inside the workout)',
+    src: '/images/OneExercise-content-new-workout.jpg'
+  },
+]

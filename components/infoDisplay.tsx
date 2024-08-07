@@ -4,11 +4,11 @@ import externalLinks from "@/lib/external-links"
 import Image from "next/image"
 import DeviceFrame from "./custom_ui/device"
 import { useState } from "react"
-import { oneexerciseFeatures } from "@/lib/data"
-import FeatureCard from "./feature-card"
+import { oneExerciseContent } from "@/lib/data"
+
 
 export default function InfoDisplay()  {
-  const [ activeFeature, setActiveFeature ] = useState(0)
+  const [ activeContent, setActiveContent ] = useState(0)
   
   return (
     <div
@@ -19,23 +19,39 @@ export default function InfoDisplay()  {
     
       <div
         aria-label=""
-        className="flex flex-wrap gap-[0.6rem] max-w-[61.8rem] border-[0.3rem] rounded-[1.2rem] min-w-[74.4rem] min-h-[67.2rem]"
+        className="flex gap-[0.6rem] max-w-[61.8rem] border-[0.3rem] rounded-[1.2rem] min-w-[74.4rem] min-h-[67.2rem]"
       >
       
         <ul
           aria-label="table of content"
-          className="flex flex-col border-r-[0.2rem] py-[2.3rem] px-[4.9rem] gap-[1.5rem] text-label-medium"
+          className="flex flex-col border-r-[0.2rem] py-[4.9rem] px-[2.6rem] gap-[1.5rem] text-label-medium"
           
         >
-         <li>Intro</li> 
-         <li>Creating a new workout</li> 
+          {
+            oneExerciseContent.map((content, index) => (
+              <li
+                className="text-nowrap"
+                key={index}
+              >
+                {content.name}
+              </li>
+            ))
+          }
         </ul>
       
-      <p
-        className="py-[4.8rem] px-[2.6rem] text-body-large"
+      <div
+        className="py-[4.9rem] px-[2.6rem] text-body-large leading-body-large tracking-body-large space-y-8"
       >
-       Details here 
-      </p>
+        {
+          oneExerciseContent[activeContent].description.split('\n').map((paragraph, index) => (
+            <p
+              key={index}
+            >
+              {paragraph}
+            </p>
+          ))
+        }
+      </div>
       
       </div>
       
@@ -46,8 +62,8 @@ export default function InfoDisplay()  {
         name="OneExercise"
       >
         <Image
-          src={oneexerciseFeatures[activeFeature].src}
-          alt={`OneExercise app feature: ${oneexerciseFeatures[activeFeature].name}`}
+          src={oneExerciseContent[activeContent].src}
+          alt={`OneExercise app feature: ${oneExerciseContent[activeContent].name}`}
           width={313.7}
           height={594.44}
         />
