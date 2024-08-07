@@ -11,13 +11,12 @@ export default function InfoDisplay()  {
   
   return (
     <div
-      aria-label="OneExercise features"
+      aria-label="OneExercise Info"
       role="region"
       className="flex place-items-center gap-[5.2rem] min-h-[77.8rem] px-[3.2rem] justify-center" 
     >
     
       <div
-        aria-label=""
         className="flex gap-[0.6rem] max-w-[61.8rem] border-[0.3rem] rounded-[1.2rem] min-w-[74.4rem] min-h-[67.2rem]"
       >
       
