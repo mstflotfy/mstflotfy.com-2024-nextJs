@@ -6,7 +6,6 @@ import DeviceFrame from "./custom_ui/device"
 import { useState } from "react"
 import { oneExerciseContent } from "@/lib/data"
 
-
 export default function InfoDisplay()  {
   const [ activeContent, setActiveContent ] = useState(0)
   
@@ -30,8 +29,13 @@ export default function InfoDisplay()  {
           {
             oneExerciseContent.map((content, index) => (
               <li
-                className="text-nowrap"
+                className={`
+                    text-nowrap cursor-pointer hover:text-m3-sys-light-secondary
+                    ${index === activeContent && 'transition-all text-m3-sys-light-primary hover:text-m3-sys-light-primary'}
+                    ${index === activeContent && 'text-label-large'}
+                  `}
                 key={index}
+                onClick={() => setActiveContent(index)}
               >
                 {content.name}
               </li>

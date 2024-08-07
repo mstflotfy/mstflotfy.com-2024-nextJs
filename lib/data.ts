@@ -63,4 +63,17 @@ export const oneExerciseContent: Feature[] = [
     description: 'Go to the date you want to add the workout in (you can change this later from the info tab inside the workout)',
     src: '/images/OneExercise-content-new-workout.jpg'
   },
+  {
+    name: 'Add a new exercise',
+    description: `While at one of the main pages (Workouts/Exercises/Stats), click on the \`Add\` button. 
+    
+    \nThen click on the \`Add Exercise\` Button. Add a name for your exercise, the name must be unique, you can’t add an exercise with a name that already exists in your Exercise list. 
+    
+    \nSelect what you want to track for your Exercise workouts sets. You can select to track Duration (for walking for example), you can add weight, distance and reps. Make any combo you want. 
+    
+    \nThen press add Exercise to save it in your Exercise list. This will automatically take you back to the page you were at, before you came here.
+    
+    \nIf you change your mind and decide not to add a new exercise, jut click on the back button and nothing will be saved.`,
+    src: '/images/OneExercise-content-new-exercise.jpg'
+  }
 ]
