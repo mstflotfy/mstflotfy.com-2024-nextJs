@@ -11,6 +11,7 @@ interface DeviceFrameProps {
   small?: boolean;
   labelTop?: string;
   children?: React.ReactNode
+  className?: string
 }
 
 const DeviceFrame: React.FC<DeviceFrameProps> = ({
@@ -20,7 +21,8 @@ const DeviceFrame: React.FC<DeviceFrameProps> = ({
   ariaLabel='an iframe that showcases an app i created',
   small = false,
   labelTop = '',
-  children 
+  children,
+  className
 }) => {
   return (
     <div
@@ -28,7 +30,8 @@ const DeviceFrame: React.FC<DeviceFrameProps> = ({
       className={
         cn(
           "z-10 flex flex-col gap-[2.2rem]",
-          gloria.className
+          gloria.className,
+          className,
           )
       }
     >

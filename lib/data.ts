@@ -69,10 +69,6 @@ export const oneExerciseContent: Feature[] = [
     
     \nThen click on the \`Add Exercise\` Button. Add a name for your exercise, the name must be unique, you can’t add an exercise with a name that already exists in your Exercise list. 
     
-    \nSelect what you want to track for your Exercise workouts sets. You can select to track Duration (for walking for example), you can add weight, distance and reps. Make any combo you want. 
-    
-    \nThen press add Exercise to save it in your Exercise list. This will automatically take you back to the page you were at, before you came here.
-    
     \nIf you change your mind and decide not to add a new exercise, jut click on the back button and nothing will be saved.`,
     src: '/images/OneExercise-content-new-exercise.jpg'
   }

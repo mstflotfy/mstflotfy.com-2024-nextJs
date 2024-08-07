@@ -13,20 +13,21 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
-import { Card, CardContent } from "./ui/card"
+import FeatureCard from "./feature-card"
 
 export default function InfoDisplay()  {
   const [ activeContent, setActiveContent ] = useState(0)
+  const contentLength = oneExerciseContent.length
   
   return (
     <div
       aria-label="OneExercise Info"
       role="region"
-      className="flex flex-col xl:flex-row place-items-center gap-[5.2rem] min-h-[77.8rem] px-[3.2rem] justify-center" 
+      className="flex flex-col lg:flex-row place-items-center lg:gap-[5.2rem] min-h-[77.8rem] px-[3.2rem] justify-center" 
     >
     
       <div
-        className="hidden xl:flex gap-[0.6rem] max-w-[61.8rem] border-[0.3rem] rounded-[1.2rem] min-w-[74.4rem] min-h-[67.2rem]"
+        className="hidden lg:flex gap-[0.6rem] max-w-[61.8rem] border-[0.3rem] rounded-[1.2rem] min-w-[74.4rem] min-h-[67.2rem]"
       >
       
         <ul
@@ -68,27 +69,42 @@ export default function InfoDisplay()  {
       </div>
       
       <Carousel
-        className="xl:hidden"
+        className="lg:hidden w-full m-auto max-w-[40.6rem]"
+        opts={{
+          align: "start",
+          loop: true
+        }}
       >
-        <CarouselContent>
+        <CarouselContent
+          className="-mx-[2.6rem] place-items-center"
+        >
           {
             oneExerciseContent.map((content, index) => (
               <CarouselItem
+                className="flex flex-col items-center gap-[0.6rem]"
                 key={index}
               >
-                <Card>
-                  <CardContent className="flex flex-col space-y-4 text-body-small items-center justify-center p-6">
-                    {
-                      content.description.split('\n').map((paragraph, index) => (
-                        <p
-                          key={index}
-                        >
-                          {paragraph}
-                        </p>
-                      ))
-                    }
-                  </CardContent>
-                </Card>
+                <FeatureCard
+                  feature={ content.name}
+                  description={content.description}
+                  active={true}
+                  onclick={() => {}}
+                />
+                <small
+                  className="text-center"
+                >{index + 1} of {contentLength}</small>
+                <DeviceFrame 
+                  src={externalLinks.OneExercise}
+                  small
+                  name="OneExercise"
+                >
+                  <Image
+                    src={oneExerciseContent[activeContent].src}
+                    alt={`OneExercise app feature: ${oneExerciseContent[activeContent].name}`}
+                    width={313.7}
+                    height={594.44}
+                  />
+                </DeviceFrame>
               </CarouselItem>
             ))
           }
@@ -102,6 +118,7 @@ export default function InfoDisplay()  {
         src={externalLinks.OneExercise}
         small
         name="OneExercise"
+        className="hidden lg:flex"
       >
         <Image
           src={oneExerciseContent[activeContent].src}
