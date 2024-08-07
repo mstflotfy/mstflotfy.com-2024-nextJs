@@ -6,6 +6,15 @@ import DeviceFrame from "./custom_ui/device"
 import { useState } from "react"
 import { oneExerciseContent } from "@/lib/data"
 
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel"
+import { Card, CardContent } from "./ui/card"
+
 export default function InfoDisplay()  {
   const [ activeContent, setActiveContent ] = useState(0)
   
@@ -13,11 +22,11 @@ export default function InfoDisplay()  {
     <div
       aria-label="OneExercise Info"
       role="region"
-      className="flex place-items-center gap-[5.2rem] min-h-[77.8rem] px-[3.2rem] justify-center" 
+      className="flex flex-col xl:flex-row place-items-center gap-[5.2rem] min-h-[77.8rem] px-[3.2rem] justify-center" 
     >
     
       <div
-        className="flex gap-[0.6rem] max-w-[61.8rem] border-[0.3rem] rounded-[1.2rem] min-w-[74.4rem] min-h-[67.2rem]"
+        className="hidden xl:flex gap-[0.6rem] max-w-[61.8rem] border-[0.3rem] rounded-[1.2rem] min-w-[74.4rem] min-h-[67.2rem]"
       >
       
         <ul
@@ -57,6 +66,36 @@ export default function InfoDisplay()  {
       </div>
       
       </div>
+      
+      <Carousel
+        className="xl:hidden"
+      >
+        <CarouselContent>
+          {
+            oneExerciseContent.map((content, index) => (
+              <CarouselItem
+                key={index}
+              >
+                <Card>
+                  <CardContent className="flex flex-col space-y-4 text-body-small items-center justify-center p-6">
+                    {
+                      content.description.split('\n').map((paragraph, index) => (
+                        <p
+                          key={index}
+                        >
+                          {paragraph}
+                        </p>
+                      ))
+                    }
+                  </CardContent>
+                </Card>
+              </CarouselItem>
+            ))
+          }
+        </CarouselContent>
+        <CarouselPrevious />
+        <CarouselNext />
+      </Carousel>
       
       
       <DeviceFrame 
