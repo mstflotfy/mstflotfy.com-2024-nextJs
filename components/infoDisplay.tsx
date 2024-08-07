@@ -69,34 +69,38 @@ export default function InfoDisplay()  {
       </div>
       
       <Carousel
-        className="lg:hidden w-full m-auto max-w-[40.6rem]"
+        className="lg:hidden w-full m-auto"
         opts={{
-          align: "start",
+          align: "center",
           loop: true
         }}
       >
         <CarouselContent
-          className="-mx-[2.6rem] place-items-center"
+          className="-mx-[2.6rem] "
         >
           {
             oneExerciseContent.map((content, index) => (
               <CarouselItem
-                className="flex flex-col items-center gap-[0.6rem]"
+                className="flex flex-col items-center gap-[0.6rem] basis-[90%]"
                 key={index}
               >
+              
                 <FeatureCard
                   feature={ content.name}
                   description={content.description}
                   active={true}
                   onclick={() => {}}
+                  className="w-[90%]"
                 />
                 <small
                   className="text-center"
                 >{index + 1} of {contentLength}</small>
+                
                 <DeviceFrame 
                   src={externalLinks.OneExercise}
                   small
                   name="OneExercise"
+                  customWidth="w-[80%]"
                 >
                   <Image
                     src={oneExerciseContent[activeContent].src}
@@ -105,6 +109,7 @@ export default function InfoDisplay()  {
                     height={594.44}
                   />
                 </DeviceFrame>
+                
               </CarouselItem>
             ))
           }
