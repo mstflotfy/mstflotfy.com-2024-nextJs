@@ -12,6 +12,7 @@ interface DeviceFrameProps {
   labelTop?: string;
   children?: React.ReactNode
   className?: string
+  customWidth?: string
 }
 
 const DeviceFrame: React.FC<DeviceFrameProps> = ({
@@ -22,7 +23,8 @@ const DeviceFrame: React.FC<DeviceFrameProps> = ({
   small = false,
   labelTop = '',
   children,
-  className
+  className,
+  customWidth
 }) => {
   return (
     <div
@@ -38,10 +40,13 @@ const DeviceFrame: React.FC<DeviceFrameProps> = ({
       <small
         className="text-center"
       >{labelTop}</small>
-      <div className={
+      <div 
+        aria-label="mobile device frame"
+        className={
         cn(
           "relative w-[320px] mx-auto",
-          !small && "md:w-[368px]"
+          !small && "md:w-[368px]",
+          customWidth
           )
       }
       >
