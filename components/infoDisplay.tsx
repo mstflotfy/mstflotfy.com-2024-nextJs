@@ -1,9 +1,11 @@
 'use client'
 
+import * as React from "react"
+
 import externalLinks from "@/lib/external-links"
 import Image from "next/image"
 import DeviceFrame from "./custom_ui/device"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { oneExerciseContent } from "@/lib/data"
 
 import {
@@ -12,12 +14,30 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
+  type CarouselApi,
 } from "@/components/ui/carousel"
 import FeatureCard from "./feature-card"
 
 export default function InfoDisplay()  {
   const [ activeContent, setActiveContent ] = useState(0)
   const contentLength = oneExerciseContent.length
+  
+  const [api, setApi] = React.useState<CarouselApi>()
+  const [current, setCurrent] = React.useState(0)
+  const [count, setCount] = React.useState(0)
+
+  React.useEffect(() => {
+    if (!api) {
+      return
+    }
+
+    setCount(api.scrollSnapList().length)
+    setCurrent(api.selectedScrollSnap())
+
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap())
+    })
+  }, [api])
   
   return (
     <div
@@ -84,6 +104,7 @@ export default function InfoDisplay()  {
       
       {/* for smaller devices switch to a carousel */}
         <Carousel
+          setApi={setApi}
           className="lg:hidden w-full m-auto"
           opts={{
             align: "center",
@@ -103,7 +124,7 @@ export default function InfoDisplay()  {
                   <FeatureCard
                     feature={ content.name}
                     description={content.description}
-                    active={true}
+                    active={current === index}
                     onclick={() => {}}
                     className="w-[90%]"
                     smallText
@@ -119,7 +140,7 @@ export default function InfoDisplay()  {
                     customWidth="w-[80%]"
                   >
                     <Image
-                      src={oneExerciseContent[activeContent].src}
+                      src={oneExerciseContent[current].src}
                       alt={`OneExercise app feature: ${oneExerciseContent[activeContent].name}`}
                       width={313.7}
                       height={594.44}
