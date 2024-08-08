@@ -8,13 +8,15 @@ interface FeatureButtonProps {
   onclick: React.MouseEventHandler
   active: boolean
   className?: string
+  smallText?: boolean
 }
 const FeatureCard: React.FC<FeatureButtonProps> = ({
   feature, 
   description, 
   onclick, 
   active = false,
-  className
+  className,
+  smallText = false
   
 }) => {
   return (
@@ -34,14 +36,24 @@ const FeatureCard: React.FC<FeatureButtonProps> = ({
         className={
           cn(
             roboto_mono.className,
-            "text-center text-headline-small leading-headline-small"
+            "text-center text-headline-small leading-headline-small",
+            smallText ? "text-title-small" : ""
           )
         }
         >{feature.toUpperCase()}
       </h3>
-      <p
-        className="text-wrap text-body-medium leading-body-medium"
-      >{description}</p>
+      <div
+        className={
+          cn(
+            "text-wrap text-body-medium leading-body-medium",
+           smallText ? "text-body-small leading-body-small" : ""
+          )
+        }
+      >
+        <p>
+          {description}
+        </p>
+      </div>
     </Button>
     </>
   )

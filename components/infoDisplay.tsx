@@ -106,6 +106,7 @@ export default function InfoDisplay()  {
                     active={true}
                     onclick={() => {}}
                     className="w-[90%]"
+                    smallText
                   />
                   <small
                     className="text-center"
