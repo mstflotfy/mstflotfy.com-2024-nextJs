@@ -76,7 +76,7 @@ export default function OneExercise() {
           <h2
           className={
             cn(
-              "text-headline-large md:text-mstf-h2 text-center max-w-[650px] leading-mstf-headline-large tracking-mstf-headline-large mx-auto md:mb-[7.8rem]",
+              "text-headline-large md:text-mstf-h2 text-center max-w-[370px] md:max-w-[650px] leading-mstf-headline-large tracking-mstf-headline-large mx-auto md:mb-[7.8rem]",
               gloria.className
               )
           }
