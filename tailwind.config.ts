@@ -263,7 +263,8 @@ const config = {
         'm-3-elevation-dark-5': 'var(--m-3-elevation-dark-5)',
       },
       screens: {
-        "xs": "475px"
+        "xs": "475px",
+        "ll": "1100px",
       }
     },
   },
