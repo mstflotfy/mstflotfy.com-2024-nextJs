@@ -57,6 +57,7 @@ export default function FeatureShowcase()  {
       {/* for smaller devices switch to a carousel */}
       <CarouselShowcase 
         data={oneexerciseFeatures} 
+        cardSmallText = { false }
       />
     </div>
   )

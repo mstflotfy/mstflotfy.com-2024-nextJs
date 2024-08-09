@@ -15,11 +15,13 @@ import externalLinks from "@/lib/external-links"
 
 interface CarouselShowcaseProps {
   data: Feature[]
+  cardSmallText?: boolean
 }
 
 const CarouselShowcase: React.FC<CarouselShowcaseProps> = 
 ({
-    data
+    data,
+    cardSmallText = true
   }) => {
     
   const contentLength = data.length
@@ -56,7 +58,7 @@ const CarouselShowcase: React.FC<CarouselShowcaseProps> =
         {
           data.map((content, index) => (
             <CarouselItem
-              className="flex flex-col items-center gap-[0.6rem] basis-[90%]"
+              className="flex flex-col items-center gap-[0.8rem] basis-[90%]"
               key={index}
             >
             
@@ -66,7 +68,7 @@ const CarouselShowcase: React.FC<CarouselShowcaseProps> =
                 active={current === index}
                 onclick={() => {}}
                 className="w-[90%]"
-                smallText
+                smallText = {cardSmallText}
               />
               <small
                 className="text-center"
