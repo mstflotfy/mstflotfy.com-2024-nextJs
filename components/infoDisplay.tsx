@@ -22,7 +22,7 @@ export default function InfoDisplay()  {
     
       {/* Table for larger devices */}
         <div
-          className="hidden lg:flex gap-[0.6rem] max-w-[61.8rem] border-[0.3rem] rounded-[1.2rem] min-w-[74.4rem] min-h-[67.2rem]"
+          className="hidden ll:flex gap-[0.6rem] max-w-[61.8rem] border-[0.3rem] rounded-[1.2rem] min-w-[74.4rem] min-h-[67.2rem]"
         >
         
           <ul
@@ -66,7 +66,7 @@ export default function InfoDisplay()  {
           src={externalLinks.OneExercise}
           small
           name="OneExercise"
-          className="hidden lg:flex"
+          className="hidden ll:flex"
         >
           <Image
             src={oneExerciseContent[activeContent].src}

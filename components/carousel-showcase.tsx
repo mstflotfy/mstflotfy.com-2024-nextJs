@@ -44,7 +44,7 @@ const CarouselShowcase: React.FC<CarouselShowcaseProps> =
   return (
     <Carousel
       setApi={setApi}
-      className="lg:hidden w-full m-auto"
+      className="ll:hidden block w-full m-auto"
       opts={{
         align: "center",
         loop: true
