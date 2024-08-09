@@ -20,7 +20,7 @@ export default function FeatureShowcase()  {
     
     {/* Table for larger devices */}
       <div
-        className="hidden lg:flex gap-[0.6rem] max-w-[61.8rem] border-[0.3rem] rounded-[1.2rem] min-w-[74.4rem] min-h-[67.2rem]"
+        className="hidden ll:flex gap-[0.6rem] space-x-[5.2rem] place-items-center"
       >
       
         <DeviceFrame 
