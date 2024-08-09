@@ -1,43 +1,17 @@
 'use client'
 
-import * as React from "react"
 
 import externalLinks from "@/lib/external-links"
 import Image from "next/image"
 import DeviceFrame from "./custom_ui/device"
 import { useState, useEffect } from "react"
 import { oneExerciseContent } from "@/lib/data"
+import CarouselShowcase from "./carousel-showcase"
 
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-  type CarouselApi,
-} from "@/components/ui/carousel"
-import FeatureCard from "./feature-card"
 
 export default function InfoDisplay()  {
   const [ activeContent, setActiveContent ] = useState(0)
-  const contentLength = oneExerciseContent.length
-  
-  const [api, setApi] = React.useState<CarouselApi>()
-  const [current, setCurrent] = React.useState(0)
-  const [count, setCount] = React.useState(0)
 
-  React.useEffect(() => {
-    if (!api) {
-      return
-    }
-
-    setCount(api.scrollSnapList().length)
-    setCurrent(api.selectedScrollSnap())
-
-    api.on("select", () => {
-      setCurrent(api.selectedScrollSnap())
-    })
-  }, [api])
   
   return (
     <div
@@ -97,63 +71,15 @@ export default function InfoDisplay()  {
           <Image
             src={oneExerciseContent[activeContent].src}
             alt={`OneExercise app feature: ${oneExerciseContent[activeContent].name}`}
-            width={313.7}
-            height={594.44}
+            width={314}
+            height={594}
           />
         </DeviceFrame>
       
       {/* for smaller devices switch to a carousel */}
-        <Carousel
-          setApi={setApi}
-          className="lg:hidden w-full m-auto"
-          opts={{
-            align: "center",
-            loop: true
-          }}
-        >
-          <CarouselContent
-            className="-mx-[2.6rem] "
-          >
-            {
-              oneExerciseContent.map((content, index) => (
-                <CarouselItem
-                  className="flex flex-col items-center gap-[0.6rem] basis-[90%]"
-                  key={index}
-                >
-                
-                  <FeatureCard
-                    feature={ content.name}
-                    description={content.description}
-                    active={current === index}
-                    onclick={() => {}}
-                    className="w-[90%]"
-                    smallText
-                  />
-                  <small
-                    className="text-center"
-                  >{index + 1} of {contentLength}</small>
-                  
-                  <DeviceFrame 
-                    src={externalLinks.OneExercise}
-                    small
-                    name="OneExercise"
-                    customWidth="w-[80%]"
-                  >
-                    <Image
-                      src={oneExerciseContent[current].src}
-                      alt={`OneExercise app feature: ${oneExerciseContent[activeContent].name}`}
-                      width={313.7}
-                      height={594.44}
-                    />
-                  </DeviceFrame>
-                  
-                </CarouselItem>
-              ))
-            }
-          </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
-        </Carousel>
+      <CarouselShowcase 
+        data={oneExerciseContent} 
+      />
       
     </div>
   )

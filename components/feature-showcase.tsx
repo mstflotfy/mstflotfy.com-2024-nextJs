@@ -6,6 +6,7 @@ import DeviceFrame from "./custom_ui/device"
 import { useState } from "react"
 import { oneexerciseFeatures } from "@/lib/data"
 import FeatureCard from "./feature-card"
+import CarouselShowcase from "./carousel-showcase"
 
 export default function FeatureShowcase()  {
   const [ activeFeature, setActiveFeature ] = useState(0)
@@ -16,35 +17,47 @@ export default function FeatureShowcase()  {
       role="region"
       className="flex place-items-center gap-[5.2rem] min-h-[77.8rem] px-[3.2rem] justify-center"
     >
-      <DeviceFrame 
-        src={externalLinks.OneExercise}
-        small
-        name="OneExercise"
-      >
-        <Image
-          src={oneexerciseFeatures[activeFeature].src}
-          alt={`OneExercise app feature: ${oneexerciseFeatures[activeFeature].name}`}
-          width={313.7}
-          height={594.44}
-        />
-      </DeviceFrame>
-      
+    
+    {/* Table for larger devices */}
       <div
-        aria-label="features"
-        className="flex flex-wrap font-gloria gap-[0.6rem] max-w-[61.8rem]"
+        className="hidden lg:flex gap-[0.6rem] max-w-[61.8rem] border-[0.3rem] rounded-[1.2rem] min-w-[74.4rem] min-h-[67.2rem]"
       >
-        {
-          oneexerciseFeatures.map((feat, index) => (
-            <FeatureCard 
-              key={index}
-              feature={feat.name}
-              description={feat.description}
-              onclick={() => setActiveFeature(index)}
-              active = {index === activeFeature}
-            /> 
-          ))
-        }
+      
+        <DeviceFrame 
+          src={externalLinks.OneExercise}
+          small
+          name="OneExercise"
+        >
+          <Image
+            src={oneexerciseFeatures[activeFeature].src}
+            alt={`OneExercise app feature: ${oneexerciseFeatures[activeFeature].name}`}
+            width={313.7}
+            height={594.44}
+          />
+        </DeviceFrame>
+      
+        <div
+          aria-label="features"
+          className="flex flex-wrap font-gloria gap-[0.6rem] max-w-[61.8rem]"
+        >
+          {
+            oneexerciseFeatures.map((feat, index) => (
+              <FeatureCard 
+                key={index}
+                feature={feat.name}
+                description={feat.description}
+                onclick={() => setActiveFeature(index)}
+                active = {index === activeFeature}
+              /> 
+            ))
+          }
+        </div>
       </div>
+      
+      {/* for smaller devices switch to a carousel */}
+      <CarouselShowcase 
+        data={oneexerciseFeatures} 
+      />
     </div>
   )
 }
