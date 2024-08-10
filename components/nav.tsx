@@ -28,7 +28,7 @@ const Nav = () => {
     className="top-4 sticky flex max-w-none z-20"
   >
     <NavigationMenuList
-      className="p-2 flex bg-m3-sys-light-surface-variant opacity-95  rounded-4xl items-center justify-center pr-3"
+      className="p-2 flex bg-m3-sys-light-surface-variant opacity-95 rounded-4xl items-center justify-center pr-3"
     >
       
       <NavigationMenuItem>

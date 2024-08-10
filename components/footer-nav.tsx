@@ -67,7 +67,7 @@ const FooterNav = () => {
       </NavigationMenuItem>
         
       <NavigationMenuItem>
-        <Link href="/indiedev" legacyBehavior passHref>
+        <Link href="/theindiedev" legacyBehavior passHref>
           <NavigationMenuLink
             className={cn(
                navigationMenuTriggerStyle(),
