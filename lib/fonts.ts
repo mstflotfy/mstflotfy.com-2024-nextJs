@@ -1,5 +1,5 @@
 
-import { Roboto_Mono, Gloria_Hallelujah, Freehand } from "next/font/google"
+import { Roboto_Mono, Gloria_Hallelujah, Freehand, DM_Serif_Display } from "next/font/google"
 
 export const roboto_mono = Roboto_Mono({
   subsets: ['latin'],
@@ -17,4 +17,9 @@ export const freehand = Freehand({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-freehand',
+})
+export const dm_serif_display = DM_Serif_Display({
+  weight: '400',
+  preload: true,
+  subsets: ['latin'],
 })
