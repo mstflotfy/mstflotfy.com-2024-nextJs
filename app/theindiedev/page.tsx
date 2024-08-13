@@ -6,7 +6,7 @@ export default function TheIndieDev() {
   return (
     <main>
       <header
-        className="bg-m3-sys-light-on-primary-container text-m3-sys-light-surface-variant -mt-[7rem] pt-[10.6rem] md:pt-[14rem] p-[0.1rem] pb-[4.6rem] md:pb-[17.8rem] flex flex-col justify-center text-center items-center bg-[#002022] text-[#DAE4E5]" 
+        className="-mt-[7rem] pt-[10.6rem] md:pt-[14rem] p-[0.1rem] pb-[4.6rem] md:pb-[17.8rem] flex flex-col justify-center text-center items-center bg-[#002022] text-[#DAE4E5]" 
       >
         <p
           className={
