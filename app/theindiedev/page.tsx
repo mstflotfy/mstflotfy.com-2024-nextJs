@@ -2,7 +2,27 @@ import ArticleFilter from "@/components/article-filter"
 import { dm_serif_display, gloria } from "@/lib/fonts"
 import { cn } from "@/lib/utils"
 
+import fs from 'fs';
+import path from 'path';
+import matter from 'gray-matter';
+import Link from 'next/link';
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "The indieDev",
+  description: "Sharing some of the lessons I learn while building my own indie apps",
+};
+
 export default function TheIndieDev() {
+  
+  // Use path.resolve to ensure the correct path
+    const files = fs.readdirSync(path.resolve('app/posts/theindiedev'));
+  const posts = files.map(filename => {
+    const markdownWithMeta = fs.readFileSync(path.join('app/posts/theindiedev', filename), 'utf-8');
+    const { data: frontmatter } = matter(markdownWithMeta);
+    return { frontmatter, slug: filename.replace('.md', '') };
+  });
+  
   return (
     <main>
       <header
@@ -38,6 +58,15 @@ export default function TheIndieDev() {
         {
           // article list
         }
+        <div>
+              <h1>Indie Dev Blog</h1>
+              {posts.map(post => (
+                <div key={post.slug}>
+                  <h2>{post.frontmatter.title}</h2>
+                  <Link href={`/theindiedev/${post.slug}`}>Read more</Link>
+                </div>
+              ))}
+            </div>
       </div>
         
     </main>
