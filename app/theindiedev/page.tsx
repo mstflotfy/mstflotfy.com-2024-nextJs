@@ -20,7 +20,7 @@ export default function TheIndieDev() {
   const posts = files.map(filename => {
     const markdownWithMeta = fs.readFileSync(path.join('app/posts/theindiedev', filename), 'utf-8');
     const { data: frontmatter } = matter(markdownWithMeta);
-    return { frontmatter, slug: filename.replace('.md', '') };
+    return { frontmatter, slug: filename.replace('.mdx', '') };
   });
   
   return (
