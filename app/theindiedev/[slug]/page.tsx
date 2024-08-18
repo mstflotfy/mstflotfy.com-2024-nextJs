@@ -15,11 +15,18 @@ export async function generateStaticParams() {
 }
 
 const components = {
-  h2: (props) => <h2 className='text-display-large' style={{ color: 'red' }} {...props} />,
-  p: (props) => <p style={{ color: 'blue' }} {...props} />,
+  h2: (props: React.HTMLProps<HTMLHeadingElement>) => <h2 className='text-display-large' style={{ color: 'red' }} {...props} />,
+  p: (props: React.HTMLProps<HTMLParagraphElement>) => <p style={{ color: 'blue' }} {...props} />,
 };
 
-export default async function PostPage({ params }) {
+// Define the type for the component props
+interface PostPageProps {
+  params: {
+    slug: string
+  }
+}
+
+export default async function PostPage({ params }: PostPageProps ) {
   // Read the specific markdown file based on the slug
   const markdownWithMeta = fs.readFileSync(path.join(process.cwd(), 'app/posts/theindiedev', `${params.slug}.mdx`), 'utf-8');
   
