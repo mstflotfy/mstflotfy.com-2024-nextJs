@@ -3,7 +3,6 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import { MDXRemote } from 'next-mdx-remote/rsc';
-import { serialize } from 'next-mdx-remote/serialize';
 
 export async function generateStaticParams() {
   // Read all markdown files in the posts/theindiedev directory
@@ -27,11 +26,6 @@ export default async function PostPage({ params }) {
   console.log('mark: ', markdownWithMeta)
   // Use gray-matter to parse the frontmatter and content
   const { data: frontmatter, content } = matter(markdownWithMeta);
-
-  // Serialize the content
-  const mdxSource = await serialize(markdownWithMeta, { parseFrontmatter: true })
-
-  console.log('ser: ', mdxSource)
 
   return (
     <div
