@@ -22,8 +22,10 @@ const config = {
     extend: {
       fontFamily: {
         'roboto-mono': ["var(--font-roboto-mono)", ...fontFamily.mono],
-        'gloria': ["var(--font-gloria)", 'cursive'],
-        'freehand': ["var(--font-freehand", 'cursive']
+        'gloria': ["var(--font-gloria)", 'cursive', ...fontFamily.cursive],
+        'freehand': ["var(--font-freehand", 'cursive', ...fontFamily.cursive],
+        'dm-serif-display': ["var(--dm-serif-display", ...fontFamily.serif],
+        'dosis': ["var(--dosis)", ...fontFamily.sans]
       },
       fontSize: {
         'display-large': 'var(--font-size-display-large)',
