@@ -1,0 +1,11 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+BEGIN:VEVENT
+URL:https://www.airmeet.com/e/868960a0-668f-11ed-8be8-f7d49ede9e81
+DTSTART:20221129T150000Z
+DTEND:20221129T180000Z
+SUMMARY:Crafting a Dynamic Feedback App with Deskree + Nuxt & Github
+DESCRIPTION:Please join the event here: https://www.airmeet.com/e/868960a0-668f-11ed-8be8-f7d49ede9e81 This link is only for you. Please don't share it with others. Airmeet is best experienced from your desktop and on latest Chrome browser(recommended)
+LOCATION:https://www.airmeet.com/e/868960a0-668f-11ed-8be8-f7d49ede9e81
+END:VEVENT
+END:VCALENDAR

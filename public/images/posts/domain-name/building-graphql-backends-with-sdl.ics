@@ -1,0 +1,39 @@
+BEGIN:VCALENDAR
+PRODID:-//AddEvent Inc//AddEvent.com v1.7//EN
+VERSION:2.0
+BEGIN:VTIMEZONE
+TZID:Europe/Amsterdam
+BEGIN:STANDARD
+DTSTART:20221030T020000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=10
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+END:STANDARD
+BEGIN:DAYLIGHT
+DTSTART:20220327T030000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=3
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+END:DAYLIGHT
+END:VTIMEZONE
+BEGIN:VEVENT
+DTSTAMP:20221122T193256Z
+STATUS:CONFIRMED
+UID:1669145576addeventcom
+SEQUENCE:0
+DTSTART;TZID=Europe/Amsterdam:20221202T160000
+DTEND;TZID=Europe/Amsterdam:20221202T180000
+SUMMARY:Building GraphQL backends with SDL
+DESCRIPTION:In this workshop\, we'll cover the basics of GraphQL\, and then use that knowledge to build a backend using SDL. Once we've created our schema\, we'll run it locally\, deploy it to production\, and create deployment branches for any changes to our schema. We'll finish the workshop by fetching data from our backend from the frontend\, as well as adding authentication to lock down data access!
+X-ALT-DESC;FMTTYPE=text/html:In this workshop, we'll cover the basics of GraphQL, and then use that knowledge to build a backend using SDL. Once we've created our schema, we'll run it locally, deploy it to production, and create deployment branches for any changes to our schema. We'll finish the workshop by fetching data from our backend from the frontend, as well as adding authentication to lock down data access!
+LOCATION:https://www.airmeet.com/e/7ba4ff80-666e-11ed-b4ab-0deef835268b
+BEGIN:VALARM
+TRIGGER:-PT60M
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+END:VALARM
+TRANSP:OPAQUE
+END:VEVENT
+END:VCALENDAR
