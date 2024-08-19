@@ -1,5 +1,5 @@
 
-import { Roboto_Mono, Gloria_Hallelujah, Freehand, DM_Serif_Display } from "next/font/google"
+import { Roboto_Mono, Gloria_Hallelujah, Freehand, DM_Serif_Display, Dosis } from "next/font/google"
 
 export const roboto_mono = Roboto_Mono({
   subsets: ['latin'],
@@ -22,4 +22,8 @@ export const dm_serif_display = DM_Serif_Display({
   weight: '400',
   preload: true,
   subsets: ['latin'],
+})
+export const dosis = Dosis({
+  weight: '400',
+  variable: '--dosis'
 })
