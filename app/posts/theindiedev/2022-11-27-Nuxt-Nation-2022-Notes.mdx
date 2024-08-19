@@ -21,7 +21,7 @@ image: /assets/i/nuxt-nation-2022/nuxt-nation-2022-thumbnail.png
 11. [Multi-Variant Apps With Nuxt3](#multi-variant-apps)
 13. [Building and deploying mobile apps with Nuxt/Ionic](#nuxt-ionic)
 14. [Good solutions for working with Icons in Nuxt](#nuxt-icons)
-15. [Why use Nuxt when you can do it yourself with Vite? (Nuxt Vs. Vite functionalities differences](#nuxt-vs-vite)
+15. [Why use Nuxt when you can do it yourself with Vite? Nuxt Vs. Vite functionalities differences](#nuxt-vs-vite)
 16. [How do you balance your primary job with maintaining open-source projects?](#work-balance)
 17. [Does `npx nuxi generate` scale? Is there a plan for an ISR (incremental static regeneration)?](#isr-nuxt)
 18. [Are there any other big meta frameworks like Nuxt that use Vite?](#meta-frameworks-with-vite)
@@ -49,9 +49,9 @@ Nuxt Nation is an online event that is held by Vue School, with speakers such as
 
 These are some notes I took while attending the online conference on 16 & 17 November 2022.
 
-Some of the talks, that I took notes from can be found on the [Vue School YT channel](https://www.youtube.com/@vueschool3782/videos){:target="_blank rel="noreferrer"}
+Some of the talks, that I took notes from can be found on the <CustomLink href="https://www.youtube.com/@vueschool3782/videos">Vue School YT channel</CustomLink>
 
-There are [Free workshops](https://nuxtnation.com/workshops){:target="_blank rel="noreferrer"} from Nuxt Nation, with limited seats.
+There are <CustomLink href="https://nuxtnation.com/workshops">Free workshops</CustomLink> from Nuxt Nation, with limited seats.
 
 ## Nuxt 3.0 Stable {#nuxt-3-stable}
 
@@ -78,7 +78,7 @@ There are [Free workshops](https://nuxtnation.com/workshops){:target="_blank rel
 
 ## Client Side Error Handing In Nuxt {#client-side-error-nuxt}
 
-- [Michael Thiessen](https://michaelnthiessen.com/){:target="_blank rel="noreferrer"}
+- <CustomLink href="https://michaelnthiessen.com/">Michael Thiessen</CustomLink>
 
 - End users are unpredictable.
 - Something unexpected will happen.
@@ -239,7 +239,7 @@ export default ({ title, description }) => {
 
 ## Nuxt Image {#nuxt-image}
 
-[https://v1.image.nuxtjs.org](https://v1.image.nuxtjs.org){:target="_blank rel="noreferrer"}
+<CustomLink href="https://v1.image.nuxtjs.org">https://v1.image.nuxtjs.org</CustomLink>
 
 install 
 `yarn add --dev @nuxt-image-edge`
@@ -303,7 +303,7 @@ a macro allows more complicated features to be implemented.
 
 ## Nuxt Rendering Modes {#nuxt-rendering-modes}
 
-[Nuxt rendering docs](https://nuxt.com/docs/guide/concepts/rendering/){:target="_blank rel="noreferrer"}
+<CustomLink href="https://nuxt.com/docs/guide/concepts/rendering/">Nuxt rendering docs</CustomLink>
 
 - In a traditional Vue App, each page is rendered on the client side. Which can improve the app's performance, but creates SEO issues.
 - Nuxt allows universal rendering. The server provides the browser with a fully rendered page, then it acts as SPA. Fixing the SEO issues, yet still providing the performance of a SPA.
@@ -375,7 +375,7 @@ if (featureFlag['goodbye-feature'] === false) {
 `npx nuxi init -t module my-module`
 
 
-[@nuxt/kit](https://v3.nuxtjs.org/api/advanced/kit){:target="_blank rel="noreferrer"}
+<CustomLink href="https://v3.nuxtjs.org/api/advanced/kit">@nuxt/kit</CustomLink>
 A library that encapsulates all the methods you'll need to create Nuxt modules.
 
 
@@ -487,7 +487,7 @@ To improve LCP and FID
 
 ![Nuxt 3 runs anywhere, built for fast cold starts, and supports hybrid rendering](/assets/i/nuxt-nation-2022/Nuxt-3-universal-rendering.png)
 
-[Hybrid Rendering in Nuxt.js 3](https://vueschool.io/articles/vuejs-tutorials/hybrid-rendering-in-nuxt-js-3/){:target="_blank rel="noreferrer"}
+<CustomLink href="https://vueschool.io/articles/vuejs-tutorials/hybrid-rendering-in-nuxt-js-3/">Hybrid Rendering in Nuxt.js 3</CustomLink>
 
 ![Zero-config Nuxt deploys on different platforms including Cloudflare pages, Vercel, and Netlify](/assets/i/nuxt-nation-2022/Nuxt-3-zero-config.png)
 
@@ -617,10 +617,10 @@ Caveats
 - Aliases are always resolved to the final app
 	- Don't use `@`, `~`, ... instead, use relative paths (but only in the sub apps)
 - Unexplored - only a few usage examples out there, e.g.:
-	- [Docus](https://github.com/nuxt-thems/docus){:target="_blank rel="noreferrer"}
-	- [Typography](https://github.com/nuxt-themes/typography){:target="_blank rel="noreferrer"}
-	- [Content wind](https://github.com/Antiux/content-wind){:target="_blank rel="noreferrer"}
-	- [config-extends](https://github.com/nuxt/framework/tree/main/examples/advanced/config-extends){:target="_blank rel="noreferrer"}
+	- <CustomLink href="https://github.com/nuxt-thems/docus">Docus</CustomLink>
+	- <CustomLink href="https://github.com/nuxt-themes/typography">Typography</CustomLink>
+	- <CustomLink href="https://github.com/Antiux/content-wind">Content wind</CustomLink>
+	- <CustomLink href="https://github.com/nuxt/framework/tree/main/examples/advanced/config-extends">config-extends</CustomLink>
 - Hooks from `nuxt.config.{ts,js}` are not yet merged - use modules instead.
 - Not in the Docs yet.
 
@@ -632,8 +632,8 @@ Upcoming features
 
 ## Building and deploying mobile apps with Nuxt/Ionic {#nuxt-ionic}
 
-- [Presentation Link](http://ionic.link/3f385om){:target="_blank rel="noreferrer"}
-- [Demo repo](https://github.com/ceceliacreates/nuxt-ionic-demo/blob/main/pages/index.vue){:target="_blank rel="noreferrer"}
+- <CustomLink href="http://ionic.link/3f385om">Presentation Link</CustomLink>
+- <CustomLink href="https://github.com/ceceliacreates/nuxt-ionic-demo/blob/main/pages/index.vue">Demo repo</CustomLink>
 
 ### Why Nuxt/Ionic?
 - Nuxt benefits brought to mobile.
@@ -702,7 +702,7 @@ export default defineNuxtConfig({
 
 3. Use components & Icons
 
-[Check the demo's GitHub repo](https://github.com/ceceliacreates/nuxt-ionic-demo/blob/main/pages/index.vue){:target="_blank rel="noreferrer"}
+<CustomLink href="https://github.com/ceceliacreates/nuxt-ionic-demo/blob/main/pages/index.vue">Check the demo's GitHub repo</CustomLink>
 
 ```vue
 <!-- index.vue -->
@@ -941,14 +941,14 @@ main features
 - Allows you to push live updates
 
 ### Ionic Resources
-- [Nuxt/Ionic Docs](https://www.google.com/url?q=https://ionic.nuxtjs.org/&sa=D&source=editors&ust=1669058207636519&usg=AOvVaw1G_pQoGJq3oazJEuOHsXwq){:target="_blank rel="noreferrer"}
-- [Nuxt/Ionic playground](https://www.google.com/url?q=https://stackblitz.com/github/nuxt-modules/ionic/tree/main/playground&sa=D&source=editors&ust=1669058207636944&usg=AOvVaw1ezUaZYL35YRvYBwMBG-81){:target="_blank rel="noreferrer"}
-- [Nuxt/Ionic GitHub](https://www.google.com/url?q=https://github.com/nuxt-modules/ionic&sa=D&source=editors&ust=1669058207637173&usg=AOvVaw19YFKEZ0mpCBjyqxnV2NPT){:target="_blank rel="noreferrer"}
-- [Ionic Docs](https://www.google.com/url?q=https://ionic.io/docs&sa=D&source=editors&ust=1669058207637335&usg=AOvVaw1hSpn_yqDy8I0NLqeU776Y){:target="_blank rel="noreferrer"}
-- [Capacitor Docs](https://www.google.com/url?q=https://capacitorjs.com/docs&sa=D&source=editors&ust=1669058207637491&usg=AOvVaw1_DZYalBcYIlb581V8opsS){:target="_blank rel="noreferrer"}
-- [Appflow Docs](https://www.google.com/url?q=https://ionic.io/docs/appflow&sa=D&source=editors&ust=1669058207637621&usg=AOvVaw3FKx0An7w6xblgmlHfiWky){:target="_blank rel="noreferrer"}
-- [Nuxt/Ionic Simple Demo App GitHub Repo](https://www.google.com/url?q=https://github.com/ceceliacreates/nuxt-ionic-demo&sa=D&source=editors&ust=1669058207637749&usg=AOvVaw00tA1eJL7Mz0w__6if2lcz){:target="_blank rel="noreferrer"}
-- [Ionic Discord](https://www.google.com/url?q=http://ionic.link/discord&sa=D&source=editors&ust=1669058207637878&usg=AOvVaw03kMRAQ4ZHuVzalXvoQEBW){:target="_blank rel="noreferrer"}
+- <CustomLink href="https://www.google.com/url?q=https://ionic.nuxtjs.org/&sa=D&source=editors&ust=1669058207636519&usg=AOvVaw1G_pQoGJq3oazJEuOHsXwq">Nuxt/Ionic Docs</CustomLink>
+- <CustomLink href="https://www.google.com/url?q=https://stackblitz.com/github/nuxt-modules/ionic/tree/main/playground&sa=D&source=editors&ust=1669058207636944&usg=AOvVaw1ezUaZYL35YRvYBwMBG-81">Nuxt/Ionic playground</CustomLink>
+- <CustomLink href="https://www.google.com/url?q=https://github.com/nuxt-modules/ionic&sa=D&source=editors&ust=1669058207637173&usg=AOvVaw19YFKEZ0mpCBjyqxnV2NPT">Nuxt/Ionic GitHub</CustomLink>
+- <CustomLink href="https://www.google.com/url?q=https://ionic.io/docs&sa=D&source=editors&ust=1669058207637335&usg=AOvVaw1hSpn_yqDy8I0NLqeU776Y">Ionic Docs</CustomLink>
+- <CustomLink href="https://www.google.com/url?q=https://capacitorjs.com/docs&sa=D&source=editors&ust=1669058207637491&usg=AOvVaw1_DZYalBcYIlb581V8opsS">Capacitor Docs</CustomLink>
+- <CustomLink href="https://www.google.com/url?q=https://ionic.io/docs/appflow&sa=D&source=editors&ust=1669058207637621&usg=AOvVaw3FKx0An7w6xblgmlHfiWky">Appflow Docs</CustomLink>
+- <CustomLink href="https://www.google.com/url?q=https://github.com/ceceliacreates/nuxt-ionic-demo&sa=D&source=editors&ust=1669058207637749&usg=AOvVaw00tA1eJL7Mz0w__6if2lcz">Nuxt/Ionic Simple Demo App GitHub Repo</CustomLink>
+- <CustomLink href="https://www.google.com/url?q=http://ionic.link/discord&sa=D&source=editors&ust=1669058207637878&usg=AOvVaw03kMRAQ4ZHuVzalXvoQEBW">Ionic Discord</CustomLink>
 
 - You can turn any web project you have into a mobile app using Capacitor, Ionic components are just what give you the native look and feel.
 
@@ -1179,7 +1179,7 @@ So Nuxt extends to allow you to build reusable Nuxt themes.
 
 ## Pinceau {#pinceau}
 
-[piceau](https://github.com/Tahul/pinceau){:target="_blank rel="noreferrer"}
+<CustomLink href="https://github.com/Tahul/pinceau">piceau</CustomLink>
 
 - A new package for the Vue community.
 - Aims at simplifying your work with Vue components by giving you a set of tools that will help you write and maintain CSS across your app.
@@ -1194,9 +1194,9 @@ So Nuxt extends to allow you to build reusable Nuxt themes.
 
 ## End-to-End Type Safety with Nuxt and tRPC {#nuxt-trpc}
 
-- [trpc-nuxt.vercel.app](https://trpc-nuxt.vercel.app/){:target="_blank rel="noreferrer"}
-- [trpc-nuct github](https://github.com/wobsoriano/trpc-nuxt){:target="_blank rel="noreferrer"}
-- [trpc docs](https://trpc.io/docs){:target="_blank rel="noreferrer"}
+- <CustomLink href="https://trpc-nuxt.vercel.app/">trpc-nuxt.vercel.app</CustomLink>
+- <CustomLink href="https://github.com/wobsoriano/trpc-nuxt">trpc-nuct github</CustomLink>
+- <CustomLink href="https://trpc.io/docs">trpc docs</CustomLink>
 
 ### What is type safety?
 
@@ -1553,17 +1553,17 @@ Next steps
 - Animations with GSAP
 
 Resources
-- [ThreeJs playlist](https://www.youtube.com/playlist?list=PLi-X1Ojrrmi8hTTHRs2LprNaaZBDY5Mhk){:target="_blank rel="noreferrer"}
-- [ThreeJS Journey by Bruno Simon](https://threejs-journey.com/#){:target="_blank rel="noreferrer"}
+- <CustomLink href="https://www.youtube.com/playlist?list=PLi-X1Ojrrmi8hTTHRs2LprNaaZBDY5Mhk">ThreeJs playlist</CustomLink>
+- <CustomLink href="https://threejs-journey.com/#">ThreeJS Journey by Bruno Simon</CustomLink>
 
 Any performance gotcha's that are important to watch out for when using ThreeJs with Nuxt?
 - Try to update all the instances without reactivity.
 - You can use a shallow ref and wrap to manage it, especially if using composable.
 - Extract the logic from the experience and put it composables (all the logic for the render)
 
-## [UNJS](https://unjs.io){:target="_blank rel="noreferrer"} and Nuxt 3 {#unjs-nuxt3}
+## <CustomLink href="https://unjs.io">UNJS</CustomLink> and Nuxt 3 {#unjs-nuxt3}
 
-[Presentation link](https://docs.google.com/presentation/d/1li7HfYo1ZTEnFCdpZuSO1k2ba5V7piGKat9NV_ryLVY/edit#slide=id.p){:target="_blank rel="noreferrer"}
+<CustomLink href="https://docs.google.com/presentation/d/1li7HfYo1ZTEnFCdpZuSO1k2ba5V7piGKat9NV_ryLVY/edit#slide=id.p">Presentation link</CustomLink>
 
 unified Javascript tools.
 
@@ -1571,30 +1571,30 @@ unified Javascript tools.
 
 ![](assets/i/nuxt-nation-2022/unjs-rules3.png)
 
-[unjs/unbuild](htttps://github.com/unjs/unbuild){:target="_blank rel="noreferrer"}
+<CustomLink href="htttps://github.com/unjs/unbuild">unjs/unbuild</CustomLink>
 
 Made for building Nuxt 3 modules and packages
 
-[unjs/changelogen](htttps://github.com/unjs/changelogen){:target="_blank rel="noreferrer"}
+<CustomLink href="htttps://github.com/unjs/changelogen">unjs/changelogen</CustomLink>
 
 Beautiful change logs using conventional commits
 Used for Nuxt 3 releases notes and change-logs
 
-[unjs/unplugin](https://github.com/unjs/unplugin){:target="_blank rel="noreferrer"}
+<CustomLink href="https://github.com/unjs/unplugin">unjs/unplugin</CustomLink>
 Unified plugin system for Vite, Rollup, Webpack, and more.
 
-[unjs/unimport](https://github.com/unjs/unimport){:target="_blank rel="noreferrer"}
+<CustomLink href="https://github.com/unjs/unimport">unjs/unimport</CustomLink>
 A system that makes imports automated. Smartly tree shaken. ...
 
-[unjs/ofetch](https://github.com/unjs/ofetch){:target="_blank rel="noreferrer"}
+<CustomLink href="https://github.com/unjs/ofetch">unjs/ofetch</CustomLink>
 
 Better fetchAPI natively works on node, browsers, and workers.
 Provides universal `$fetch` for Nuxt 3.
 
-[node-fetch-native](https://github.com/unjs/node-fetch-native){:target="_blank rel="noreferrer"}
+<CustomLink href="https://github.com/unjs/node-fetch-native">node-fetch-native</CustomLink>
 If you have a custom server or nodejs project. Future proof. Supports native fetch implementations for the server.
 
-[unjs/h3](https://github.com/unjs/h3){:target="_blank rel="noreferrer"}
+<CustomLink href="https://github.com/unjs/h3">unjs/h3</CustomLink>
 
 Minimal h(ttp) framework build for high performance, composition, and portability
 Makes it easier to scale up the project.
@@ -1602,7 +1602,7 @@ Fast.
 You can use h3 for any custom solution you have.
 Nitro is built on h3.
 
-[unjs/unstorage](https://github.com/unjs/unstorage){:target="_blank rel="noreferrer"}
+<CustomLink href="https://github.com/unjs/unstorage">unjs/unstorage</CustomLink>
 Universal storage layer.
 Cross-platform, Multi Driver KV storage powering Nuxt 3 and Nitro cache.
 Persistent storage is one of the essential parts of making a universal framework.
@@ -1610,30 +1610,30 @@ You can combine different stores into a simplified key and value storage layer.
 Used by Nuxt for caching and deployment
 Works out of the box for any deployment platform
 
-### [unjs/listhen](https://github.com/unjs/listhen){:target="_blank rel="noreferrer"}
+### <CustomLink href="https://github.com/unjs/listhen">unjs/listhen</CustomLink>
 - Elegant HTTP listener.
 - Powering Nuxi CLI
 - Small package with one single purpose to listen
 
-### [unjs/c12](https://github.com/unjs/c12){:target="_blank rel="noreferrer"}
+### <CustomLink href="https://github.com/unjs/c12">unjs/c12</CustomLink>
 - Smart configuration loader.
 - Powering Nuxt 3 and Nitro with extends and theming support.
 
-### [unjs/ipx](https://github.com/unjs/ipx){:target="_blank rel="noreferrer"}
+### <CustomLink href="https://github.com/unjs/ipx">unjs/ipx</CustomLink>
 - High-performance, secure, and easy-to-use image proxy based on Sharp and libvips.
 - Powering Nuxt Image and Next.js images on Netlify.
 - If you want to optimize your images you can use Nuxt image, or if you have any custom solutions, or if you want to host it on a private CDN you can directly use ipx.
 
-### [unjs/untyped](https://github.com/unjs/untyped){:target="_blank rel="noreferrer"}
+### <CustomLink href="https://github.com/unjs/untyped">unjs/untyped</CustomLink>
 - Generate config, docs, and types from schema and more
 - powering Nuxt 3 config and schema
 - Depends on one single schema config which is typescript, comments to define documentations and defaults, and normalization. Untyped generates the code and documentation.
 
-### [unjs/giget](htttps://github.com/unjs/giget){:target="_blank rel="noreferrer"}
+### <CustomLink href="htttps://github.com/unjs/giget">unjs/giget</CustomLink>
 - Download templates and git repos
 - Powering nuxi init
 
-### [unjs/nitro](https://nitro.unjs.io){:target="_blank rel="noreferrer"}
+### <CustomLink href="https://nitro.unjs.io">unjs/nitro</CustomLink>
 - A powerful toolchain and runtime framework from the UnJs ecosystem to build and deploy any javascript server. anywhere.
 - A meta-framework for Unjs.
 - Combines different packages to make an experience similar to Nuxt but for the server side. ??
@@ -1641,7 +1641,7 @@ Works out of the box for any deployment platform
 
 ## What is headless? {#what-is-headless}
 
-[Example app using Storyblok and Algolia with Nuxt](https://github.com/Baroshem/headless-avuengers){:target="_blank rel="noreferrer"}
+<CustomLink href="https://github.com/Baroshem/headless-avuengers">Example app using Storyblok and Algolia with Nuxt</CustomLink>
 
 - They don't come with their own UIs they are servers or software that we can communicate with by using an API.
 - Examples
@@ -1659,7 +1659,7 @@ Stack
 - Storyblok Nuxt
 - Nuxt Algolia
 
-## [Nuxt Security](https://nuxt-security.vercel.app){:target="_blank rel="noreferrer"} {#nuxt-security}
+## <CustomLink href="https://nuxt-security.vercel.app">Nuxt Security</CustomLink> {#nuxt-security}
 
 ```shell
 yarn add nuxt-security
@@ -1782,10 +1782,10 @@ In Nuxt 3, it is possible to create fully hybrid sites. Which have individual ro
 
 To explore that we'll create a little blog site and see what that might be like to deploy.
 
-If you want to start a new project. It's recommended to go to [nuxt.new](https://nuxt.new){:target="_blank rel="noreferrer"}
+If you want to start a new project. It's recommended to go to <CustomLink href="https://nuxt.new">nuxt.new</CustomLink>
 There are a couple of templates there, but some interesting things are coming soon.
 
-[You can follow the Nuxt official installation Docs](https://nuxt.com/docs/getting-started/installation){:target="_blank rel="noreferrer"}
+<CustomLink href="https://nuxt.com/docs/getting-started/installation">You can follow the Nuxt official installation Docs</CustomLink>
 
 Open a terminal and run `npx nuxi init appName`
 
@@ -2127,11 +2127,11 @@ It means that you don't need to redeploy when you change the content of CMS if y
 
 ## Tools To Explore {#tools}
 
-- [Docus](https://docus.dev/){:target="_blank rel="noreferrer"} -- Create your own Docs with Nuxt.
+- <CustomLink href="https://docus.dev/">Docus</CustomLink> -- Create your own Docs with Nuxt.
 - Nuxt typography
 - Nuxt Studio (still in Beta)
-- [Vuetelescope.com](https://www.vuetelescope.com/){:target="_blank rel="noreferrer"}
-- [sidebase.io](https://sidebase.io/){:target="_blank rel="noreferrer"} -- An auth module
-- [Nuxt (3) Module Builder](https://github.com/nuxt/module-builder){:target="_blank rel="noreferrer"}
-- [Vue storefronts](https://vuestorefront.io/){:target="_blank rel="noreferrer"}
-- [Strapi](https://strapi.io){:target="_blank rel="noreferrer"}
+- <CustomLink href="https://www.vuetelescope.com/">Vuetelescope.com</CustomLink>
+- <CustomLink href="https://sidebase.io/">sidebase.io</CustomLink> -- An auth module
+- <CustomLink href="https://github.com/nuxt/module-builder">Nuxt (3) Module Builder</CustomLink>
+- <CustomLink href="https://vuestorefront.io/">Vue storefronts</CustomLink>
+- <CustomLink href="https://strapi.io">Strapi</CustomLink>

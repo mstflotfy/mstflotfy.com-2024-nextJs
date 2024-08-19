@@ -22,9 +22,9 @@ I implemented this Figma design into my website.
 
  ![Same design as above implemented with html and css and running live on my website mstflotfy.com](/assets/i/dev9/figma-to-code-html-css-mstflotfy-responsive-website-mobile.png)
     
-You can see the [Figma design file here](https://www.figma.com/community/file/1051279558347794166){:target="_blank" rel="noreferrer"}, and if you're not already there, [you can visit the live website here](http://mstflotfy.com/).  
+You can see the <CustomLink href="https://www.figma.com/community/file/1051279558347794166">Figma design file here</CustomLink>, and if you're not already there, [you can visit the live website here](http://mstflotfy.com/).  
 
-Also, here's a [GitHub repo of the HTML & CSS](https://github.com/mstflotfy/mstflotfy-redesign-exercise/tree/main){:target="_blank" rel="noreferrer"} as I plan a more deliberate remake of my website soon.
+Also, here's a <CustomLink href="https://github.com/mstflotfy/mstflotfy-redesign-exercise/tree/main">GitHub repo of the HTML & CSS</CustomLink> as I plan a more deliberate remake of my website soon.
 
 **This is not a step-by-step guide**, just documenting the main steps I took and the thought process. However, more practical lessons will be coming soon.
 	
@@ -36,16 +36,16 @@ This is the starting point.
 
 I have already gone through how I designed the website in 2 previous videos.
 
-In [this first video](https://youtu.be/LTmHoRJLcuY){:target="_blank" rel="noreferrer"} I quickly went thought the general process, then in [the second](https://youtu.be/euXzyxr_d6A){:target="_blank" rel="noreferrer"}  you can find a step-by-step guide, starting from scratch.
+In <CustomLink href="https://youtu.be/LTmHoRJLcuY">this first video</CustomLink> I quickly went thought the general process, then in <CustomLink href="https://youtu.be/euXzyxr_d6A">the second</CustomLink>  you can find a step-by-step guide, starting from scratch.
  In brief: It is not an ideal well-thought start. It started as an exercise to practice making designs in Figma. Then I took it a bit further into a full redesign of my website. I heavily used Figma's auto-layout and components.
 
-In this [Figma Community file](https://www.figma.com/community/file/1051279558347794166){:target="_blank" rel="noreferrer"}, you can find the final design.
+In this <CustomLink href="https://www.figma.com/community/file/1051279558347794166">Figma Community file</CustomLink>, you can find the final design.
 
 ![Figma community that can be duplicated](/assets/i/dev9/free-figma-community-file-full-design-and-prototype-for-personal-webiste.png)
 
 As for responsiveness, I made three designs; for desktop, tablet, and mobile. Then I figured out the in-between sizes while I was coding.
 
-In this case, I think this was good enough. In a previous video, I explored how to create a fully responsive design in Figma using breakpoints. You can have a look at it [here](https://youtu.be/3KUZ3o0ddcE){:target="_blank" rel="noreferrer"}.
+In this case, I think this was good enough. In a previous video, I explored how to create a fully responsive design in Figma using breakpoints. You can have a look at it <CustomLink href="https://youtu.be/3KUZ3o0ddcE">here</CustomLink>.
 
 So basically, I didn't start from scratch. I had a Figma file with components and pages.
 
@@ -73,7 +73,7 @@ So I made a simple typography scale, then experimented and adjusted it a bit to 
 
 Also, I limited the color palette. And tried to use it consistently across elements and pages.
 
-Finally, I had to think of readability. I used [Adobe Color's Contrast Checker](https://color.adobe.com/create/color-contrast-analyzer){:target="_blank" rel="noreferrer"} to do this. This made me change the color slightly for some fonts and adjust the type scale to make sure smaller font sizes are readable.
+Finally, I had to think of readability. I used <CustomLink href="https://color.adobe.com/create/color-contrast-analyzer">Adobe Color's Contrast Checker</CustomLink> to do this. This made me change the color slightly for some fonts and adjust the type scale to make sure smaller font sizes are readable.
 
 ![A screenshot of Adobe color's contrast checker](/assets/i/dev9/adobe-color-contrast-tool-screenshot.png)
 
@@ -82,7 +82,7 @@ I wanted to name components and elements in a consistent way across the design a
 
 So instead of coming up with my own naming system, I decided to try BEM. 
 
-[BEM](https://css-tricks.com/bem-101/){:target="_blank" rel="noreferrer"} (Block, Element, Modifier) is a naming convention for classes in HTML and CSS.
+<CustomLink href="https://css-tricks.com/bem-101/">BEM</CustomLink> (Block, Element, Modifier) is a naming convention for classes in HTML and CSS.
 
 I think I didn't do the best job with naming. Generally, I treated components as blocks, the items inside components as elements, and component variants as modifiers.
 
@@ -92,27 +92,27 @@ While it might seem straightforward, sometimes there will be elements inside ele
 
 Again with naming, I wasn't consistent enough, so next time I need to think this through and do a cleaner job.
 
-In this [Figma Community file](https://www.figma.com/community/file/1144516865792093918){:target="_blank" rel="noreferrer"}, you can find the final design after making the changes.
+In this <CustomLink href="https://www.figma.com/community/file/1144516865792093918">Figma Community file</CustomLink>, you can find the final design after making the changes.
 
 ## Step 3--Turning the Figma design into HTML
 
-I laid out the [HTML](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#what_is_html){:target="_blank" rel="noreferrer"} structure for each page, starting with the landing page and focusing only on the desktop design. 
+I laid out the <CustomLink href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#what_is_html">HTML</CustomLink> structure for each page, starting with the landing page and focusing only on the desktop design. 
 
-Tried my best to use [semantic HTML](https://developer.mozilla.org/en-US/docs/Glossary/semantics#semantics_in_html){:target="_blank" rel="noreferrer"} and minimize the use of [divs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div){:target="_blank" rel="noreferrer"}, but of course, I sometimes had to resort to them.
+Tried my best to use <CustomLink href="https://developer.mozilla.org/en-US/docs/Glossary/semantics#semantics_in_html">semantic HTML</CustomLink> and minimize the use of <CustomLink href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div">divs</CustomLink>, but of course, I sometimes had to resort to them.
 
-Also, I tried to give elements class names matching the naming in the [Figma file](https://www.figma.com/community/file/1144516865792093918){:target="_blank" rel="noreferrer"}.
+Also, I tried to give elements class names matching the naming in the <CustomLink href="https://www.figma.com/community/file/1144516865792093918">Figma file</CustomLink>.
 
-I laid out the HTML structure for all the pages then I moved to [CSS](https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/What_is_CSS){:target="_blank" rel="noreferrer"}.
+I laid out the HTML structure for all the pages then I moved to <CustomLink href="https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/What_is_CSS">CSS</CustomLink>.
 
-Using [Visual Studio Code](https://code.visualstudio.com/){:target="_blank" rel="noreferrer"} and installing the [live server extension](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer){:target="_blank" rel="noreferrer"}, I used a local server to see the live changes while I coded.
+Using <CustomLink href="https://code.visualstudio.com/">Visual Studio Code</CustomLink> and installing the <CustomLink href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer">live server extension</CustomLink>, I used a local server to see the live changes while I coded.
 
 ## Step 4-- Styling With CSS
 
-I started by setting some [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties){:target="_blank" rel="noreferrer"}. 
+I started by setting some <CustomLink href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties">CSS variables</CustomLink>. 
 
 ![CSS variables applied to the root element](/assets/i/dev9/css-variables-example.png)
 
-I used the styles that I set in the [Figma file](https://www.figma.com/community/file/1144516865792093918){:target="_blank" rel="noreferrer"}.
+I used the styles that I set in the <CustomLink href="https://www.figma.com/community/file/1144516865792093918">Figma file</CustomLink>.
 
 ![Text and color styles from the Figma design](/assets/i/dev9/figma-text-color-styles.png)
 
@@ -142,9 +142,9 @@ To actually deploy the website, I had to find a way to integrate this HTML and C
 
 ![Jekyll static website generator web page screenshot](/assets/i/dev9/jekyll-landing-page.png)
 
-[Jekyll](https://jekyllrb.com/){:target="_blank" rel="noreferrer"} is a static site generator. I use Jekyll so that I can write my articles in [Markdown](https://en.wikipedia.org/wiki/Markdown){:target="_blank" rel="noreferrer"}, push them to GitHub, and the changes would go live.
+<CustomLink href="https://jekyllrb.com/">Jekyll</CustomLink> is a static site generator. I use Jekyll so that I can write my articles in <CustomLink href="https://en.wikipedia.org/wiki/Markdown">Markdown</CustomLink>, push them to GitHub, and the changes would go live.
 
-My website was already running using the [Jekyll minima theme](https://github.com/jekyll/minima){:target="_blank" rel="noreferrer"}, which I had [cloned](https://github.com/git-guides/git-clone){:target="_blank" rel="noreferrer"} and deployed on [GitHub pages](https://pages.github.com/){:target="_blank" rel="noreferrer"} (where I host my website).
+My website was already running using the <CustomLink href="https://github.com/jekyll/minima">Jekyll minima theme</CustomLink>, which I had <CustomLink href="https://github.com/git-guides/git-clone">cloned</CustomLink> and deployed on <CustomLink href="https://pages.github.com/">GitHub pages</CustomLink> (where I host my website).
 
 I already knew how Jekyll generally works. I didn't go too deep into it, and I don't want to. I just needed to figure out how to place my HTML and CSS with minimal changes.
 
