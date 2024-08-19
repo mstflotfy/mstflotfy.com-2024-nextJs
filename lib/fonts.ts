@@ -22,8 +22,10 @@ export const dm_serif_display = DM_Serif_Display({
   weight: '400',
   preload: true,
   subsets: ['latin'],
+  variable: '--font-dm'
 })
 export const dosis = Dosis({
-  weight: '400',
-  variable: '--dosis'
+  weight: '300',
+  subsets: ['latin'],
+  variable: '--font-dosis',
 })
