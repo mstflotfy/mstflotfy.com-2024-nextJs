@@ -22,7 +22,7 @@ Then I got an error that Volar failed to install because Volar is not supported 
 
 I tried to update VSCode.
 
-![VSCode settings icon clicked. A menu pops up with a "check for updates..." option, that is about to be clicked](/assets/i/vsc-wont-update-on-mac/vsc-check-for-updates.png)
+![VSCode settings icon clicked. A menu pops up with a "check for updates..." option, that is about to be clicked](/images/posts/vsc-wont-update-on-mac/vsc-check-for-updates.png)
 
 But I got this error: 
 
@@ -30,7 +30,7 @@ But I got this error:
 
 I was directed to <CustomLink href="https://github.com/microsoft/vscode/issues/7426#issuecomment-425093469">this post</CustomLink>
 
-![The link states that it's due to a well-known Squirell issue. And the workaround is to move the VSC app from the downloads to the Applications folder or run the code below](/assets/i/vsc-wont-update-on-mac/cannot-update-vscode-link.png)
+![The link states that it's due to a well-known Squirell issue. And the workaround is to move the VSC app from the downloads to the Applications folder or run the code below](/images/posts/vsc-wont-update-on-mac/cannot-update-vscode-link.png)
 
 I found others with the same problem on <CustomLink href="https://github.com/Squirrel/Squirrel.Mac/issues/182">this thread</CustomLink>. Some people on this thread said that moving the VSC app out of the Apps folder and back again worked for them. Every time I tried to do that, the App did not move but created a shortcut.
 
@@ -48,8 +48,8 @@ $ xattr -dr com.apple.quarantine "Visual Studio Code"
 
 Next, I installed Volar, and it worked! And the experience of using Nuxt or Vue with Volar is much better than with Vetur. 
 
-![Volar(Vue Language Features) installed and enabled in VSC](/assets/i/vsc-wont-update-on-mac/volar-installed-vsc.png)
+![Volar(Vue Language Features) installed and enabled in VSC](/images/posts/vsc-wont-update-on-mac/volar-installed-vsc.png)
 
 P.S. You might need to disable Vetur to stop conflicts between it and Volar.
 
-![Vetur disabled in VSCode](/assets/i/vsc-wont-update-on-mac/vetur-disabled-vsc.png)
+![Vetur disabled in VSCode](/images/posts/vsc-wont-update-on-mac/vetur-disabled-vsc.png)

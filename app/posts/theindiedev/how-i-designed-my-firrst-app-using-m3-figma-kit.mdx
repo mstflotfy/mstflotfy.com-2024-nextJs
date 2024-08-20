@@ -76,11 +76,11 @@ For example using real workout data or realistic data at least can got me to tak
 
 - Import and image of the whole wireframe inside your Figma file.
 
-![](/assets/i/workout-tracker-design/Pasted%20image%2020221212231838.png)
+![](/images/posts/workout-tracker-design/Pasted%20image%2020221212231838.png)
 
 - Take a screenshot of the wireframe of the specific page you're working on and place it next to you're design to avoid the back and forth scrolling. 
 
-![](/assets/i/workout-tracker-design/Pasted%20image%2020221212231702.png)
+![](/images/posts/workout-tracker-design/Pasted%20image%2020221212231702.png)
 
 ## Wireframe
 
@@ -90,7 +90,7 @@ I still rushed the last one, and I kept going to back to GoodNotes (The app I us
 
 I uploaded the full image of the wireframe. While working on a new screen I needed the specific part to be next to it. I used to go back and forth a lot at the beginning which is ineffective. But eventually I just took a screen shot (cmd shift 4, on Mac. While holding the ctrl key to copy to clipboard) and pasted it next to the screen I am working on speeding up the process.
 
-![](/assets/i/workout-tracker-design/Pasted%20image%2020221208000257.png)
+![](/images/posts/workout-tracker-design/Pasted%20image%2020221208000257.png)
 
 Like with everything the next step is build upon this one. If you scuff it you'll waste a lot of time going back to fix. And going back and forth between stages is not efficient. I guess some back and forth is unavoidable, but it's best to minize it as much as you could.
 
@@ -98,7 +98,7 @@ I should make a list of all the pages. So that when I'm designing I know which p
 
 Then each iteration I can just have a check list.
 
-![](/assets/i/workout-tracker-design/Pasted%20image%2020221213002612.png)
+![](/images/posts/workout-tracker-design/Pasted%20image%2020221213002612.png)
 
 There is something missing here, that should be found somewhere in this file; Having to go back to the wireframe, rethink, and redraw some screens.
 
@@ -126,13 +126,13 @@ So I'll design in an iPhone 13 mini frame.
 
 I added a frame and set its frame to an iPhone 13 mini, from the frame drop down menu in the design panel.
 
-![](/assets/i/workout-tracker-design/Pasted%20image%2020221204124527.png)
+![](/images/posts/workout-tracker-design/Pasted%20image%2020221204124527.png)
 
 I grab a device frame component from the "Styles" page and put inside my new frame, resize it to fit, and constraint it to top & bottom, and right & left. That way if I change the frame size it will respond to the changes.
 
-![](/assets/i/workout-tracker-design/Pasted%20image%2020221204124957.png)
+![](/images/posts/workout-tracker-design/Pasted%20image%2020221204124957.png)
 
-![](/assets/i/workout-tracker-design/Pasted%20image%2020221204125237.png)
+![](/images/posts/workout-tracker-design/Pasted%20image%2020221204125237.png)
 
 
 There are 2 ways to go about making this design responsive. I can use constraints on every element and minimal autolayout, or I can minimze constraints and rely mainly on autolayout. I think it's best to use autolayout mainly. 
@@ -342,13 +342,13 @@ I set the spacing between them to 15 for now.
 
 It's unecessary to create a workaround like this.
 
-![](/assets/i/workout-tracker-design/Pasted%20image%2020221209162133.png)
+![](/images/posts/workout-tracker-design/Pasted%20image%2020221209162133.png)
 
 Just create a swap overlay. If it dosn't work a manual overlay just on top the button.
 
-![](/assets/i/workout-tracker-design/Pasted%20image%2020221209162228.png)
+![](/images/posts/workout-tracker-design/Pasted%20image%2020221209162228.png)
 
-![](/assets/i/workout-tracker-design/Pasted%20image%2020221209163058.png)
+![](/images/posts/workout-tracker-design/Pasted%20image%2020221209163058.png)
 ## Button
 
 ![](assets/i/workout-tracker-design/Pasted%20image%2020221209165137.png)
@@ -403,11 +403,11 @@ So I remove most of the exercises and leave 2 for a single date.
 
 Next I head to the **Components Page**, grab an instance of the date picker I want, and place it in a test frame above the **Date picker** component.
 
-![](/assets/i/workout-tracker-design/Pasted%20image%2020221205011138.png)
+![](/images/posts/workout-tracker-design/Pasted%20image%2020221205011138.png)
 
 I start by hiding some of the things I don't think I'll need from the instance.
 
-![](/assets/i/workout-tracker-design/Pasted%20image%2020221205011826.png)
+![](/images/posts/workout-tracker-design/Pasted%20image%2020221205011826.png)
 
 Next I go to the building blocks component of the date picker. And I make the prototype connections for the hover, and pressed states.
 
@@ -421,11 +421,11 @@ Now the only thing missing is to add a property to the day's building blocks, th
 
 So I grab an instance of the small badge component.
 
-![](/assets/i/workout-tracker-design/Pasted%20image%2020221205013158.png)
+![](/images/posts/workout-tracker-design/Pasted%20image%2020221205013158.png)
 
 I go to the Default (day) building block variant and I past the badge inside its auto layout frame. The badge is placed outside the component. 
 
-![](/assets/i/workout-tracker-design/Pasted%20image%2020221205014428.png)
+![](/images/posts/workout-tracker-design/Pasted%20image%2020221205014428.png)
 
 So I switched its position to absolute and push it where I want it inside the compont.
 
@@ -449,11 +449,11 @@ But this only works for the default day, and it breakes when hovering or pressin
 
 So I get back to the default day building block variant. I copy the badge and paste it to every single day component, just by selecting each one and pressing `cmd v`. This automatically adds a badge, that is hidden by default with a boolean property to show and hide it.
 
-![](/assets/i/workout-tracker-design/Pasted%20image%2020221205015548.png)
+![](/images/posts/workout-tracker-design/Pasted%20image%2020221205015548.png)
 
 And now I can present it, hover and press works.
 
-![](/assets/i/workout-tracker-design/Pasted%20image%2020221205020120.png)
+![](/images/posts/workout-tracker-design/Pasted%20image%2020221205020120.png)
 
 I think this is good enough. So I turn my custom instance into a component, and move it to the Screens page.
 
@@ -465,7 +465,7 @@ I take an instance of it and put inside the "MyWorkoutsCal" screen. Inside the *
 
 I select it and set its horizontal resizing to fill container.
 
-![](/assets/i/workout-tracker-design/Pasted%20image%2020221205020816.png)
+![](/images/posts/workout-tracker-design/Pasted%20image%2020221205020816.png)
 
 The badges are not centered anymore! The solution is simple. I get back to the day's building block componet, select all the hidden page elments and change their constraints from top and left to top and center.
 
@@ -478,60 +478,60 @@ And the badges are centered again.
 Now I adjust the toggle underneath the search bar. For this page the Calander should be selected and toggle disselected.
 
 
-![](/assets/i/workout-tracker-design/Pasted%20image%2020221205022519.png)
+![](/images/posts/workout-tracker-design/Pasted%20image%2020221205022519.png)
 
 And also I make a prototype connection on click to navigate between the 2 pages.
 
-![](/assets/i/workout-tracker-design/Pasted%20image%2020221205022652.png)
+![](/images/posts/workout-tracker-design/Pasted%20image%2020221205022652.png)
 
-![](/assets/i/workout-tracker-design/Pasted%20image%2020221205022728.png)
+![](/images/posts/workout-tracker-design/Pasted%20image%2020221205022728.png)
 
 ## Adding An exercise (FAB)
 
-![](/assets/i/workout-tracker-design/Pasted%20image%2020221206024650.png)
+![](/images/posts/workout-tracker-design/Pasted%20image%2020221206024650.png)
 
-![](/assets/i/workout-tracker-design/Pasted%20image%2020221206024730.png)
+![](/images/posts/workout-tracker-design/Pasted%20image%2020221206024730.png)
 
-![](/assets/i/workout-tracker-design/Pasted%20image%2020221206024942.png)
+![](/images/posts/workout-tracker-design/Pasted%20image%2020221206024942.png)
 
-![](/assets/i/workout-tracker-design/Pasted%20image%2020221206025112.png)
+![](/images/posts/workout-tracker-design/Pasted%20image%2020221206025112.png)
 
-![](/assets/i/workout-tracker-design/Pasted%20image%2020221206025337.png)
+![](/images/posts/workout-tracker-design/Pasted%20image%2020221206025337.png)
 
-![](/assets/i/workout-tracker-design/Pasted%20image%2020221206030136.png)
+![](/images/posts/workout-tracker-design/Pasted%20image%2020221206030136.png)
 
-![](/assets/i/workout-tracker-design/Pasted%20image%2020221206030214.png)
+![](/images/posts/workout-tracker-design/Pasted%20image%2020221206030214.png)
 
-![](/assets/i/workout-tracker-design/Pasted%20image%2020221206030416.png)
-
-
-![](/assets/i/workout-tracker-design/Pasted%20image%2020221206030502.png)
-
-![](/assets/i/workout-tracker-design/Pasted%20image%2020221206030714.png)
+![](/images/posts/workout-tracker-design/Pasted%20image%2020221206030416.png)
 
 
-![](/assets/i/workout-tracker-design/Pasted%20image%2020221206030813.png)
+![](/images/posts/workout-tracker-design/Pasted%20image%2020221206030502.png)
+
+![](/images/posts/workout-tracker-design/Pasted%20image%2020221206030714.png)
 
 
-![](/assets/i/workout-tracker-design/Pasted%20image%2020221206030907.png)
+![](/images/posts/workout-tracker-design/Pasted%20image%2020221206030813.png)
+
+
+![](/images/posts/workout-tracker-design/Pasted%20image%2020221206030907.png)
 
 
 
-![](/assets/i/workout-tracker-design/Pasted%20image%2020221206043204.png)
+![](/images/posts/workout-tracker-design/Pasted%20image%2020221206043204.png)
 
 
 To avoid the FAB being out of position if the device is changed.
 
-![](/assets/i/workout-tracker-design/Pasted%20image%2020221207224105.png)
+![](/images/posts/workout-tracker-design/Pasted%20image%2020221207224105.png)
 
 Make its constraints bottom and center or bottom and right & left.
 
-![](/assets/i/workout-tracker-design/Pasted%20image%2020221207224209.png)
+![](/images/posts/workout-tracker-design/Pasted%20image%2020221207224209.png)
 
 
 I can do on top change to the clicked variant, but in this situation it doesn't look good. The text of the icons is not redeable.
 
-![](/assets/i/workout-tracker-design/Pasted%20image%2020221207230325.png)
+![](/images/posts/workout-tracker-design/Pasted%20image%2020221207230325.png)
 
 The other option is to do on tap swap or open overlay. But this doesn't work betwen variants. And I can't get it to be placed properly. Perhaps because my component is not placed in an absolute position so it swaps the whole screen! and place the button in an awkward and unusable position.
 
@@ -545,22 +545,22 @@ Not a pretty solution. But it'll do.
 
 
 
-![](/assets/i/workout-tracker-design/Pasted%20image%2020221207231140.png)
+![](/images/posts/workout-tracker-design/Pasted%20image%2020221207231140.png)
 
 Perhaps lowing the opacity jsut a little bit makes a bit obvious what is inteded.
 
-![](/assets/i/workout-tracker-design/Pasted%20image%2020221207231312.png)
+![](/images/posts/workout-tracker-design/Pasted%20image%2020221207231312.png)
 ## Exercises List Screen
 
-![Hand drawn wireframe of a mobile screen with the title My Exercises top of the mobile screen. Below it a search bar](/assets/i/workout-tracker-design/Pasted%20image%2020221205162557.png)
+![Hand drawn wireframe of a mobile screen with the title My Exercises top of the mobile screen. Below it a search bar](/images/posts/workout-tracker-design/Pasted%20image%2020221205162557.png)
 
 Not updated. I went back to the wireframing and uploaded a new image.
 
 Now here's the adjusted exercise list screen wireframe
 
-![](/assets/i/workout-tracker-design/Pasted%20image%2020221207222311.png)
+![](/images/posts/workout-tracker-design/Pasted%20image%2020221207222311.png)
 
-![](/assets/i/workout-tracker-design/Pasted%20image%2020221207222453.png)
+![](/images/posts/workout-tracker-design/Pasted%20image%2020221207222453.png)
 
 There is a problem with icons. They should be outlined when not selected, and when selected change to fill. That's a detail that I'll handle later but it should be noted.
 
@@ -579,24 +579,24 @@ I think an overlay an manually adjusting the height if the device is changed is 
 
 ## Sections
 
-![](/assets/i/workout-tracker-design/Pasted%20image%2020221207232556.png)
+![](/images/posts/workout-tracker-design/Pasted%20image%2020221207232556.png)
 
-![](/assets/i/workout-tracker-design/Pasted%20image%2020221207232735.png)
+![](/images/posts/workout-tracker-design/Pasted%20image%2020221207232735.png)
 
 A new Figma feature. 
 
 Just select a couple of frames that are related together right click and select create a section.
 
-![](/assets/i/workout-tracker-design/Pasted%20image%2020221207234059.png)
+![](/images/posts/workout-tracker-design/Pasted%20image%2020221207234059.png)
 Not sure what that is about!!
 
 The result is a much cleaner canvas.
 
-![](/assets/i/workout-tracker-design/Pasted%20image%2020221207234620.png)
+![](/images/posts/workout-tracker-design/Pasted%20image%2020221207234620.png)
 
 And a much cleaner layer panel.
 
-![](/assets/i/workout-tracker-design/Pasted%20image%2020221207234650.png)
+![](/images/posts/workout-tracker-design/Pasted%20image%2020221207234650.png)
 
 
 ## Handover
@@ -607,7 +607,7 @@ However, I want to start coding and as much as possible not have to make adjustm
 
 
 ## Bottom Sheets
-![](/assets/i/workout-tracker-design/Pasted%20image%2020221208164919.png)
+![](/images/posts/workout-tracker-design/Pasted%20image%2020221208164919.png)
 
 According to the M3 Docs bottom sheets are 
 
@@ -617,26 +617,26 @@ I used the one without the scrim. A button can easily be connected to the bottom
 
 With the scrim it's not possible to change its width!
 
-![](/assets/i/workout-tracker-design/Pasted%20image%2020221208170541.png)
+![](/images/posts/workout-tracker-design/Pasted%20image%2020221208170541.png)
 
-![](/assets/i/workout-tracker-design/Pasted%20image%2020221208170439.png)
+![](/images/posts/workout-tracker-design/Pasted%20image%2020221208170439.png)
 
-![](/assets/i/workout-tracker-design/Pasted%20image%2020221208162229.png)
+![](/images/posts/workout-tracker-design/Pasted%20image%2020221208162229.png)
 
 So I ended up detaching the bottom sheet from it's main component to be able to put a list inside it and make it change its size according to the size of the items in the list.
 
 And made my own component out of it.
 
-![](/assets/i/workout-tracker-design/Pasted%20image%2020221208183036.png)
+![](/images/posts/workout-tracker-design/Pasted%20image%2020221208183036.png)
 
 ## Navigation Drawer
-![](/assets/i/workout-tracker-design/Pasted%20image%2020221208183259.png)
+![](/images/posts/workout-tracker-design/Pasted%20image%2020221208183259.png)
 
 ## Menu
 
-![](/assets/i/workout-tracker-design/Pasted%20image%2020221208183323.png)
+![](/images/posts/workout-tracker-design/Pasted%20image%2020221208183323.png)
 
-![](/assets/i/workout-tracker-design/Pasted%20image%2020221208185053.png)
+![](/images/posts/workout-tracker-design/Pasted%20image%2020221208185053.png)
 
 I decided to go with a menu rather than a bottom sheet for this one. Seems to be more common in this sort of situation in other apps, youtube an example. 
 
@@ -649,22 +649,22 @@ Now this will simplify a lot of things.
 
 This is a game changer! How did I not know that! What a fool! I went through a lot of trouble just because I never found this manual placement thing. Never! Damn! How much time have I wasted!!!!!!!!
 
-![](/assets/i/workout-tracker-design/Pasted%20image%2020221208190439.png)
+![](/images/posts/workout-tracker-design/Pasted%20image%2020221208190439.png)
 
 ## Dialogs (Creating a delete full delete interaction using M3 components)
 
 When the delete button is pressed. To delete a workout or exercise. The user should be promted with a confirmation message. The dialog coponent is perfect here.
 
-![](/assets/i/workout-tracker-design/Pasted%20image%2020221208191731.png)
+![](/images/posts/workout-tracker-design/Pasted%20image%2020221208191731.png)
 
 
-![](/assets/i/workout-tracker-design/Pasted%20image%2020221208191441.png)
+![](/images/posts/workout-tracker-design/Pasted%20image%2020221208191441.png)
 Found the Dialogs component in the component page. And made a few edits to it.
 Grabbed an instance. Turned it into a component, just in case I added any changes on top of it later. And dropped the component in the design page.
 
 It's not necessary to create another component on top of this one, but since I've done this for most of the other components. I should try to make things consistent. 
 
-![](/assets/i/workout-tracker-design/Pasted%20image%2020221208214155.png)
+![](/images/posts/workout-tracker-design/Pasted%20image%2020221208214155.png)
 
 So here's how I went about it:
 	- I made little adjustments to the original Dialog component. The ability to hide secodary text or title.
@@ -678,18 +678,18 @@ So here's how I went about it:
 	- As for the snicker I went to m3 found it's the component I need to use. Then I headed to the components page. Found it. Made some adjustments. Took an instance of it. Pasted it in my design file. Turned it into a component. Took an instance of it in the "Nav" section, then made the mentioned above connections to it.
 
 
-![](/assets/i/workout-tracker-design/Pasted%20image%2020221208224824.png)
+![](/images/posts/workout-tracker-design/Pasted%20image%2020221208224824.png)
 
 ## Responsive Table Using AutoLayout
 
 
-![](/assets/i/workout-tracker-design/Pasted%20image%2020221209014433.png)
+![](/images/posts/workout-tracker-design/Pasted%20image%2020221209014433.png)
 
-![](/assets/i/workout-tracker-design/Pasted%20image%2020221209014501.png)
+![](/images/posts/workout-tracker-design/Pasted%20image%2020221209014501.png)
 
 ## Productivity
 
-![](/assets/i/workout-tracker-design/Pasted%20image%2020221209021348.png)
+![](/images/posts/workout-tracker-design/Pasted%20image%2020221209021348.png)
 
 Instead of jumping in to the first area I notice. I take a different approach. I first notice an area  (for example I need to add an extended FAB button at the bottom of the page, I need to go to the FAB component, and ...) Instead of heading document immediately. I just press "C" and write a comment of what I thing should be done, all the steps, just a quick comment. Then I move on to the next area, and the next. Till I run out of ideas for the current page. I am still tacking one page not the whole design/docuemnt.
 
@@ -720,11 +720,11 @@ When tackling a new page. Before you start, or the moment you start feeling a bi
 
 Now you'll now exactly what you need to do to get this page done. You'll feel less lost, save time by batching this process, and also feel motivated to get all these comments resolved. It's like a visual task list.
 
-![](/assets/i/workout-tracker-design/Pasted%20image%2020221212233327.png)
+![](/images/posts/workout-tracker-design/Pasted%20image%2020221212233327.png)
 
 When I'm done with a task I'll check mark it as resolved, until none are left.
 
-![](/assets/i/workout-tracker-design/Pasted%20image%2020221212234915.png)
+![](/images/posts/workout-tracker-design/Pasted%20image%2020221212234915.png)
 
 The moment I notice a problem that needs to be fixed, or any task that needs to be done. I just write a comment, preferrably inside the partial wireframe, so I don't clutter a view with comments. So that I don't need to rediscover problems.
 
@@ -732,7 +732,7 @@ Perhaps it's best to put the unhandled comments above the screen itself. So that
 
 Comments can be inserted inside frames. Make sure a comment is inside the frame you want. Otherwise if you move the frame around the comment will not move with it and will be left pointing nowhere!
 
-![](/assets/i/workout-tracker-design/Pasted%20image%2020221213000706.png)
+![](/images/posts/workout-tracker-design/Pasted%20image%2020221213000706.png)
 
 I tackle each screen/page/view thoroughly with all its visible components and prototyping. Then I move to the next. 
 If I have to come back to the same screen it would be for theming and minor adjustments. But the hard work for this page should be done.
@@ -744,7 +744,7 @@ If I have to come back to the same screen it would be for theming and minor adju
 
 Generated colors using "M3 Theme Builder Plugin". Just doing that changed all the elements colors that I used, since they were already set with color styles with the same naming. Except for the very few custom colors that I had added.
 
-![](/assets/i/workout-tracker-design/Pasted%20image%2020221217055806.png)
+![](/images/posts/workout-tracker-design/Pasted%20image%2020221217055806.png)
 
 I just gave it an image that I wanted to use as the base for generating the theme and it was done!
 

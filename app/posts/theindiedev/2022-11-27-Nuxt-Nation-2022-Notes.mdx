@@ -4,7 +4,7 @@ layout: post
 author: Mostafa Lotfy
 section: Dev
 permalink: /dev/nuxt-nation-2022-notes
-image: /assets/i/nuxt-nation-2022/nuxt-nation-2022-thumbnail.png
+image: /images/posts/nuxt-nation-2022/nuxt-nation-2022-thumbnail.png
 ---
 
 ## On This Page
@@ -55,17 +55,17 @@ There are <CustomLink href="https://nuxtnation.com/workshops">Free workshops</Cu
 
 ## Nuxt 3.0 Stable {#nuxt-3-stable}
 
-![Nuxt 2 vs Nuxt 3](/assets/i/nuxt-nation-2022/Nuxt3-vs-nuxt2.png)
+![Nuxt 2 vs Nuxt 3](/images/posts/nuxt-nation-2022/Nuxt3-vs-nuxt2.png)
 
 - Vue2 used connect which is used by ExpressJs, now they use h3 which is one of the fastest Js frameworks and works in any environment (node, Cloudflare workers, ...)
 - Vue Router 4 is not included by default if you do not have a `pages` directory.
 - Nitro is a server, it uses h3 under the hood, but it's also a bundler (it will track all the dependencies and delivers an output that is less than 1 mega bite and can be deployed on any platform including Cloudflare workers)
 
-![Nuxt 3 javaScript size vs Nuxt 2](/assets/i/nuxt-nation-2022/nuxt3-js-size-vs-nuxt2-js-size.png)
+![Nuxt 3 javaScript size vs Nuxt 2](/images/posts/nuxt-nation-2022/nuxt3-js-size-vs-nuxt2-js-size.png)
 
 - Out of the 34.1KB, Vue is 25.3 and Nuxt is 8.7kB
 
-![Nuxt 3 is fast, it has Hybrid rendering, and SEO and web vitals](/assets/i/nuxt-nation-2022/nuxt-3-features.png)
+![Nuxt 3 is fast, it has Hybrid rendering, and SEO and web vitals](/images/posts/nuxt-nation-2022/nuxt-3-features.png)
 
 - Auto imports.
 - Components inside the `component` directory can be used without import.
@@ -294,9 +294,9 @@ You can also use the `<nuxt-picture>` tag
 
 - A series of proposals of ideas that are not yet officially implemented by Vue.
 
-![defineModel code example](/assets/i/nuxt-nation-2022/defineModel.png)
+![defineModel code example](/images/posts/nuxt-nation-2022/defineModel.png)
 
-![defineModel with reactivity transform code example](/assets/i/nuxt-nation-2022/defineModel-with-reactivity-transform.png)
+![defineModel with reactivity transform code example](/images/posts/nuxt-nation-2022/defineModel-with-reactivity-transform.png)
 
 macro vs runtime code
 a macro allows more complicated features to be implemented. 
@@ -398,7 +398,7 @@ export default defineNuxtModule<ModuleOptions>({
 
 ## How Nuxt 3 is allowing us to build faster apps {#nuxt-3-faster-apps}
 
-![As page load speed increases conversion rate decreases](/assets/i/nuxt-nation-2022/frontend-speed-conversion.png)
+![As page load speed increases conversion rate decreases](/images/posts/nuxt-nation-2022/frontend-speed-conversion.png)
 
 - Frontend is king.
 - 70% of customers admit that page speed impacts their willingness to buy from an online retailer. Deloitte
@@ -411,7 +411,7 @@ export default defineNuxtModule<ModuleOptions>({
 	- Core web vitals are key.
 	- The only metric that is going to tell you if the experience is good or bad is revenue. So good core web vitals do not necessarily mean that the experience is good, but bad core web vitals do mean that the experience is bad.
 
-![Core web vitals: LCP (largest contentful paint), FID (first input delay), and CLS (cumulative layout shifts)](/assets/i/nuxt-nation-2022/LCP-FID-CLS.png)
+![Core web vitals: LCP (largest contentful paint), FID (first input delay), and CLS (cumulative layout shifts)](/images/posts/nuxt-nation-2022/LCP-FID-CLS.png)
 
 What makes a good performance?
 - Main content is visible in less than 2.5 seconds.
@@ -420,9 +420,9 @@ What makes a good performance?
 
 Metrics from builder.io
 
-![Simple to do app speed comparison across different front end frameworks](/assets/i/nuxt-nation-2022/todo-app-frontend-frameworks-speed-comparison.png)
+![Simple to do app speed comparison across different front end frameworks](/images/posts/nuxt-nation-2022/todo-app-frontend-frameworks-speed-comparison.png)
 
-![Complex app speeds comparison across different frontend frameworks](/assets/i/nuxt-nation-2022/complex-app-frontend-frameworks-speed-comparison.png)
+![Complex app speeds comparison across different frontend frameworks](/images/posts/nuxt-nation-2022/complex-app-frontend-frameworks-speed-comparison.png)
 
 Benchmarks are useful but they are not the ultimate source of truths. So many things that can influence benchmarks.
 
@@ -473,27 +473,27 @@ To improve LCP and FID
 - Every time you run a cloud function, every time you call it it has to cold start the whole app. This used to take 314ms in Nuxt 2, now using nitro it takes 3ms only.
 - Cloud function have a limitation on disk space and went down from 51 152 KB in Nuxt 2 to 716 kB using nitro.
 
-![Different hosting providers (including cloudflare, netlify, and Vercel) that Nitro works with](/assets/i/nuxt-nation-2022/nitro-engine-toolbox.png)
+![Different hosting providers (including cloudflare, netlify, and Vercel) that Nitro works with](/images/posts/nuxt-nation-2022/nitro-engine-toolbox.png)
 
 ## Comparing Nuxt 2 to Nuxt 3 {#nuxt3-vs-nuxt2}
 
 - Now working with Vue3 instead of Vue2
 
-![Vue 3 main features; increased performance, TypeSCript support, and it works with composition API](/assets/i/nuxt-nation-2022/nuxt-best-features.png)
+![Vue 3 main features; increased performance, TypeSCript support, and it works with composition API](/images/posts/nuxt-nation-2022/nuxt-best-features.png)
 
 - Adding more features to Universal Rendering
 
-![Nuxt 3 has better performance, improved SEO, and allows for fast static site generation](/assets/i/nuxt-nation-2022/nuxt3-universal-rendering-improvements.png)
+![Nuxt 3 has better performance, improved SEO, and allows for fast static site generation](/images/posts/nuxt-nation-2022/nuxt3-universal-rendering-improvements.png)
 
-![Nuxt 3 runs anywhere, built for fast cold starts, and supports hybrid rendering](/assets/i/nuxt-nation-2022/Nuxt-3-universal-rendering.png)
+![Nuxt 3 runs anywhere, built for fast cold starts, and supports hybrid rendering](/images/posts/nuxt-nation-2022/Nuxt-3-universal-rendering.png)
 
 <CustomLink href="https://vueschool.io/articles/vuejs-tutorials/hybrid-rendering-in-nuxt-js-3/">Hybrid Rendering in Nuxt.js 3</CustomLink>
 
-![Zero-config Nuxt deploys on different platforms including Cloudflare pages, Vercel, and Netlify](/assets/i/nuxt-nation-2022/Nuxt-3-zero-config.png)
+![Zero-config Nuxt deploys on different platforms including Cloudflare pages, Vercel, and Netlify](/images/posts/nuxt-nation-2022/Nuxt-3-zero-config.png)
 
-![Nuxt 2 used Webpack and CLI tooling](/assets/i/nuxt-nation-2022/nuxt-tooling.png)
+![Nuxt 2 used Webpack and CLI tooling](/images/posts/nuxt-nation-2022/nuxt-tooling.png)
 
-![Nuxt 3 supports Vite and Nuxi CLI tooling](/assets/i/nuxt-nation-2022/nuxt3-tooling.png)
+![Nuxt 3 supports Vite and Nuxi CLI tooling](/images/posts/nuxt-nation-2022/nuxt3-tooling.png)
 
 File structure
 - `/pages`
@@ -517,12 +517,12 @@ useHead({
 	- lazy load components by prefixing with "lazy" `<LazyMountainList v-if="show" />`
 	- You can combine a directory structure to assemble a component name
 	
-![Nuxt 3 components directory](/assets/i/nuxt-nation-2022/nuxt-components-directory.png)
+![Nuxt 3 components directory](/images/posts/nuxt-nation-2022/nuxt-components-directory.png)
 
 - `/layouts` directory
 	- extract common UI or code patterns into reusable layouts
 
-![Nuxt 3 render page must be wrapped and uses slot element](/assets/i/nuxt-nation-2022/nuxt-slot.png)
+![Nuxt 3 render page must be wrapped and uses slot element](/images/posts/nuxt-nation-2022/nuxt-slot.png)
 - `/middleware`
 	- run code before navigating to a route
 	- define a global middleware by appending `.global` to the end of the file name. `~/middleware/log.global.js`
@@ -1055,7 +1055,7 @@ Over 300 devs working
 They started to add a couple of Vue components.
 They grew and had different teams to specifically handle different customer journeys. They switched from a monolith to a distributed application architecture
 
-![Jumbo adding Vue to the stack](/assets/i/nuxt-nation-2022/jumbo-stack-vue.png)
+![Jumbo adding Vue to the stack](/images/posts/nuxt-nation-2022/jumbo-stack-vue.png)
 
 As the system evolved the complexities increased.
 
@@ -1063,9 +1063,9 @@ They were using Vue and their apps were using Vue components.
 
 So they build a component library.
 
- ![Jumbo using Vue, CMS, and component library to handle apps](/assets/i/nuxt-nation-2022/jumbo-stack-vue-cms-components.png)
+ ![Jumbo using Vue, CMS, and component library to handle apps](/images/posts/nuxt-nation-2022/jumbo-stack-vue-cms-components.png)
 
-![Jumbo added nuxt to the stack](/assets/i/nuxt-nation-2022/jumbo-stack-nuxt-vue-cms-components.png) 
+![Jumbo added nuxt to the stack](/images/posts/nuxt-nation-2022/jumbo-stack-nuxt-vue-cms-components.png) 
  
 A lot of maintenance for all these micro apps, and for the component library
 
@@ -1101,11 +1101,11 @@ Instead, they built their system
 - Support SSR
 - Nuxt is an obvious candidate
 
-![Component library pointing to CMS](/assets/i/nuxt-nation-2022/jumbo-workflow.png)
+![Component library pointing to CMS](/images/posts/nuxt-nation-2022/jumbo-workflow.png)
 
-![Headless CMS connected to the adapter. An adapter is connected to the content service. And Content service connected to a database.](/assets/i/nuxt-nation-2022/jumbo-workflow-cms.png)
+![Headless CMS connected to the adapter. An adapter is connected to the content service. And Content service connected to a database.](/images/posts/nuxt-nation-2022/jumbo-workflow-cms.png)
 
-![customer with an arrow pointed to nuxt. Nuxt pointed to CMS. And CMS pointing to database](/assets/i/nuxt-nation-2022/jumbo-stack-nuxt.png)
+![customer with an arrow pointed to nuxt. Nuxt pointed to CMS. And CMS pointing to database](/images/posts/nuxt-nation-2022/jumbo-stack-nuxt.png)
 
 Challenges
 - Map 100s of components & props to one editor UI (To solve this they extract component properties from Vue and give them back to the CMS as config. They can tell the CMS editor that a component has certain props.)
@@ -1722,7 +1722,7 @@ useHead({title: ()=> ref.value})
 What's going on with `useHead`
 - Fully typed `useHead`
 - Reactive getter support
-![reactive getter code example](/assets/i/nuxt-nation-2022/nuxt-reactive-getter-support.png)
+![reactive getter code example](/images/posts/nuxt-nation-2022/nuxt-reactive-getter-support.png)
 - Array support
 - Prop promises
 - DOM event handlers
@@ -1743,9 +1743,9 @@ What's going on with `useHead`
 	- intended to be tree shaken from the client build
 	- Official Nuxt support coming soon (for now use it with manual imports, you can just import directly from the client)
 	
-![useSeoMeta code example](/assets/i/nuxt-nation-2022/useSeoMeta.png)
+![useSeoMeta code example](/images/posts/nuxt-nation-2022/useSeoMeta.png)
 
-![Nuxt-unhead get early access to experimental features at github.com/harlan-zw/nuxt-unhead](/assets/i/nuxt-nation-2022/nuxt-unhead-experimantal.png)
+![Nuxt-unhead get early access to experimental features at github.com/harlan-zw/nuxt-unhead](/images/posts/nuxt-nation-2022/nuxt-unhead-experimantal.png)
 
 ### Practical Nuxt 3 SEO Tips
 
@@ -2002,7 +2002,7 @@ import "@picocss/pico"
 
 - Run a dev server `$ npm run dev` and check the result.
 
-![Posts/Landing page with a list of posts and a link to each](/assets/i/nuxt-nation-2022/nuxt-blog-posts.png)
+![Posts/Landing page with a list of posts and a link to each](/images/posts/nuxt-nation-2022/nuxt-blog-posts.png)
 
 - Create `/pages/posts/[id].vue`
 
@@ -2052,9 +2052,9 @@ const { data: post } = await useFetch(
 
 Here's the result when clicking on a post.
 
- ![Post page with a title and body and a "Back Home" button](/assets/i/nuxt-nation-2022/nuxt-blog-post.png)
+ ![Post page with a title and body and a "Back Home" button](/images/posts/nuxt-nation-2022/nuxt-blog-post.png)
 
-![404 page with "Post not found" text](/assets/i/nuxt-nation-2022/404-nuxt-page.png)
+![404 page with "Post not found" text](/images/posts/nuxt-nation-2022/404-nuxt-page.png)
 
 Finally to deploy we might want to have some configurable rules at `nuxt.config.ts`.
 
@@ -2108,7 +2108,7 @@ Everything is going to be put into a single folder that can be deployed. Any nee
 
 There's also a `dist` folder which will have all the things that Netlify is going to the server from CDN. This will also include `_headers` and `_redirects` files which will configure Netlify to use builder functions.
 
-![.netlify folder prepared for deploying to Netlify](/assets/i/nuxt-nation-2022/deploy-nuxt-to-netlify-directory.png)
+![.netlify folder prepared for deploying to Netlify](/images/posts/nuxt-nation-2022/deploy-nuxt-to-netlify-directory.png)
 
 
 Deploying the output to Netlify will give you a URL to test it on. Using the link we can visit the site and see it working as expected.

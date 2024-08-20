@@ -5,7 +5,7 @@ author: Mostafa Lotfy
 section: Design
 permalink: /design/fab-material-design-3
 description: I finally started working on building my first app. And I decided to use Material Design 3 to design it. In the video above, I talk about a part of this design; The FAB (floating action button), and how I used it in the design of my app.
-image: /assets/i/v18/fab-thumbnail-3.png
+image: /images/posts/v18/fab-thumbnail-3.png
 ---
 
 
@@ -41,48 +41,48 @@ The FAB can only have an icon. But sometimes an icon is not enough to show what 
 
 If you check the <CustomLink href="https://m3.material.io/components/floating-action-button/overview">FAB</CustomLink>, and <CustomLink href="https://m3.material.io/components/extended-fab/overview">extended FAB</CustomLink> guideline pages on the material design website you'll find more guidelines and very specific info on how to use the FAB and how not to use it as well. 
 
-![Foundations page from the m3.material.ion website](/assets/i/v18/Pasted%20image%2020230127230659.png)
+![Foundations page from the m3.material.ion website](/images/posts/v18/Pasted%20image%2020230127230659.png)
 
 ## Apps Using A Floating Action Button
 
 Google Keep has a FAB embedded in the bottom Nav. That allows the user to quickly add a new note.
 
-![Google Keep app using a FAB](/assets/i/v18/Pasted%20image%2020230126233114.png)
+![Google Keep app using a FAB](/images/posts/v18/Pasted%20image%2020230126233114.png)
 
 And Gmail has an extended FAB to quickly compose a new email. 
 
-![Gmail using an extended FAB](/assets/i/v18/Pasted%20image%2020230126233245.png)
+![Gmail using an extended FAB](/images/posts/v18/Pasted%20image%2020230126233245.png)
 
 ## How I used a FAB in my App's Design
 
 While wireframing this is how I imagined the FAB. 
 
-![Hand-drawn Wire frame of my app with FAB](/assets/i/v18/Pasted%20image%2020230126232349.png)
+![Hand-drawn Wire frame of my app with FAB](/images/posts/v18/Pasted%20image%2020230126232349.png)
 
 I wanted a main FAB and when I click it 2 other FABs would come app. 
 
-![FAB from my wireframe drawn in Goonotes on the iPad](/assets/i/v18/Pasted%20image%2020230126232445.png)
+![FAB from my wireframe drawn in Goonotes on the iPad](/images/posts/v18/Pasted%20image%2020230126232445.png)
 
 This is an exercise-tracking app. So there would be 2 main actions that I want to have quick access to when I'm on any of the main pages. And a FAB is perfect for that.
 
 I thought I'd make adding a workout larger and adding an exercise smaller as adding a workout should happen more often than adding a new exercise.
 
-![Wireframe for my app clicked](/assets/i/v18/Pasted%20image%2020230126232516.png)
+![Wireframe for my app clicked](/images/posts/v18/Pasted%20image%2020230126232516.png)
 
 Clicking on a FAB that opens a list of FAB is inspired by MyNetDiary an app I'm currently using to track my calories.
 
-![FAB from MyNetDiary app](/assets/i/v18/Pasted%20image%2020230126232637.png)
+![FAB from MyNetDiary app](/images/posts/v18/Pasted%20image%2020230126232637.png)
 
 So my first attempt to implement this in Figma using the Material 3 kit. This is what you see in the image below.
 
-![FAB from the design of my app in Figma](/assets/i/v18/Pasted%20image%2020230126232737.png)
+![FAB from the design of my app in Figma](/images/posts/v18/Pasted%20image%2020230126232737.png)
 
 The icons I have do not make the action clear so I must use a label. However the extended FAB already has a place for a label, so I thought there is no need to customize the FAB and I used an extended FAB instead.
 
-![Extended FAB from the design of my app in Figma](/assets/i/v18/Pasted%20image%2020230126232826.png)
+![Extended FAB from the design of my app in Figma](/images/posts/v18/Pasted%20image%2020230126232826.png)
 
 When clicked it opens up 2 extended FABs, There is no need to have a dismiss FAB when I can just click anywhere outside the buttons. I can dismiss taking an action.
-![2 extended FAB in the design of my app using Material 3 components](/assets/i/v18/Pasted%20image%2020230126232847.png)
+![2 extended FAB in the design of my app using Material 3 components](/images/posts/v18/Pasted%20image%2020230126232847.png)
 
 
 
@@ -94,7 +94,7 @@ When clicked it opens up 2 extended FABs, There is no need to have a dismiss FAB
 
 You can follow the link above and all you need to do is press "Get a copy" and you'll have a copy of it in your drafts folder.
 
-![Material 3 design kit in figma](/assets/i/v18/Pasted%20image%2020230126214510.png)
+![Material 3 design kit in figma](/images/posts/v18/Pasted%20image%2020230126214510.png)
 
 ### 2. Add a device frame to a new page
 
@@ -102,13 +102,13 @@ Create a new page for our design. And add a frame.
 
 I added an Android large device frame from the presets.
 
-![Crating a large android device frame in Figma](/assets/i/v18/Pasted%20image%2020230126231027.png)
+![Crating a large android device frame in Figma](/images/posts/v18/Pasted%20image%2020230126231027.png)
 
 ### 3. Grab an instance of the device component and drop it in our device frame
 
 This step is optional. If you want you can grab a device frame from the "Styles" page. And adjust the constraints of its elements to always stick to our frame.
 
-![Adding a device inside a frame in Figma](/assets/i/v18/Pasted%20image%2020230126223410.png)
+![Adding a device inside a frame in Figma](/images/posts/v18/Pasted%20image%2020230126223410.png)
 
 ### 4. Grab an instance of the extended FAB from the components page
 
@@ -116,59 +116,59 @@ Before grabbing an instance of the Extended FAB component. Make prototype connec
 
 Do this for the Primary and secondary FABs as we'll use both.
 
-![Making prototype connections to the material 3 component in Figma](/assets/i/v18/Pasted%20image%2020230126223620.png)
+![Making prototype connections to the material 3 component in Figma](/images/posts/v18/Pasted%20image%2020230126223620.png)
 
 Then just grab a copy of the primary FAB and drop it into our design page to take an instance of it.
-![Extended FAB dropped into our design frame](/assets/i/v18/Pasted%20image%2020230126223728.png)
+![Extended FAB dropped into our design frame](/images/posts/v18/Pasted%20image%2020230126223728.png)
 
 ### 5.  Edit the Label and Icon of the FAB
 
 
-![Zoomed in on the extended FAB and edited it](/assets/i/v18/Pasted%20image%2020230126223826.png)
+![Zoomed in on the extended FAB and edited it](/images/posts/v18/Pasted%20image%2020230126223826.png)
 
 ### 6. Test the FAB's hover and press states
 
 First turn it into a component, as we'll add a variant to it soon.
 
-![Mouse hovering above the "Create component" button while the FAB instance is selected](/assets/i/v18/Pasted%20image%2020230126223944.png)
+![Mouse hovering above the "Create component" button while the FAB instance is selected](/images/posts/v18/Pasted%20image%2020230126223944.png)
 
 Then grab a copy of it and drop it inside our device frame.
 
-![An instance of our custom FAB component placed inside the frame of our design](/assets/i/v18/Pasted%20image%2020230126224159.png)
+![An instance of our custom FAB component placed inside the frame of our design](/images/posts/v18/Pasted%20image%2020230126224159.png)
 
 Present it, hover it, and press on it.
 
-![Presenting the design and pressing on the FAB and it changes to the pressed state](/assets/i/v18/Pasted%20image%2020230126224234.png)
+![Presenting the design and pressing on the FAB and it changes to the pressed state](/images/posts/v18/Pasted%20image%2020230126224234.png)
 
 ### 7. Add an open-state variant
 
 Add a new variant to our extended FAB.
 
-![FAB custom component selected and mouse about click the "Add variant" button](/assets/i/v18/Pasted%20image%2020230126224309.png)
+![FAB custom component selected and mouse about click the "Add variant" button](/images/posts/v18/Pasted%20image%2020230126224309.png)
 
 The new variant is 2 FABs on top of each other. 
 
-![Open state with 2 FABs ](/assets/i/v18/Pasted%20image%2020230126224455.png)
+![Open state with 2 FABs ](/images/posts/v18/Pasted%20image%2020230126224455.png)
 
 For the Add button to change to its open state, we'll use an overlay. 
 
-![The enabled state of our custom FAB connected to an overlay](/assets/i/v18/Pasted%20image%2020230126224702.png)
+![The enabled state of our custom FAB connected to an overlay](/images/posts/v18/Pasted%20image%2020230126224702.png)
 
 An overlay is going to open right on top of the Add FAB and cover it. 
 
-![](/assets/i/v18/Pasted%20image%2020230126224750.png)
+![](/images/posts/v18/Pasted%20image%2020230126224750.png)
 
 Check the close when clicking outside, so we can dismiss the overlay and the open state when we click anywhere on the page away from the buttons.
 
-![The overlay placed right on top of the FAB](/assets/i/v18/Pasted%20image%2020230126224809.png)
+![The overlay placed right on top of the FAB](/images/posts/v18/Pasted%20image%2020230126224809.png)
 
 You can now present our design and see the FAB in action.
 
-![FAB is in an open stated and hovering mouse hovering above the create workout button](/assets/i/v18/Pasted%20image%2020230126224848.png)
+![FAB is in an open stated and hovering mouse hovering above the create workout button](/images/posts/v18/Pasted%20image%2020230126224848.png)
 
 Finally, you can add a couple of pages with back buttons, so you can have a mini prototype.
 
-![Couple of new pages added and adding an on tap back](/assets/i/v18/Pasted%20image%2020230126224952.png)
+![Couple of new pages added and adding an on tap back](/images/posts/v18/Pasted%20image%2020230126224952.png)
 
 
 ## Links 

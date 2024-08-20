@@ -5,7 +5,7 @@ author: Mostafa Lotfy
 section: Dev
 permalink: /design/figma-to-code-html-css
 description:   
-image: /assets/i/dev9/figma-to-code-responsive-website-html-css-jekyll-article-cover.png
+image: /images/posts/dev9/figma-to-code-responsive-website-html-css-jekyll-article-cover.png
 ---
 
 In this article, I want to show you how I took a Figma design and turned it into a live website using HTML & CSS. And finally deployed it with Jekyll and GitHub pages.
@@ -16,11 +16,11 @@ As an exercise to learn Figma, I redesigned my website.
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/2U750Bd3CbM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-![a design of a mobile webpage inside Figma](/assets/i/dev9/figma-responsive-design-website-mobile-figma-to-code.png)
+![a design of a mobile webpage inside Figma](/images/posts/dev9/figma-responsive-design-website-mobile-figma-to-code.png)
 
 I implemented this Figma design into my website.
 
- ![Same design as above implemented with html and css and running live on my website mstflotfy.com](/assets/i/dev9/figma-to-code-html-css-mstflotfy-responsive-website-mobile.png)
+ ![Same design as above implemented with html and css and running live on my website mstflotfy.com](/images/posts/dev9/figma-to-code-html-css-mstflotfy-responsive-website-mobile.png)
     
 You can see the <CustomLink href="https://www.figma.com/community/file/1051279558347794166">Figma design file here</CustomLink>, and if you're not already there, [you can visit the live website here](http://mstflotfy.com/).  
 
@@ -30,7 +30,7 @@ Also, here's a <CustomLink href="https://github.com/mstflotfy/mstflotfy-redesign
 	
 ## Step 1 -- Designing An Entire Website In Figma
 
-![Figma file for mstflotfy.com redesign with full pages and components](/assets/i/dev9/figma-file-full-design-and-components.png)
+![Figma file for mstflotfy.com redesign with full pages and components](/images/posts/dev9/figma-file-full-design-and-components.png)
 
 This is the starting point.
 
@@ -41,7 +41,7 @@ In <CustomLink href="https://youtu.be/LTmHoRJLcuY">this first video</CustomLink>
 
 In this <CustomLink href="https://www.figma.com/community/file/1051279558347794166">Figma Community file</CustomLink>, you can find the final design.
 
-![Figma community that can be duplicated](/assets/i/dev9/free-figma-community-file-full-design-and-prototype-for-personal-webiste.png)
+![Figma community that can be duplicated](/images/posts/dev9/free-figma-community-file-full-design-and-prototype-for-personal-webiste.png)
 
 As for responsiveness, I made three designs; for desktop, tablet, and mobile. Then I figured out the in-between sizes while I was coding.
 
@@ -51,7 +51,7 @@ So basically, I didn't start from scratch. I had a Figma file with components an
 
 ## Step 2-- Prep The Figma File For Coding
 
-![free figma community file. website design and design system in figma.](/assets/i/dev9/free-figma-file-personal-website-design-system.png)
+![free figma community file. website design and design system in figma.](/images/posts/dev9/free-figma-file-personal-website-design-system.png)
 
 
 I was itching to jump straight into code. 
@@ -75,7 +75,7 @@ Also, I limited the color palette. And tried to use it consistently across eleme
 
 Finally, I had to think of readability. I used <CustomLink href="https://color.adobe.com/create/color-contrast-analyzer">Adobe Color's Contrast Checker</CustomLink> to do this. This made me change the color slightly for some fonts and adjust the type scale to make sure smaller font sizes are readable.
 
-![A screenshot of Adobe color's contrast checker](/assets/i/dev9/adobe-color-contrast-tool-screenshot.png)
+![A screenshot of Adobe color's contrast checker](/images/posts/dev9/adobe-color-contrast-tool-screenshot.png)
 
 ### Naming Components And Elements
 I wanted to name components and elements in a consistent way across the design and code.
@@ -110,11 +110,11 @@ Using <CustomLink href="https://code.visualstudio.com/">Visual Studio Code</Cus
 
 I started by setting some <CustomLink href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties">CSS variables</CustomLink>. 
 
-![CSS variables applied to the root element](/assets/i/dev9/css-variables-example.png)
+![CSS variables applied to the root element](/images/posts/dev9/css-variables-example.png)
 
 I used the styles that I set in the <CustomLink href="https://www.figma.com/community/file/1144516865792093918">Figma file</CustomLink>.
 
-![Text and color styles from the Figma design](/assets/i/dev9/figma-text-color-styles.png)
+![Text and color styles from the Figma design](/images/posts/dev9/figma-text-color-styles.png)
 
 Then I finished styling all the pages for the desktop design, intentionally ignoring responsiveness. 
 
@@ -126,7 +126,7 @@ Mainly targeting elements using classes, I tried to minimize other selectors but
 
 I also used Figma's "Inspect panel", It's not a copy-and-paste solution, but it helped a lot.
 
-![Figma's code inspector panel showing CSS code for the header design](/assets/i/dev9/figma-code-inspector-panel-example.png)
+![Figma's code inspector panel showing CSS code for the header design](/images/posts/dev9/figma-code-inspector-panel-example.png)
 
 Having the fonts set using rem instead of pixels helped make this easier.
 
@@ -140,7 +140,7 @@ To actually deploy the website, I had to find a way to integrate this HTML and C
 
 ## Step 5-- Integrating The HTML & CSS into Jekyll
 
-![Jekyll static website generator web page screenshot](/assets/i/dev9/jekyll-landing-page.png)
+![Jekyll static website generator web page screenshot](/images/posts/dev9/jekyll-landing-page.png)
 
 <CustomLink href="https://jekyllrb.com/">Jekyll</CustomLink> is a static site generator. I use Jekyll so that I can write my articles in <CustomLink href="https://en.wikipedia.org/wiki/Markdown">Markdown</CustomLink>, push them to GitHub, and the changes would go live.
 
@@ -152,7 +152,7 @@ I already knew how Jekyll generally works. I didn't go too deep into it, and I d
 
 While setting things up in Jekyll, I tested locally on many different browsers.
 
-![Testing my code in browser for many devices](/assets/i/dev9/testing-website-locally.png)
+![Testing my code in browser for many devices](/images/posts/dev9/testing-website-locally.png)
 
 When I got decent results, I committed the changes and pushed them to the GitHub repo hosted on GitHub pages. In a couple of minutes, it was up and running.
 
