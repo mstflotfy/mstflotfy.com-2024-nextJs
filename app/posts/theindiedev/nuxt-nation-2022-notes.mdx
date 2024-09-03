@@ -10,7 +10,7 @@ categories: ['dev']
 tags: ['nuxtjs', 'notes']
 ---
 
-## On This Page
+{/* ## On This Page
 1. [Nuxt Nation](#nuxt-nation)
 2. [Nuxt 3.0 Stable](#nuxt-3-stable)
 3. [Client-side Error Handling In Nuxt](#client-side-error-nuxt)
@@ -44,9 +44,9 @@ tags: ['nuxtjs', 'notes']
 32. [Nuxt Security](#nuxt-security)
 33. [Supercharged `<head>` management](#head-management-nuxt)
 34. [Beyond Static: Building with Nuxt 3 and Nitro](#nuxt-3-nitro)
-35. [Tools To Explore](#tools)
+35. [Tools To Explore](#tools) */}
 
-## [Nuxt Nation](https://nuxtnation.com/) {#nuxt-nation} 
+## [Nuxt Nation](https://nuxtnation.com/) 
 
 Nuxt Nation is an online event that is held by Vue School, with speakers such as the Nuxt and Vue authors.
 
@@ -56,7 +56,7 @@ Some of the talks, that I took notes from can be found on the <CustomLink href="
 
 There are <CustomLink href="https://nuxtnation.com/workshops">Free workshops</CustomLink> from Nuxt Nation, with limited seats.
 
-## Nuxt 3.0 Stable {#nuxt-3-stable}
+## Nuxt 3.0 Stable 
 
 ![Nuxt 2 vs Nuxt 3](/images/posts/nuxt-nation-2022/Nuxt3-vs-nuxt2.png)
 
@@ -79,7 +79,7 @@ There are <CustomLink href="https://nuxtnation.com/workshops">Free workshops</Cu
 - Modules.
 - content directory for building pages with markdown.
 
-## Client Side Error Handing In Nuxt {#client-side-error-nuxt}
+## Client Side Error Handing In Nuxt 
 
 - <CustomLink href="https://michaelnthiessen.com/">Michael Thiessen</CustomLink>
 
@@ -200,7 +200,7 @@ If you navigate away without resetting the error the error will still be there. 
 
 The error can return an object as well as a message.
 
-## Vue Js Composables {#vue-composable}
+## Vue Js Composables 
 
 - Inside a composable directory you can refactor code that you repeatedly use.
 - Nuxt will automatically pick up that you created the composable and you can use it in your pages script tag and it will be automatically imported.
@@ -240,7 +240,7 @@ export default ({ title, description }) => {
 }
 ```
 
-## Nuxt Image {#nuxt-image}
+## Nuxt Image 
 
 <CustomLink href="https://v1.image.nuxtjs.org">https://v1.image.nuxtjs.org</CustomLink>
 
@@ -293,7 +293,7 @@ You can also use the `<nuxt-picture>` tag
 </template>
 ```
 
-## Vue Macros {#vue-macros}
+## Vue Macros 
 
 - A series of proposals of ideas that are not yet officially implemented by Vue.
 
@@ -304,7 +304,7 @@ You can also use the `<nuxt-picture>` tag
 macro vs runtime code
 a macro allows more complicated features to be implemented. 
 
-## Nuxt Rendering Modes {#nuxt-rendering-modes}
+## Nuxt Rendering Modes 
 
 <CustomLink href="https://nuxt.com/docs/guide/concepts/rendering/">Nuxt rendering docs</CustomLink>
 
@@ -313,7 +313,7 @@ a macro allows more complicated features to be implemented.
 - Hybrid Rendering. No need to choose just one rendering mode for the whole app (client or server-side rendering). You can define rendering rules for a group of routes. 
 - We can for example set a blog as a static that gets rendered only once, then set another part of the app to be SSR.
 
-## Nuxt Custom Dev Tools {#nuxt-custom-dev-tools}
+## Nuxt Custom Dev Tools 
 
 use-cases
 - Activate/deactivate Feature flags
@@ -399,7 +399,7 @@ export default defineNuxtModule<ModuleOptions>({
 ```
 
 
-## How Nuxt 3 is allowing us to build faster apps {#nuxt-3-faster-apps}
+## How Nuxt 3 is allowing us to build faster apps 
 
 ![As page load speed increases conversion rate decreases](/images/posts/nuxt-nation-2022/frontend-speed-conversion.png)
 
@@ -478,7 +478,7 @@ To improve LCP and FID
 
 ![Different hosting providers (including cloudflare, netlify, and Vercel) that Nitro works with](/images/posts/nuxt-nation-2022/nitro-engine-toolbox.png)
 
-## Comparing Nuxt 2 to Nuxt 3 {#nuxt3-vs-nuxt2}
+## Comparing Nuxt 2 to Nuxt 3 
 
 - Now working with Vue3 instead of Vue2
 
@@ -530,7 +530,7 @@ useHead({
 	- run code before navigating to a route
 	- define a global middleware by appending `.global` to the end of the file name. `~/middleware/log.global.js`
 	- Middleware definition
-	```js
+```js
 	// middleware/log.js
 export default defineNuxtRouteMiddleware((to, from) => {
 	return navigateTo('/login') // a redirect
@@ -550,7 +550,7 @@ export default defineNuxtRouteMiddleware((to, from) => {
 	- Will bring Nitro, Vite, Composition API, Script setup, Auto imports, and other features will be backported to your Nuxt 2 project. Then you can start to incrementally migrate.
 	- There are some steps it's not installed and it's done.
 
-## Multi-Variant Apps With Nuxt3 {#multi-variant-apps}
+## Multi-Variant Apps With Nuxt3 
 
 - Use theming and configs as the base of multiple Nuxt projects.
 - Projects that have a designated version per customer.
@@ -633,7 +633,7 @@ Upcoming features
 	- e.g. `~layerName` - `~layerName/assets/logo.png`
 - Follow #3222 for updates of `extends`
 
-## Building and deploying mobile apps with Nuxt/Ionic {#nuxt-ionic}
+## Building and deploying mobile apps with Nuxt/Ionic 
 
 - <CustomLink href="http://ionic.link/3f385om">Presentation Link</CustomLink>
 - <CustomLink href="https://github.com/ceceliacreates/nuxt-ionic-demo/blob/main/pages/index.vue">Demo repo</CustomLink>
@@ -956,11 +956,11 @@ main features
 - You can turn any web project you have into a mobile app using Capacitor, Ionic components are just what give you the native look and feel.
 
 
-## Good solutions for working with Icons in Nuxt {#nuxt-icons}
+## Good solutions for working with Icons in Nuxt 
 
 - Nuxt-icon, uses Iconify. Nuxt's author is working on making it the one recommended solution.
 
-## Why use Nuxt when you can do it yourself with Vite? (Nuxt Vs. Vite functionalities differences) {#nuxt-vs-vite}
+## Why use Nuxt when you can do it yourself with Vite? (Nuxt Vs. Vite functionalities differences) 
 
 - Nuxt provides an echo system for ready-to-use solutions
 - Nuxt is stable
@@ -973,14 +973,14 @@ main features
 - Vite is a shared common tooling layer that meta frameworks are built on. 
 - So the question is are you trying to build your meta-framework using Vite, or do you want to use a meta-framework that is already polished (Nuxt)
 
-## How do you balance your primary job with maintaining open-source projects? {#work-balance}
+## How do you balance your primary job with maintaining open-source projects? 
 - Managing multiple big projects is a challenge.
 - Find the right people.
 - Build a team.
 - Delegate.
 - Let them take on more responsibilities.
 
-## Does `npx nuxi generate` scale? Is there a plan for an ISR (incremental static regeneration)? {#isr-nuxt}
+## Does `npx nuxi generate` scale? Is there a plan for an ISR (incremental static regeneration)? 
 
 - When you use `nuxi generate` in Nuxt 3 it generates a fully static output that, during the build time, pre-renders every possible route and their data in the payload and you can deploy it on any hosting service.
 - For a normal website (with the build of pages) it is possible at build time, but when we have lots of articles the build time gets longer and longer. And like a shop, we don't need to rebuild every possible page at runtime.
@@ -994,7 +994,7 @@ main features
 - You can also use a caching layer and normal NodeJs and it will work as well.
 
 
-## Are there any other big meta frameworks like Nuxt that use Vite? {#meta-frameworks-with-vite}
+## Are there any other big meta frameworks like Nuxt that use Vite? 
 
 - Quaiser already supports using Vite.
 - Vite press, a static site generator.
@@ -1002,7 +1002,7 @@ main features
 
 - Astro is a Vite-based meta-framework that's framework agnostic.
 
-## Which is better to create a large app Next.js or Nuxt.js? {#nuxt-vs-next}
+## Which is better to create a large app Next.js or Nuxt.js? 
 
 - They both work.
 - Both are fast.
@@ -1012,13 +1012,13 @@ main features
 - Evaluate based on your needs and preferences.
 - Both Vue and react are massively popular and both provide good community support, so go with the one that better fits your mental model.
 
-## Micro-frontend Architecture in Nuxt 3? {#Micro-frontend-in-nuxt}
+## Micro-frontend Architecture in Nuxt 3? 
 
 - They had some experiments to support web components to integrate different apps. Through experience, they found out it doesn't work because Nuxt itself is like a host it can be integrated with some sub-apps like components, so they created a system called extends which can combine different apps and use Nuxt like a host.
 - So right now it's not in the plan to support Microfrontend, 
 - but there are hopes, as they are working on a new feature called component islands. Component islands are standalone and they can integrate with the whole application. They can, at some point, extract it and support different frameworks, Those components could run on any framework and be hydrated by themselves.
 
-## Can you talk about clean architecture and why we should or should not apply it to front-end development? {#clean-architecture-frontend}
+## Can you talk about clean architecture and why we should or should not apply it to front-end development? 
 
 - If you're working with a frontend codebase typically your framework dictates the way you organize code already so you'd best follow the conventions of the framework you've chosen, instead of imposing too much architectural complexity on yourself. 
 - Typically (these design patterns of clean architecture) these conventions are designed for situations where you have a really big team, for example, 100 devs working in a huge organization. If you're not in such an environment you don't have that problem.
@@ -1026,12 +1026,12 @@ main features
 - A lot of front-end projects have smaller teams, unlike large back-end projects. 
 - Most front-end projects don't need to go there.
 
-## How to use concurrency and interval properties in NuxtJs static mode, when there are many headless cams data API calls on hundreds of pages? {#concurrency-in-nuxt-static}
+## How to use concurrency and interval properties in NuxtJs static mode, when there are many headless cams data API calls on hundreds of pages? 
 
 - No specific option for it, it's automated. This is handled by Nitro.
 - Or since you have more than a hundred pages, it's probably better to use hybrid rendering and ISR to generate on demand. Instead of pre-rendering all of them.
 
-## What is the process of becoming a Nuxt ambassador? {#become-nuxt-ambassador}
+## What is the process of becoming a Nuxt ambassador? 
 
 - Right now there is no defined process.
 - Thinking of a new program that allows everyone to get involved.
@@ -1039,13 +1039,13 @@ main features
 - Anyone is an ambassador by advocation, the Nuxt team is thinking about how to get ambassadors rewarded. Info will be given on this next year.
 - Everyone is encouraged to write articles, and explain any project that uses Vue, Vite, or Nuxt. Until you get noticed.
 
-## What are the next big steps for Nuxt, Vite, and Vue? {#vue-next-steps}
+## What are the next big steps for Nuxt, Vite, and Vue? 
 
 - For Vite. working on Vite 4, perhaps in a month. The main theme of the upgrade is upgrading to roll-ups 3 and other things that are related to the react echo system.
 - For Nuxt: Component islands, improvements for hybrid rendering (the ability to specify at the page level). Improving modules to work seamlessly in Nuxt; image, auth. And lots of docs.
 - For Vue: SSR-related improvements (built-in ability to lazy or on-demand hydrate async components), Vue Promote (new compilation strategy for Vue components) similar to solid Js, should result in better performance and better memory footprint, won't affect the way you write code, but the code should be faster, lighter, and more performant. Most improvements should also automatically benefit Nuxt users.
 
-## Nuxt In Large Companies {#nuxt-in-large-companies}
+## Nuxt In Large Companies 
 
 Nuxt as a backbone of a scalable platform
 
@@ -1122,7 +1122,7 @@ Which CMS does JUMBO use?
 - What you see is what you get editing.
 - It can also render and cache pages well.
 
-## Nuxt Extends {#nuxt-extends}
+## Nuxt Extends 
 
 - Allow you to extend one Nuxt application with another one.
 - Theming is a perfect example of Nuxt extends usage.
@@ -1180,7 +1180,7 @@ So now we can add these components to our Nuxt app.
 
 So Nuxt extends to allow you to build reusable Nuxt themes.
 
-## Pinceau {#pinceau}
+## Pinceau 
 
 <CustomLink href="https://github.com/Tahul/pinceau">piceau</CustomLink>
 
@@ -1195,7 +1195,7 @@ So Nuxt extends to allow you to build reusable Nuxt themes.
 - Pinceau config is compatible with the design tokens format.
 - Pinceau config is compatible with design tools like Figma and Sketch
 
-## End-to-End Type Safety with Nuxt and tRPC {#nuxt-trpc}
+## End-to-End Type Safety with Nuxt and tRPC 
 
 - <CustomLink href="https://trpc-nuxt.vercel.app/">trpc-nuxt.vercel.app</CustomLink>
 - <CustomLink href="https://github.com/wobsoriano/trpc-nuxt">trpc-nuct github</CustomLink>
@@ -1401,7 +1401,7 @@ Does tRPC provide runtime validation or is it all about types for use at develop
 Is trpc-nuxt ready for production?
 Not yet.
 
-## Add 3D to your Nuxt app with Three.js {#nuxt-threejs}
+## Add 3D to your Nuxt app with Three.js 
 
 - ThreeJS is a library that leverages WebGL to render 3D scenes on the web. (Basically makes it easier to use 3D in the browser)
 
@@ -1564,7 +1564,7 @@ Any performance gotcha's that are important to watch out for when using ThreeJs 
 - You can use a shallow ref and wrap to manage it, especially if using composable.
 - Extract the logic from the experience and put it composables (all the logic for the render)
 
-## <CustomLink href="https://unjs.io">UNJS</CustomLink> and Nuxt 3 {#unjs-nuxt3}
+## <CustomLink href="https://unjs.io">UNJS</CustomLink> and Nuxt 3 
 
 <CustomLink href="https://docs.google.com/presentation/d/1li7HfYo1ZTEnFCdpZuSO1k2ba5V7piGKat9NV_ryLVY/edit#slide=id.p">Presentation link</CustomLink>
 
@@ -1642,7 +1642,7 @@ Works out of the box for any deployment platform
 - Combines different packages to make an experience similar to Nuxt but for the server side. ??
 
 
-## What is headless? {#what-is-headless}
+## What is headless? 
 
 <CustomLink href="https://github.com/Baroshem/headless-avuengers">Example app using Storyblok and Algolia with Nuxt</CustomLink>
 
@@ -1662,7 +1662,7 @@ Stack
 - Storyblok Nuxt
 - Nuxt Algolia
 
-## <CustomLink href="https://nuxt-security.vercel.app">Nuxt Security</CustomLink> {#nuxt-security}
+## <CustomLink href="https://nuxt-security.vercel.app">Nuxt Security</CustomLink> 
 
 ```shell
 yarn add nuxt-security
@@ -1671,7 +1671,7 @@ yarn add nuxt-security
 Security module for Nuxt based on OWASP Top 10 and Helmet
 Just by importing this module, you're making your app a bit more secure.
 
-## Supercharged `<head>` management {#head-management-nuxt}
+## Supercharged `<head>` management 
 
 Vue head v1 and the future of SEO with Nuxt v3
 
@@ -1779,7 +1779,7 @@ The Nuxt CSS option does some CSS optimization, inlining it.
 If you use useHead it would be a link and you'd have to make an HTTP request for the style sheet.
 Stick to the CSS option, unless you need some sort of async script, that is not essential for your app you can use useHead for it.
 
-## Beyond Static: Building with Nuxt 3 and Nitro {#nuxt-3-nitro}
+## Beyond Static: Building with Nuxt 3 and Nitro 
 
 In Nuxt 3, it is possible to create fully hybrid sites. Which have individual route rules, which enable different rendering strategies for different sections of your website.
 
@@ -2128,7 +2128,7 @@ For the about page, the first fetch request is the `age=0`, but on subsequent re
 
 It means that you don't need to redeploy when you change the content of CMS if you're using hybrid rendering.
 
-## Tools To Explore {#tools}
+## Tools To Explore 
 
 - <CustomLink href="https://docus.dev/">Docus</CustomLink> -- Create your own Docs with Nuxt.
 - Nuxt typography
