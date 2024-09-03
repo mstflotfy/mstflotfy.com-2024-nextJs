@@ -6,11 +6,12 @@ section: Design
 permalink: /design/figma-negative-stack-card-component-in-5steps/
 description: How to use Figma's interactive components to easily make a dropdown menu.
 image: /images/posts/v15/figma-negative-stacked-card-component-indieDev-mstflotfy.png
+date: "2022-06-18"
 ---
 
 In this article, I want to show you how I used **auto layout** and **components** to recreate the pin stack you see above (from the Pinterest design) in Figma.
 
-I broke this down into 12 mini-steps:
+{/* I broke this down into 12 mini-steps:
 
 1. [Grab screenshots to have quick in-page references.](#screenshot)
 2. [Inspect Pinterest's code to get precise measurements for the design elements.](#inspect)
@@ -23,10 +24,15 @@ I broke this down into 12 mini-steps:
 9. [Add an icon (boolean) component property](#bool-prop)
 10. [Take instances of the component](#instances)
 11. [Add a hover variant](#hover-variant)
-12. [Present and test the design](#present)
+12. [Present and test the design](#present) */}
 
 <small>
-	You can also watch it on [YouTube](https://www.youtube.com/c/mstflotfyindieDev){:target="_blank rel="noreferrer"}. 
+	You can also watch it on 
+	<a
+	src="https://www.youtube.com/c/mstflotfyindieDev"
+	target="_blank"
+	rel="noopener"
+	>YouTube</a>
 </small>
 
 <small>
@@ -35,9 +41,16 @@ I broke this down into 12 mini-steps:
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/pHuh--cYx9o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-## 1 Take Screenshots For Reference {#screenshot}
+## 1 Take Screenshots For Reference 
 
-I'm making a **Pinterest Clone in Figma** as an exercise to to work on developing an eye for good **Ui & Ux**. [Check out my Pinterest Clone In Figma playlist](https://www.youtube.com/playlist?list=PLsOexrcoU3Q4b-dI6chgagDntDD-AgetO){:target="_blank rel="noreferrer"}
+I'm making a **Pinterest Clone in Figma** as an exercise to to work on developing an eye for good **Ui & Ux**. 
+<a
+	href="https://www.youtube.com/playlist?list=PLsOexrcoU3Q4b-dI6chgagDntDD-AgetO"
+	target="_blank"
+	rel="noreferrer"
+>
+	Checkout my Pinterest Clone In Figma playlist
+</a>
 
 So, I started by heading to the Pinterest website and grabbing screenshots of the parts of the design I am going to copy.
 
@@ -51,7 +64,7 @@ We have **2 card stacks** that are almost identical except that they have **diff
 
 The second screenshot shows the **hover state**. It's hard to see in the screenshot but there is a **subtle difference on hover** that makes the card stack just a tiny **bit darker**.
 
-## 2 Inspect Code For Precise Measurements {#inspect}
+## 2 Inspect Code For Precise Measurements 
 
 Since this is just an exercise you can size elements just by eying them, which I always do for exercises. But I found it **insightful** to dig in and have a look at the **actual sizes** of the elements.
 
@@ -121,7 +134,7 @@ One last thing we need to grab is the dimensions of the lock icon (**32 * 32 px*
 	You can see this if you open the toggle device toolbar and change to a smaller device, all the sizes we took are the same, even the text! but the grid adapts by presenting fewer columns
 </small>
 
-## 3 Grab An Image From Unsplash {#unsplash}
+## 3 Grab An Image From Unsplash 
 
 We need an image to work with so grab one from **Unsplash**. 
 
@@ -136,13 +149,13 @@ To quickly open the Unsplash plugin (or any other plugin), get the quick access 
 
 Select any image and it will be dropped into your canvas.
 
-## 4 Set Image Properties {#image-properties}
+## 4 Set Image Properties 
 
 ![Image zoomed-in, given rounded corners, width, and height](/images/posts/v15/image-width-height-radius.png)
 
 Select the image and give it the dimensions we grabbed from the inspector earlier; a width of <kbd>116px</kbd> and a height of <kbd>155px</kbd>. And give it a <kbd>16px</kbd> corner radius.
 
-## 5 Auto Layout Frame (Images Container) {#images-container}
+## 5 Auto Layout Frame (Images Container) 
 
 According to our in-page reference (the screenshot), we want to have 4 images stacked on top of each other.
 
@@ -200,7 +213,7 @@ Inspecting the code again, I found a property of the image that we missed. It ha
 
 To select all 4 images at the same time, select the **"images"** frame and press <kbd>Enter</kbd>. At the design panel, go to strokes and press on the **+** icon next to it to add a stroke around each image. Give it a white color. The default size is one pixel already.
 
-## 6 Add Text To Your Component {#text}
+## 6 Add Text To Your Component 
 
 We grabbed the font size from the inspector earlier, but not the font weight so I went back in and got it. 
 
@@ -245,7 +258,7 @@ Then to wrap everything in a frame I select the **images frame** and the **text 
 
 Also, adjust the **distance between items** inside the **card frame** till the height of it is <kbd>215px</kbd>.
 
-## 7 Create a component {#component}
+## 7 Create a component 
 
 We'll turn the card into a component, this will allow us to take many instances of it. And if we update our component all the instances will be updated. 
 
@@ -259,7 +272,7 @@ To turn the "card frame" into a component, select it and press the **create comp
 
 Notice how the **icon of the frame** changed to the **component icon** in the **layers panel** and also to a **purple color** to make it distinct from normal elements.
 
-## 8 Text Component Properties {#text-prop}
+## 8 Text Component Properties 
 
 Next, we'll add **component properties**. We'll start by adding **text component properties**. 
 
@@ -279,12 +292,19 @@ You'll be prompted to give your new **component property** a **Name** and a **de
 
 And the **same** goes for the **secondary text (1,851 Pins)**. 
 
-## 9 Add A Boolean Property To Show/Hide An Icon {#bool-prop}
+## 9 Add A Boolean Property To Show/Hide An Icon 
 
 Normally I just quickly grab icons from one of the icons plugins in Figma, but I couldn't find this one. So instead of searching for it online, or recreating it in Figma, I just went to the icon in Pinterest and grabbed its SVG code.
 
 <small>
-	[SVG](https://developer.mozilla.org/en-US/docs/Web/SVG){:target="_blank rel="noreferrer"} stands for scalable vector graphics. It's used to display vector graphics for the web.
+	<a
+		href="https://developer.mozilla.org/en-US/docs/Web/SVG"	
+		target="_blank"
+		rel="noreferrer"
+	>
+		SVG
+	</a>
+	stands for scalable vector graphics. It's used to display vector graphics for the web.
 </small>
 
 ![Pinterest boards page is shown. Code inspector is open on the right. SVG icon is selected to be copied.](/images/posts/v15/copy-icon-svg.png)
@@ -319,7 +339,7 @@ Give the icon's frame a fill and rounded corners.
 
 To add a fill press on the **+** icon, next to **Fill**, inside the **Design panel**, and set the color to **white**.
 
-In the **design panel**, **Frame**, give the frame a <kbd>100px</kdbd> rounded corners, to turn it into a circle.
+In the **design panel**, **Frame**, give the frame a <kbd>100px</kbd> rounded corners, to turn it into a circle.
 
 ![lock icon inside the image stack frame and selected](/images/posts/v15/add-lock-icon-to-image-stack.png)
 
@@ -358,7 +378,7 @@ And, you'll be prompted to  give your new property a name and value.
 I set it to False (hidden) by default, but it doesn't matter much.
 
 
-## 10 Take Instances Of The Component {#instances}
+## 10 Take Instances Of The Component 
 
 Let's try out our component properties.
 
@@ -384,7 +404,7 @@ Now you can edit the component easily.
 
 Just toggle the icon on, and change the values of "Text" and "Text2" to match our design.
 
-## 11 Add A Hover Variant {#hover-variant}
+## 11 Add A Hover Variant
 
 To add a hover state to our button, we need to create a new variant. 
 
@@ -446,7 +466,7 @@ The effect is above the icon, in our design, the icon shouldn't be affected by h
 
 To fix this get back to the "hover=True" variant and in the "layer panel" grab the icon's frame and put it above the hover effect's frame.
 
-## 12 Present It {#present}
+## 12 Present It 
 Finally, select the "MacBook frame" and present it by pressing the play button at the top left side of the page, above the design panel.
 
 ![2 instances presented pointer above one of them shows hover effect](/images/posts/v15/figma-frame-presented.png)

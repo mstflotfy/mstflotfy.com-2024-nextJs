@@ -6,6 +6,7 @@ section: Dev
 permalink: /dev/command-line-simplified/
 description: I am on a learning journey to build my own apps. I started it by exploring Figma, now I think I need to move on to coding, and I think that learning the command line is a great starting point. This is my cmd line study notes. I tried to simplify getting started with the cmd line.
 image: /images/posts/v12/v12-iD-th5.png
+date: "2022-04-22"
 ---
 
 While the command line seems like a scary and daunting place, getting started with it is not as hard as it first seems. In the following video, I try to simplify getting started with the command line. This article contains notes from the video. I tried to be brief with the article, not sure it worked, but I think that this is a thorough (for an intro that is) introduction to the command line, that can take you from knowing nothing about the command line, to confidently using it daily. And hopefully, build up your knowledge from there.
@@ -16,20 +17,7 @@ While the command line seems like a scary and daunting place, getting started wi
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/wRsqiMIBI3Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
   
 
-## Outline
-
-*You can come back to the outline by pressing the back button of your browser.*
-
-[1. What is the command line?](#what)  
-[2. Why should you care? Why I'm learning it?](#why)  
-[3. How to start?](#how)  
-[4. Navigate](#nav)  
-[5. Organize](#org)  
-[6. Edit](#edit)  
-[7. Customize](#cust)  
-[8. What's Next?](#next)  
-
-## 1. What is the cmd line? {#what}
+## 1. What is the cmd line?
 
 We use a GUI (Graphical UI) to interact with our computers.
 
@@ -41,7 +29,7 @@ The command line, Shell, Terminal, and Bash are different things, but for now, j
 
 But why would you want to do that? Why should you **even** bother?
 
-## 2. Why learn the command line? {#why}
+## 2. Why learn the command line?
 
 *This video/article does not aim to promote abandoning GUI and using the cmd line to do every single thing. But to show you that learning the command line can be easy and can make you more efficient with some of your everyday tasks.*  
 
@@ -103,7 +91,7 @@ At first, you'll just do simple tasks, that you can already do using GUI, using 
 
 You'll also become faster and more efficient at doing some of your everyday tasks.
 
-## 3. How to start using the command line? {#how}
+## 3. How to start using the command line? 
 
 If you're using a Mac or Linux, you can simply open the **terminal App** and get started immediately! 
 
@@ -114,7 +102,7 @@ If you're using windows there are 2 ways you can use a Linux Shell:
 1. <CustomLink href="https://gitforwindows.org/">Install git for windows</CustomLink>, which runs a Linux shell emulator.
 2. <CustomLink href="https://gitforwindows.org/">Install Windows Subsystem for Linux</CustomLink>, which is the way that is most recommended. It gives you a Linux environment without using a virtual machine or dual-booting Linux.
 
-## 4. Navigate {#nav}
+## 4. Navigate 
 
 Now that you're inside the **terminal app**. The first thing you can do is use the **terminal** to navigate through the files and folders on your computer.
 
@@ -270,7 +258,7 @@ If you have a `screenshots` directory at your Desktop, you can open it inside GU
 
 `open ~/Downloads/images/image1.png` The open command can also be used to open files.
 
-## 5. Organize {#org}
+## 5. Organize 
 
 Now that you know where you are, you can list files and directories, and you can navigate between directories, let's see how we can organize our directories and files.
 
@@ -285,8 +273,6 @@ If you want to create a parent directory with multiple directories inside it wit
 ### `mv` - move files and directories
 
 Now let's move things!
-
-<!-- ![mv.gif](/images/posts/v12/mv.gif) -->
 
 ```bash
 
@@ -382,7 +368,7 @@ You can also target files that have a specific word in the middle -` ls *image*`
 
 Be careful using this! If you make a mistake you can mess up a lot of files.
 
-## 6. Edit {#edit}
+## 6. Edit 
 
 Almost done! It's time to edit files using the command line, text files especially, as those are the ones you'll deal with the most as you develop your own Apps.
 
@@ -425,9 +411,8 @@ It stands for concatenate, to link or connect together. But, its simplest use ca
 
 No need to open the file then it will display inside your terminal. 
 
-### `echo` - return arguments 
 
-<!-- ![echo.gif](assets/i/v12/echo.gif) -->
+### `echo` - return arguments 
 
 Echo is a simple command that returns whatever argument you give it. It takes your input and turns it into output. This might, at first, seem useless, but it can be used to quickly pass text into a file (without first opening it!)
 
@@ -471,7 +456,7 @@ Vim needs its own intro so, for now, just use `open`, or `nano` and in the futur
 
 To exit Vim, press **ESC**, then write `:q!`, then press **return**, and you'll safely return to the terminal.
 
-## 7. Customize {#cust}
+## 7. Customize 
 
 Hang in there we're almost done!
 
@@ -514,7 +499,7 @@ If you want a minimal and clean prompt to add this `ps1='$ '` , in an empty line
 
 You need to `source ~/.bashrc` for this to take effect or start a new terminal tab.
 
-## 8. What's next? Command Line Resources {#next}
+## 8. What's next? Command Line Resources 
 
 Some resources that can help you learn more about using the command line.
 
@@ -524,7 +509,7 @@ There is no need to memorize any command.
 
 Understand what a command does, when you get introduced to it, and how it works, then choose a cheat sheet to get back to when you forget it. Or even better, make your own cheat sheet, with your favorite commands.
 
-[Here's my cheatsheet](/dev/command-line-cheat-sheet/){:target="_blank"}
+[Here's my cheatsheet](/dev/command-line-cheat-sheet/)
 
 There is also a <CustomLink href="https://www.codecademy.com/learn/learn-the-command-line/modules/learn-the-command-line-navigation/cheatsheet">cheatsheet by Codecademy</CustomLink>, if you don't like how I structured my cheatsheet.
 
@@ -535,7 +520,7 @@ Or, just look up other Command-line cheatsheets online, and find one you like.
 #### The Linux commands handbook by Flavio.
 
 <a href="https://flaviocopes.com/page/linux-commands-handbook/" target="_blank" rel="noreferrer">
-	<img alt="The Linux Commands Handbook, by Flavio" src="/images/posts/flavioBook.jpeg" style="max-width:20%;height:auto;">
+	<img alt="The Linux Commands Handbook, by Flavio" src="/images/posts/flavioBook.jpeg" style={{maxWidth: '20%', height: 'auto'}} />
 </a>
 
 This is a short book of commands and quick explanations, that the author thinks are used by shell users 80% of the time.
@@ -543,7 +528,7 @@ This is a short book of commands and quick explanations, that the author thinks 
 #### The Linux command line Book by William Shots  
 
 <a href="https://www.linuxcommand.org/tlcl.php" target="_blank" rel="noreferrer">
-	<img alt="The Linux Command Line Book, by William shotts" src="/images/posts/wsbook.png" style="max-width:20%;height:auto;">
+	<img alt="The Linux Command Line Book, by William shotts" src="/images/posts/wsbook.png" style={{maxWidth: '20%', height: 'auto'}} />
 </a>
 
 A very recommended book that dives deep into the command line and that is suited for beginners.
