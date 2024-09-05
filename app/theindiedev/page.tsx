@@ -1,5 +1,5 @@
 import ArticleFilter from "@/components/article-filter"
-import { dm_serif_display, gloria } from "@/lib/fonts"
+import { dm_serif_display, dosis, gloria } from "@/lib/fonts"
 import { cn } from "@/lib/utils"
 
 import fs from 'fs';
@@ -7,6 +7,7 @@ import path from 'path';
 import matter from 'gray-matter';
 import Link from 'next/link';
 import type { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "The indieDev",
@@ -59,12 +60,35 @@ export default function TheIndieDev() {
           // article list
         }
         <div>
-              <h1>Indie Dev Blog</h1>
               {posts.map(post => (
-                <div key={post.slug}>
-                  <h2>{post.frontmatter.title}</h2>
-                  <Link href={`/theindiedev/${post.slug}`}>Read more</Link>
-                </div>
+                <Link 
+                  key={post.slug} 
+                  href={`${post.frontmatter.permalink}`}
+                  className={
+                    cn(
+                      "my-[3.2rem] hover:bg-m3-sys-light-primary-container flex items-center space-x-[0.8rem] md:space-x-[3.2rem] mx-[0.4rem] lg:mx-[1.2rem] py-[1.2rem] px-[0.4rem] lg:px-[12rem] rounded-[1.2rem] h-[9.6rem] transition duration-200",
+                      dosis.className
+                    )
+                  }
+                    >
+                  <Image 
+                    className="rounded-[0.8rem]"
+                    src={post.frontmatter.image}
+                    alt={`${post.frontmatter.title} article image`}
+                    width="102"
+                    height="60"
+                  />
+                  <div
+                   className="flex flex-col-reverse md:flex-row gap-2  lg:gap-12 md:items-center" 
+                  >
+                    <small
+                      className="text-[1.4rem] lg:text-[1.8rem] text-nowrap"
+                    >{post.frontmatter.date}</small>
+                    <h2
+                      className="text-[1.4rem] xxs:text-[1.8rem] xxs:leading-[2.2rem] xl:text-[3.6rem] xl:leading-[4.2rem]"
+                    >{post.frontmatter.title.toUpperCase()}</h2>
+                  </div>
+                </Link>
               ))}
             </div>
       </div>
