@@ -17,12 +17,11 @@ export function getSortedPosts(directory: string) {
     const fileContents = fs.readFileSync(fullPath, 'utf8')
     
     // Use gray-matter to parse the post metadata section
-    const { data: frontmatter, content } = matter(fileContents)
+    const { data: frontmatter } = matter(fileContents)
     
     // Combine the data with the id and content
     return {
       id,
-      content,
       frontmatter,
     }
   })
