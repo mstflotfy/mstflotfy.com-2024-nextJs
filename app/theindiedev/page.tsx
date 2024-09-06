@@ -33,7 +33,7 @@ export default function TheIndieDev() {
           className={
             cn(
               gloria.className,
-              "text-xs md:text-body-medium"
+              "text-sm md:text-body-medium"
             )
           }
         >
