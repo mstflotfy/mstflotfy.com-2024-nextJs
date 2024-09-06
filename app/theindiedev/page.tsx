@@ -80,11 +80,14 @@ export default function TheIndieDev() {
                     height="60"
                   />
                   <div
-                   className="flex flex-col-reverse md:flex-row gap-2  lg:gap-12 md:items-center" 
+                    aria-label="article info" 
+                    className="flex flex-col-reverse md:flex-row gap-2 md:gap-12 md:items-center" 
                   >
                     <small
-                      className="text-[1.4rem] lg:text-[1.8rem] text-nowrap"
-                    >{formatDate(post.frontmatter.date)}</small>
+                      className="text-[1.2rem] lg:text-[1.4rem] xl:text-[1.8rem] text-nowrap"
+                    >
+                      {formatDate(post.frontmatter.date)}
+                    </small>
                     <h2
                       className="text-[1.4rem] xxs:text-[1.8rem] xxs:leading-[2.2rem] xl:text-[3.6rem] xl:leading-[4.2rem]"
                     >{post.frontmatter.title.toUpperCase()}</h2>
