@@ -8,6 +8,7 @@ import matter from 'gray-matter';
 import Link from 'next/link';
 import type { Metadata } from "next";
 import Image from "next/image";
+import { formatDate } from "@/lib/stringUtils";
 
 export const metadata: Metadata = {
   title: "The indieDev",
@@ -83,7 +84,7 @@ export default function TheIndieDev() {
                   >
                     <small
                       className="text-[1.4rem] lg:text-[1.8rem] text-nowrap"
-                    >{post.frontmatter.date}</small>
+                    >{formatDate(post.frontmatter.date)}</small>
                     <h2
                       className="text-[1.4rem] xxs:text-[1.8rem] xxs:leading-[2.2rem] xl:text-[3.6rem] xl:leading-[4.2rem]"
                     >{post.frontmatter.title.toUpperCase()}</h2>
