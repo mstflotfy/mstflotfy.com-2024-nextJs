@@ -26,11 +26,12 @@ export function getSortedPosts(directory: string) {
     }
   })
   
-  // Sort posts by date (more recent on top)
-  return posts.sort((a, b) => {
-    const dateA = new Date(a.frontmatter.date)
-    const dateB = new Date(b.frontmatter.date)
+  return posts
+  // // Sort posts by date (more recent on top)
+  // return posts.sort((a, b) => {
+  //   const dateA = new Date(a.frontmatter.date)
+  //   const dateB = new Date(b.frontmatter.date)
     
-    return dateB.getTime() - dateA.getTime() // Sort in descending order (newest first)
-  })
+  //   return dateB.getTime() - dateA.getTime() // Sort in descending order (newest first)
+  // })
 }
