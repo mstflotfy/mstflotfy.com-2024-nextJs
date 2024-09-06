@@ -9,6 +9,7 @@ import Link from 'next/link';
 import type { Metadata } from "next";
 import Image from "next/image";
 import { formatDate } from "@/lib/stringUtils";
+import { getSortedPosts } from "@/lib/getPosts";
 
 export const metadata: Metadata = {
   title: "The indieDev",
@@ -17,13 +18,7 @@ export const metadata: Metadata = {
 
 export default function TheIndieDev() {
   
-  // Use path.resolve to ensure the correct path
-    const files = fs.readdirSync(path.resolve('app/posts/theindiedev'));
-  const posts = files.map(filename => {
-    const markdownWithMeta = fs.readFileSync(path.join('app/posts/theindiedev', filename), 'utf-8');
-    const { data: frontmatter } = matter(markdownWithMeta);
-    return { frontmatter, slug: filename.replace('.mdx', '') };
-  });
+  const theIndieDevPosts = getSortedPosts('app/posts/theindiedev')
   
   return (
     <main>
@@ -61,9 +56,9 @@ export default function TheIndieDev() {
           // article list
         }
         <div>
-              {posts.map(post => (
+              {theIndieDevPosts.map(post => (
                 <Link 
-                  key={post.slug} 
+                  key={post.id} 
                   href={`${post.frontmatter.permalink}`}
                   className={
                     cn(
