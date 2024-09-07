@@ -58,7 +58,7 @@ export default function TheIndieDev() {
         <div>
               {theIndieDevPosts.map(post => (
                 <Link 
-                  key={post.id} 
+                  key={post.slug} 
                   href={`${post.frontmatter.permalink}`}
                   className={
                     cn(
