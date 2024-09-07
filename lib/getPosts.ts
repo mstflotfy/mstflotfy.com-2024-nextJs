@@ -4,9 +4,9 @@ import matter from 'gray-matter'
 
 export function getSortedPosts(directory: string) {
   // Use path.resolve to ensure the correct path
-  const files = fs.readdirSync(path.resolve('app/posts/theindiedev'));
+  const files = fs.readdirSync(path.resolve(directory));
   const posts = files.map(filename => {
-    const markdownWithMeta = fs.readFileSync(path.join('app/posts/theindiedev', filename), 'utf-8');
+    const markdownWithMeta = fs.readFileSync(path.join(directory, filename), 'utf-8');
     const { data: frontmatter } = matter(markdownWithMeta);
     return { frontmatter, slug: filename.replace('.mdx', '') };
   });
@@ -15,7 +15,7 @@ export function getSortedPosts(directory: string) {
   // const postsDir = path.join(process.cwd(), directory)
 
   // // Get file names under the specified directory
-  // const files = fs.readdirSync(postsDir)
+  // const files = fs.readdirSync(path.resolve(postsDir))
   
   // const posts = files.map((fileName) => {
   //   // Remove .md or .mdx from file name to get id
