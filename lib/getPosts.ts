@@ -11,7 +11,12 @@ export function getSortedPosts(directory: string) {
     return { frontmatter, slug: filename.replace('.mdx', '') };
   });
   
-  return posts;
+  return posts.sort((a, b) => {
+    const dateA = new Date(a.frontmatter.date)
+    const dateB = new Date(b.frontmatter.date)
+    
+    return dateB.getTime() - dateA.getTime() // Sort in descending order (newest first)
+  })
   // const postsDir = path.join(process.cwd(), directory)
 
   // // Get file names under the specified directory
@@ -24,7 +29,6 @@ export function getSortedPosts(directory: string) {
   //   // Read markdown file as string
   //   const fullPath = path.join(postsDir, fileName)
   //   const fileContents = fs.readFileSync(fullPath, 'utf8')
-    
   //   // Use gray-matter to parse the post metadata section
   //   const { data } = matter(fileContents)
     
