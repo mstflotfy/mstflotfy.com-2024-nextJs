@@ -18,6 +18,14 @@ export const metadata: Metadata = {
 
 export default function TheIndieDev() {
   
+  // Use path.resolve to ensure the correct path
+  const files = fs.readdirSync(path.resolve('app/posts/theindiedev'));
+  const posts = files.map(filename => {
+    const markdownWithMeta = fs.readFileSync(path.join('app/posts/theindiedev', filename), 'utf-8');
+    const { data: frontmatter } = matter(markdownWithMeta);
+    return { frontmatter, slug: filename.replace('.mdx', '') };
+  });
+  
   const theIndieDevPosts = getSortedPosts('app/posts/theindiedev')
   
   return (
@@ -58,7 +66,7 @@ export default function TheIndieDev() {
         <div>
               {theIndieDevPosts.map(post => (
                 <Link 
-                  key={post.id} 
+                  key={post.slug} 
                   href={`${post.frontmatter.permalink}`}
                   className={
                     cn(

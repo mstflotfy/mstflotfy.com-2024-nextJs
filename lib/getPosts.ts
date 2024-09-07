@@ -3,34 +3,42 @@ import path from 'path'
 import matter from 'gray-matter'
 
 export function getSortedPosts(directory: string) {
-  const postsDir = path.join(process.cwd(), directory)
+  // Use path.resolve to ensure the correct path
+  const files = fs.readdirSync(path.resolve('app/posts/theindiedev'));
+  const posts = files.map(filename => {
+    const markdownWithMeta = fs.readFileSync(path.join('app/posts/theindiedev', filename), 'utf-8');
+    const { data: frontmatter } = matter(markdownWithMeta);
+    return { frontmatter, slug: filename.replace('.mdx', '') };
+  });
+  
+  return posts;
+  // const postsDir = path.join(process.cwd(), directory)
 
-  // Get file names under the specified directory
-  const files = fs.readdirSync(postsDir)
+  // // Get file names under the specified directory
+  // const files = fs.readdirSync(postsDir)
   
-  const posts = files.map((fileName) => {
-    // Remove .md or .mdx from file name to get id
-    const id = fileName.replace(/\.(md|mdx)$/, '')
+  // const posts = files.map((fileName) => {
+  //   // Remove .md or .mdx from file name to get id
+  //   const id = fileName.replace(/\.(md|mdx)$/, '')
     
-    // Read markdown file as string
-    const fullPath = path.join(postsDir, fileName)
-    const fileContents = fs.readFileSync(fullPath, 'utf8')
+  //   // Read markdown file as string
+  //   const fullPath = path.join(postsDir, fileName)
+  //   const fileContents = fs.readFileSync(fullPath, 'utf8')
     
-    // Use gray-matter to parse the post metadata section
-    const { data: frontmatter } = matter(fileContents)
+  //   // Use gray-matter to parse the post metadata section
+  //   const { data } = matter(fileContents)
     
-    // Combine the data with the id and content
-    return {
-      id,
-      frontmatter,
-    }
-  })
+  //   // Combine the data with the id and content
+  //   return {
+  //     id,
+  //     data,
+  //   }
+  // })
   
-  return posts
   // // Sort posts by date (more recent on top)
   // return posts.sort((a, b) => {
-  //   const dateA = new Date(a.frontmatter.date)
-  //   const dateB = new Date(b.frontmatter.date)
+  //   const dateA = new Date(a.data.date)
+  //   const dateB = new Date(b.data.date)
     
   //   return dateB.getTime() - dateA.getTime() // Sort in descending order (newest first)
   // })
