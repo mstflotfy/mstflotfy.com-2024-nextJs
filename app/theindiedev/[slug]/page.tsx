@@ -7,6 +7,8 @@ import { dosis } from '@/lib/fonts';
 import { cn } from '@/lib/utils';
 import CustomLink from '@/components/custom_ui/custom-external-link-icon';
 import Image from "next/image"
+import { formatDate } from '@/lib/stringUtils';
+import Tag from '@/components/custom_ui/tag';
 
 export async function generateStaticParams() {
   // Read all markdown files in the posts/theindiedev directory
@@ -44,31 +46,40 @@ export default async function PostPage({ params }: PostPageProps ) {
       <header
         className={
           cn(
-            "-mt-[7rem] pt-[10.6rem] md:pt-[14rem] p-[0.1rem] md:p-[12rem] pb-[4.6rem] md:pb-[17.8rem] flex flex-col justify-center text-center items-center bg-[#002022] text-[#DAE4E5] space-y-[1rem]" ,
+            "-mt-[7rem] pt-[10.6rem] md:pt-[14rem] md:p-[12rem] pb-[4.6rem] md:pb-[17.8rem] flex flex-col justify-center text-center items-center bg-[#002022] text-[#DAE4E5] space-y-[3.2rem]" ,
             dosis.className
           )
         }
       >
         <h1
-          className='text-display-medium text-center'
+          className='text-[2.4rem] leading-[2.6rem] md:text-[4.6rem] md:leading-[4.9rem] lg:text-[7.6rem] lg:leading-[7.9rem] text-center max-w-[90rem]'
         >
           {frontmatter.title.toUpperCase()}
         </h1>
-        <p
-          className='text-center'
-        >
-          {frontmatter.date}
-        </p>
         {
           frontmatter.image &&
           <Image
-            className='rounded-[4.6rem] px-[0.8rem]'
+            className='rounded-[2.6rem] md:rounded-[4.6rem] px-[0.8rem]'
             src={frontmatter.image}
             alt={frontmatter.title}
-            width={600}
-            height={400}
+            width={900}
+            height={600}
           />
         }
+        <p
+          className='text-center md:text-[2.3rem]'
+        >
+          {formatDate(frontmatter.date)} . {frontmatter.author}
+        </p>
+        <div
+          className='flex flex-wrap place-items-center items-center justify-center gap-4'
+        >
+          {
+            frontmatter.tags.map((tag: string) => (
+              <Tag key={tag} text={tag} clickable={false} />
+            ))
+          }
+        </div>
       </header>
       <article
         className='flex flex-col gap-[0.6rem] p-4 border rounded-lg shadow-md mt-[6.4rem] mb-[17.8rem] md:w-1/2 mx-auto'
