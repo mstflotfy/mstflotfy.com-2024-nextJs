@@ -1,20 +1,19 @@
+
 import ArticleFilter from "@/components/article-filter"
 import { dm_serif_display, dosis, gloria } from "@/lib/fonts"
 import { cn } from "@/lib/utils"
 
-import fs from 'fs';
-import path from 'path';
-import matter from 'gray-matter';
 import Link from 'next/link';
 import type { Metadata } from "next";
 import Image from "next/image";
 import { formatDate } from "@/lib/stringUtils";
 import { getSortedPosts } from "@/lib/getPosts";
 
-export const metadata: Metadata = {
-  title: "The indieDev",
-  description: "Sharing some of the lessons I learn while building my own indie apps",
-};
+// replace with a <head> tag later if you continue to use this comp client-side!
+// export const metadata: Metadata = {
+//   title: "The indieDev",
+//   description: "Sharing some of the lessons I learn while building my own indie apps",
+// };
 
 export default function TheIndieDev() {
   
@@ -51,9 +50,8 @@ export default function TheIndieDev() {
         aria-label="the indieDev articles"
         className="pt-[4.2rem] space-y-[4.6rem] pb-[4.6rem] md:pt-[6.4rem] md:pb-[21.8rem]" 
       >
-        <ArticleFilter />  
         {
-          // article list
+        // <ArticleFilter />  
         }
         <div>
               {theIndieDevPosts.map(post => (
