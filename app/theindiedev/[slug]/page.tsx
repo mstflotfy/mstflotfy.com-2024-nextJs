@@ -23,6 +23,14 @@ export async function generateStaticParams() {
 const components = {
   h2: (props: React.HTMLProps<HTMLHeadingElement>) => <h2 className='text-headline-medium' style={{ }} {...props} />,
   p: (props: React.HTMLProps<HTMLParagraphElement>) => <p className='mb-[3.2rem]' style={{ }} {...props} />,
+  img: (props: React.HTMLProps<HTMLImageElement>) => {
+    const { src, alt, width = 900, height = 600 } = props
+    if (!src || !alt) {
+      console.warn('Image missing src or alt')
+      return null
+    }
+    return <Image src={src} alt={alt} width={Number(width)} height={Number(height)} className='rounded-[2.4rem]' />
+  },
   CustomLink
 };
 
@@ -82,7 +90,7 @@ export default async function PostPage({ params }: PostPageProps ) {
         </div>
       </header>
       <article
-        className='flex flex-col gap-[0.6rem] p-4 border rounded-lg shadow-md mt-[6.4rem] mb-[17.8rem] md:w-1/2 mx-auto'
+        className='flex flex-col gap-[0.6rem] p-4 rounded-lg mt-[6.4rem] mb-[17.8rem] md:w-1/2 mx-auto'
       >
         <MDXRemote source={content} components={components} /> {/* Use the serialized content here */}
       </article>
