@@ -19,6 +19,7 @@ export default function Home() {
         title="Try 1Xercise (OneExercise)"
         name="OneExercise"
         aria-label="This iframe showcases my workout tracker app (1Xercsie)"
+        className="!mb-[9.3rem]"
         left={
           <div
             className="flex flex-col place-items-center gap-[0.6rem]"
