@@ -9,6 +9,7 @@ import CustomLink from '@/components/custom_ui/custom-external-link-icon';
 import Image from "next/image"
 import { formatDate } from '@/lib/stringUtils';
 import Tag from '@/components/custom_ui/tag';
+import YoutubeEmbed from '@/components/youtubeEmbed';
 
 export async function generateStaticParams() {
   // Read all markdown files in the posts/theindiedev directory
@@ -89,6 +90,7 @@ export default async function PostPage({ params }: PostPageProps ) {
           }
         </div>
       </header>
+      {frontmatter.video && <YoutubeEmbed videoId={frontmatter.video} />}
       <article
         className='flex flex-col gap-[0.6rem] p-4 rounded-lg mt-[6.4rem] mb-[17.8rem] md:w-1/2 mx-auto'
       >
