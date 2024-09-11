@@ -30,7 +30,7 @@ const components = {
       console.warn('Image missing src or alt')
       return null
     }
-    return <Image src={src} alt={alt} width={Number(width)} height={Number(height)} className='rounded-[2.4rem]' />
+    return <Image src={src} alt={alt} width={Number(width)} height={Number(height)} className='rounded-[2.4rem] ml-auto mr-auto' />
   },
   CustomLink
 };
