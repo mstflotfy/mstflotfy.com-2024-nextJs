@@ -9,7 +9,7 @@ import CustomLink from '@/components/custom_ui/custom-external-link-icon';
 import Image from "next/image"
 import { formatDate } from '@/lib/stringUtils';
 import Tag from '@/components/custom_ui/tag';
-import YoutubeEmbed from '@/components/youtubeEmbed';
+import YoutubeEmbed from '@/components/YoutubeEmbed';
 
 export async function generateStaticParams() {
   // Read all markdown files in the posts/theindiedev directory
