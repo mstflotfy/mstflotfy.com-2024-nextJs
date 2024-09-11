@@ -22,7 +22,7 @@ export default function Home() {
         className="!mb-[9.3rem]"
         left={
           <div
-            className="flex flex-col place-items-center gap-[0.6rem]"
+            className="flex flex-col place-items-center gap-[0.6rem] xl:-mr-40"
           >
             <OneExerciseLogo />
             <p

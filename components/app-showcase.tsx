@@ -33,7 +33,7 @@ const AppShowCase: React.FC<AppShowCaseProps> = ({
     <div
       className={
         cn(
-          "relative flex flex-col items-center justify-center lg:flex-row gap-[3.6rem] py-[3.4rem] mx-12 text-center xl:text-left",
+          "relative flex flex-col items-center justify-center lg:flex-row gap-[3.6rem] py-[3.4rem] mx-12 text-center xl:text-left xl:grid xl:grid-cols-[1fr_auto_1fr] xl:gap-[0rem]",
           border && 'border-2 xl:border-none',
           className
           )
@@ -49,6 +49,7 @@ const AppShowCase: React.FC<AppShowCaseProps> = ({
         small = {small ?? false}
         labelTop={labelTop}
         customWidth={customWidth}
+        className="mr-8"
       />
       
       {right}
