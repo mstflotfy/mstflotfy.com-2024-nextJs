@@ -12,6 +12,7 @@ import Tag from '@/components/custom_ui/tag';
 import YoutubeEmbed from '@/components/YoutubeEmbed';
 //import { rehypePlugins } from '@/mdx-components';
 import rehypePrettyCode from 'rehype-pretty-code';
+import "@/styles/code-highlights.css"
 
 
 export async function generateStaticParams() {
