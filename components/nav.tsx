@@ -85,22 +85,27 @@ const Nav = () => {
         </NavigationMenuItem>
       </div>
         
-      <NavigationMenuItem
-        className="hidden xs:block"
-      >
-        <Link href="/selfmastery" legacyBehavior passHref>
-          <NavigationMenuLink
-            className={cn(
-              `${gloria.className}`,
-               navigationMenuTriggerStyle(),
-               'bg-transparent antialiased',
-            )
-            }
-          >
-            SelfMastery   
-          </NavigationMenuLink>
-        </Link>
-      </NavigationMenuItem>
+      {
+       /*
+       // hide SelfMastery links, for now
+       <NavigationMenuItem
+         className="hidden xs:block"
+       >
+         <Link href="/selfmastery" legacyBehavior passHref>
+           <NavigationMenuLink
+             className={cn(
+               `${gloria.className}`,
+                navigationMenuTriggerStyle(),
+                'bg-transparent antialiased',
+             )
+             }
+           >
+             SelfMastery   
+           </NavigationMenuLink>
+         </Link>
+       </NavigationMenuItem>
+       */
+      }
       
       <NavigationMenuItem>
         <Link href="/oneexercise" legacyBehavior passHref>
