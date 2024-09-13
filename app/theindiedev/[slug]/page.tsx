@@ -10,6 +10,9 @@ import Image from "next/image"
 import { formatDate } from '@/lib/stringUtils';
 import Tag from '@/components/custom_ui/tag';
 import YoutubeEmbed from '@/components/YoutubeEmbed';
+//import { rehypePlugins } from '@/mdx-components';
+import rehypePrettyCode from 'rehype-pretty-code';
+
 
 export async function generateStaticParams() {
   // Read all markdown files in the posts/theindiedev directory
@@ -32,6 +35,11 @@ const components = {
     }
     return <Image src={src} alt={alt} width={Number(width)} height={Number(height)} className='rounded-[2.4rem] ml-auto mr-auto' />
   },
+  pre: (props: React.HTMLProps<HTMLPreElement>) => <pre className='py-[2rem] my-[1.2rem] rounded-2xl overflow-x-auto text-body-medium' {...props} />,
+  // a: (props: React.HTMLProps<HTMLAnchorElement>) => {
+  //   const { src,} = props
+  //   return <a src={src} className='text-[#55AEFF]' />
+  // },
   CustomLink
 };
 
@@ -94,7 +102,23 @@ export default async function PostPage({ params }: PostPageProps ) {
       <article
         className='flex flex-col gap-[0.6rem] p-4 rounded-lg mt-[6.4rem] mb-[17.8rem] md:w-1/2 mx-auto'
       >
-        <MDXRemote source={content} components={components} /> {/* Use the serialized content here */}
+        <MDXRemote 
+          source={content} 
+          components={components} 
+          options={{
+            mdxOptions: {
+              // remarkPlugins: [],
+              rehypePlugins: [
+                [
+                  rehypePrettyCode,
+                  {
+                    theme:  "github-dark-dimmed",
+                  },
+                ],
+              ],
+            },
+          }}        
+        /> {/* Use the serialized content here */}
       </article>
     </>
   );
