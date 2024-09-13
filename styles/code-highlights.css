@@ -31,7 +31,9 @@ code[data-line-numbers-max-digits="4"] > [data-line]::before {
 figure[data-rehype-pretty-code-figure] {
     position: relative;
 }
-div[data-rehype-pretty-code-title] {
+div[data-rehype-pretty-code-title],
+figcaption[data-rehype-pretty-code-title]
+{
     padding: 0rem;
     border-radius: 1rem;
     font-size: x-small;
@@ -40,8 +42,17 @@ div[data-rehype-pretty-code-title] {
     top: 15px; 
     left: 20px;
 }
+
+/* Style caption */
 figcaption[data-rehype-pretty-code-caption] {
     color: gray;
     text-align: center;
     font-size: small;
+    margin-bottom: 1.2rem;
+}
+
+/* Style inline code */
+span[data-rehype-pretty-code-figure] > code {
+   border-radius: 0.3rem; 
+   padding: 0.2rem 0.6rem;
 }
