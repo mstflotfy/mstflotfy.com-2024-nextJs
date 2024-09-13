@@ -156,6 +156,7 @@ const config = {
             'inverse-on-surface': 'var(--m-3-sys-light-inverse-on-surface)',
             'inverse-primary': 'var(--m-3-sys-light-inverse-primary)',
             'surface-tint': 'var(--m-3-sys-light-surface-tint)',
+            'link': "var(--m-3-sys-light-link)"
           },
           'sys-dark': {
             'primary': 'var(--m-3-sys-dark-primary)',
@@ -188,6 +189,7 @@ const config = {
             'inverse-on-surface': 'var(--m-3-sys-dark-inverse-on-surface)',
             'inverse-primary': 'var(--m-3-sys-dark-inverse-primary)',
             'surface-tint': 'var(--m-3-sys-dark-surface-tint)',
+            'link': "var(--m-3-sys-light-link)"
           },
           // State layers
           'state-layers': {

@@ -13,6 +13,7 @@ import YoutubeEmbed from '@/components/YoutubeEmbed';
 //import { rehypePlugins } from '@/mdx-components';
 import rehypePrettyCode from 'rehype-pretty-code';
 import "@/styles/code-highlights.css"
+import Link from 'next/link';
 
 
 export async function generateStaticParams() {
@@ -36,11 +37,11 @@ const components = {
     }
     return <Image src={src} alt={alt} width={Number(width)} height={Number(height)} className='rounded-[2.4rem] ml-auto mr-auto' />
   },
-  pre: (props: React.HTMLProps<HTMLPreElement>) => <pre className='py-[2rem] my-[1.2rem] rounded-2xl overflow-x-auto text-body-medium' {...props} />,
-  // a: (props: React.HTMLProps<HTMLAnchorElement>) => {
-  //   const { src,} = props
-  //   return <a src={src} className='text-[#55AEFF]' />
-  // },
+  pre: (props: React.HTMLProps<HTMLPreElement>) => <pre className='py-[2rem] my-[1.2rem] rounded-2xl overflow-x-auto text-body-medium ' {...props} />,
+  a: (props: React.HTMLProps<HTMLAnchorElement>) => {
+    const { href } = props
+    return <Link href={href as string} className='text-m3-sys-light-link underline hover:no-underline transition-all duration-200 hover:text-m3-sys-light-on-surface hover:text-[1.63rem] delay-75 p-2 m-1' {...props} />
+  }, 
   CustomLink
 };
 
