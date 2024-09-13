@@ -17,16 +17,16 @@ const Footer = () => {
     
     <section>
       <section aria-label="Social Medi Links" className="flex space-x-8 text-title-large p-10 justify-center">
-        <CustomLink href={externalLinks.indieDev} target="_blank" rel="noopener" aria-label="youtube">
+        <CustomLink naked href={externalLinks.indieDev} target="_blank" rel="noopener" aria-label="youtube">
           <FaYoutube />
         </CustomLink>
-          <CustomLink href={externalLinks.github} target="_blank" rel="noopener" aria-label="GitHub">
+          <CustomLink naked href={externalLinks.github} target="_blank" rel="noopener" aria-label="GitHub">
             <FaGithub />
           </CustomLink>
-          <CustomLink href={externalLinks.contact} target="_blank" rel="noopener" aria-label="Email">
+          <CustomLink naked href={externalLinks.contact} target="_blank" rel="noopener" aria-label="Email">
             <MdEmail />
           </CustomLink>
-          <CustomLink href={externalLinks.figma} target="_blank" rel="noopener" aria-label="Figma">
+          <CustomLink naked href={externalLinks.figma} target="_blank" rel="noopener" aria-label="Figma">
             <IoLogoFigma />
           </CustomLink>
         </section>

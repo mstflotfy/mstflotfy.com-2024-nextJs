@@ -1,3 +1,4 @@
+import { cn } from "@/lib/utils";
 import React from "react"
 
 interface CustomLinkProps {
@@ -6,6 +7,7 @@ interface CustomLinkProps {
   target?: string;
   rel?: string;
   ariaLabel?: string;
+  naked?: boolean;
 }
 
 const CustomLink: React.FC<CustomLinkProps> = ({
@@ -13,10 +15,22 @@ const CustomLink: React.FC<CustomLinkProps> = ({
   href="/", 
   target="_blank", 
   rel="noopener", 
-  ariaLabel=""
+  ariaLabel="",
+  naked = false
 }) => {
   return (
-    <a href={href} target={target} rel={rel} aria-label={ariaLabel} className="text-m3-sys-light-on-surface hover:text-m3-sys-light-secondary active:text-m3-sys-light-secondary focus:text-m3-sys-light-secondary transition-colors duration-200">
+    <a 
+      href={href} 
+      target={target} 
+      rel={rel} 
+      aria-label={ariaLabel} 
+      className={
+        cn(
+          "text-m3-sys-light-link underline hover:no-underline transition-all duration-200 hover:text-m3-sys-light-on-surface delay-75 p-2 m-1",
+          naked && "text-m3-sys-light-on-surface hover:text-m3-sys-light-secondary active:text-m3-sys-light-secondary focus:text-m3-sys-light-secondary",
+        )
+      }
+    >
       {children}
     </a>
   )
