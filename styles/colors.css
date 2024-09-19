@@ -50,6 +50,7 @@
   --m-3-sys-light-surface-container-lowest: rgba(255, 255, 255, 1);
   --m-3-sys-light-surface-bright: rgba(244, 250, 251, 1);
   --m-3-sys-light-surface-dim: rgba(213, 219, 219, 1);
+  --m-3-sys-light-link: rgba(85, 174, 225, 1);
   
   --m-3-sys-light-high-contrast-primary: rgba(0, 39, 41, 1);
   --m-3-sys-light-high-contrast-surface-tint: rgba(0, 105, 111, 1);

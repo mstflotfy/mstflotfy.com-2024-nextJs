@@ -13,6 +13,7 @@ interface AppShowCaseProps {
   small?: boolean;
   labelTop?: string;
   customWidth?: string;
+  className?: string;
 }
 
 const AppShowCase: React.FC<AppShowCaseProps> = ({
@@ -25,7 +26,8 @@ const AppShowCase: React.FC<AppShowCaseProps> = ({
   border = true,
   small = false,
   labelTop = '',
-  customWidth
+  customWidth,
+  className
 }) => {
   return (
     <div
@@ -33,6 +35,7 @@ const AppShowCase: React.FC<AppShowCaseProps> = ({
         cn(
           "relative flex flex-col items-center justify-center lg:flex-row gap-[3.6rem] py-[3.4rem] mx-12 text-center xl:text-left",
           border && 'border-2 xl:border-none',
+          className
           )
       }
         >

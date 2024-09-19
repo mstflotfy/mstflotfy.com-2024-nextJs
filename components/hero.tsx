@@ -3,7 +3,7 @@ import { freehand, gloria } from "@/lib/fonts"
 
 const Hero = () => {
  return (
-   <header aria-label="Page header" className="space-y-32">
+   <header aria-label="Page header" className="space-y-32 pt-[3.2rem]">
     <h1 
       className={
         cn(

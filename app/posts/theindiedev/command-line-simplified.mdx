@@ -7,15 +7,12 @@ permalink: /dev/command-line-simplified/
 description: I am on a learning journey to build my own apps. I started it by exploring Figma, now I think I need to move on to coding, and I think that learning the command line is a great starting point. This is my cmd line study notes. I tried to simplify getting started with the cmd line.
 image: /images/posts/v12/v12-iD-th5.png
 date: "2022-04-22"
+categories: ['dev']
+tags: ['commandline', 'tutorial']
+video: wRsqiMIBI3Y
 ---
 
 While the command line seems like a scary and daunting place, getting started with it is not as hard as it first seems. In the following video, I try to simplify getting started with the command line. This article contains notes from the video. I tried to be brief with the article, not sure it worked, but I think that this is a thorough (for an intro that is) introduction to the command line, that can take you from knowing nothing about the command line, to confidently using it daily. And hopefully, build up your knowledge from there.
-
-
-
-
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/wRsqiMIBI3Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
-  
 
 ## 1. What is the cmd line?
 
@@ -73,11 +70,11 @@ Package managers are like app stores for the terminal.
 
 Through package managers, you can download and install tools, that you can use daily. Some of those tools are not just for developers.
 
-For example, I can install a command-line internet speed test tool on a mac using one command: `$ brew install speedtest-cli`.  And I can test my internet speed through the command line without visiting any website or downloading any app, using a single quick command: `$ speedtest`.
+For example, I can install a command-line internet speed test tool on a mac using one command: `brew install speedtest-cli{:bash}`.  And I can test my internet speed through the command line without visiting any website or downloading any app, using a single quick command: `speedtest{:bash}`.
 
 You can also use a package manager to download and update GUI apps using one-line commands. 
 
-I can install Figma from the command line using one line of code: `$ brew install --cask figma`, or install Brave Browser: `$ brew install --cask brave-browser`.
+I can install Figma from the command line using one line of code: `brew install --cask figma{:bash}`, or install Brave Browser: `brew install --cask brave-browser{:bash}`.
 
 ### Finally getting started is not as hard as it first seems
 
@@ -108,19 +105,19 @@ Now that you're inside the **terminal app**. The first thing you can do is use t
 
 ![blank.png](/images/posts/blank.png)
 
-When you open **the terminal** you get a **prompt**, it might look different depending on your settings. Usually, you'll find a `$` sign and a fat rectangle. 
+When you open **the terminal** you get a **prompt**, it might look different depending on your settings. Usually, you'll find a `${:bash}` sign and a fat rectangle. 
 
-The `$` sign is a **prompt** it shows you that this is **a command line**. You can type your command after the prompt. The rectangle is just **the cursor**.
+The `${:bash}` sign is a **prompt** it shows you that this is **a command line**. You can type your command after the prompt. The rectangle is just **the cursor**.
 
-### `pwd` - print working directory
+### `pwd{:bash}` - print working directory
 
 ![pwd.gif](/images/posts/pwd.gif)
 
-To know where you're at, type your very first command: `pwd`: Print working directory. Think of a directory as just a folder. Basically, you're telling the terminal to show you what folder you are at, right now.
+To know where you're at, type your very first command: `pwd{:bash}`: Print working directory. Think of a directory as just a folder. Basically, you're telling the terminal to show you what folder you are at, right now.
 
-`pwd` returns a path for you. Then the prompt and cursor again, show you that you can type another command if you want.
+`pwd{:bash}` returns a path for you. Then the prompt and cursor again, show you that you can type another command if you want.
 
-`/Users/mostafalotfy/`  is the absolute path to where I am currently at, my home folder.
+`/Users/mostafalotfy/{:plaintext}`  is the absolute path to where I am currently at, my home folder.
 
 But what is an absolute path?
 
@@ -128,68 +125,68 @@ But what is an absolute path?
 
 ![linuxDs.gif](/images/posts/v12/linuxDs.gif)
 
-Everything (all files and folders), in a Unix-based system, is located under the **root** directory `/`.
+Everything (all files and folders), in a Unix-based system, is located under the **root** directory `/{:bash}`.
 
 Therefore a full path to any file or folder starts from the **root**. This is called an **absolute path**.
 
 The **home directory** is a directory that holds your personal files and folders. It contains folders like **Desktop**, **Downloads**, **Documents**, among other things. 
 
-In a Linux system the **absolute path** to the **home directory** is like this: `/home/userName`. 
+In a Linux system the **absolute path** to the **home directory** is like this: `/home/userName{:plaintext}`. 
 
-For mac, it's the same (Since it's a Unix-based system), but your personal files will be under `/Users/yourUserName`. 
+For mac, it's the same (Since it's a Unix-based system), but your personal files will be under `/Users/yourUserName{:plaintext}`. 
 
-So, the path returned by the `pwd` command `/Users/mostafalotfy`, is the path to my home folder. It's like directions, start from the **root** directory `/`, then move to the **Users** directory `/Users`, then move into my user. 
+So, the path returned by the `pwd{:bash}` command `/Users/mostafalotfy{:plaintext}`, is the path to my home folder. It's like directions, start from the **root** directory `/{:bash}`, then move to the **Users** directory `/Users{:plaintext}`, then move into my user. 
 
-The home directory has a shortcut to it `~`. For example, the absolute path to my **Desktop** will be `/Users/mostafalotfy/Desktop` or `~/Desktop`.
+The home directory has a shortcut to it `~{:bash}`. For example, the absolute path to my **Desktop** will be `/Users/mostafalotfy/Desktop{:plaintext}` or `~/Desktop{:plaintext}`.
 
-If I have an image on my **Desktop** named **screenShot1.png**. The absolute path to it will be `~/Desktop/screenShot1.png`
+If I have an image on my **Desktop** named **screenShot1.png**. The absolute path to it will be `~/Desktop/screenShot1.png{:plaintext}`
 
 
-### `ls` - list directory contents
+### `ls{:bash}` - list directory contents
 
 ![ls.gif](/images/posts/v12/ls.gif)
 
-Use the `ls` command to know what files and folders are inside your current working directory.
+Use the `ls{:bash}` command to know what files and folders are inside your current working directory.
 
-`ls` will return a list of all files and folders inside your current directory.
+`ls{:bash}` will return a list of all files and folders inside your current directory.
 
-`ls -<options>` You can add options to the `ls` command.
+`ls -<options>{:bash}` You can add options to the `ls{:bash}` command.
 
-`ls -a` The `-a` option will include dotfiles, which are hidden files, in the list.
+`ls -a{:bash}` The `-a{:bash}` option will include dotfiles, which are hidden files, in the list.
 
-There are many options for the `ls` command. `ls -G` will give colored output, which will make directories have a different color than files. 
+There are many options for the `ls{:bash}` command. `ls -G{:bash}` will give colored output, which will make directories have a different color than files. 
 
-Most options can be combined. This is how I often use the `ls` command: `ls -GhalS`
+Most options can be combined. This is how I often use the `ls{:bash}` command: `ls -GhalS{:bash}`
 
-### `clear` - clear the terminal screen
+### `clear{:bash}` - clear the terminal screen
 
 ![clear commmand](/images/posts/v12/clear.gif)
 
-When the screen gets too crowded you can use the `clear` command to get back to the comfort of a blank screen.
+When the screen gets too crowded you can use the `clear{:bash}` command to get back to the comfort of a blank screen.
 
-### `man` - display manual pages
+### `man{:bash}` - display manual pages
 
 But how to know what options you can use with your commands?
 
 ![man command](/images/posts/v12/man.gif)
 
-Use the `man` command followed by the command you want to know more about. And you'll get all the info on this command, including a list of all options you can use. 
+Use the `man{:bash}` command followed by the command you want to know more about. And you'll get all the info on this command, including a list of all options you can use. 
 
 Can be confusing at first, but keep using it and you'll learn how to extract what you need out of it.
 
 No need to learn every option, just look for what you need.
 
-If you run the command `man ls`, you can read what each of the options I use with the `ls -GhalS` command does.
+If you run the command `man ls{:bash}`, you can read what each of the options I use with the `ls -GhalS{:bash}` command does.
 
-- `-G` gives colored output, so folders have a different color than files. 
--  `-a` shows hidden files
-- `-l` gives a long list with more info about the file. This will come in handy in the future as you expand your knowledge. Including file type, permissions, and file size.
--  `h` makes the size of files human-readable, by adding K for Kilobytes, G for Gigabytes, and so on. 
-- `S` orders files according to size
+- `-G{:bash}` gives colored output, so folders have a different color than files. 
+-  `-a{:bash}` shows hidden files
+- `-l{:bash}` gives a long list with more info about the file. This will come in handy in the future as you expand your knowledge. Including file type, permissions, and file size.
+-  `h{:bash}` makes the size of files human-readable, by adding K for Kilobytes, G for Gigabytes, and so on. 
+- `S{:bash}` orders files according to size
 
-Try to use the man command on each new command you learn. To quit the manual just press the `q` key.
+Try to use the man command on each new command you learn. To quit the manual just press the `q{:bash}` key.
 
-I find it helpful sometimes to open the man in a new tab. By pressing `cmd t`, then `man <cmd>`, and switching using `cmd 1`  & `cmd 2` just like you would inside your browser.
+I find it helpful sometimes to open the man in a new tab. By pressing `cmd t{:plaintext}`, then `man <cmd>{:bash}`, and switching using `cmd 1{:plaintext}`  & `cmd 2{:plaintext}` just like you would inside your browser.
 
 ### Anatomy of a command
 
@@ -199,32 +196,30 @@ What is the anatomy of a command line?
 
 ![cmdAnatomy.png](/images/posts/cmdAnatomy.png)
 
-```bash
-
-$ <cmd> -<option> <argument>▮
-
+```bash title="bash"
+<cmd> -<option> <argument>▮
 ```
 
-- `$` The dollar sign is a prompt to show you that you can write a command here.
-- `▮` This rectangle is just to show you where the cursor is at.
-- `<cmd>` The cmd name. Like `ls`
-- `<options>` Options that you can add to the command. Like `-G`
-- `<arguments>` Inputs that some commands need to run. like a path to a file or directory. If the cmd is to list then I can give directories as input to be listed.
+- `${:bash}` The dollar sign is a prompt to show you that you can write a command here.
+- `▮{:bash}` This rectangle is just to show you where the cursor is at.
+- `<cmd>{:bash}` The cmd name. Like `ls{:bash}`
+- `<options>{:bash}` Options that you can add to the command. Like `-G{:bash}`
+- `<arguments>{:bash}` Inputs that some commands need to run. like a path to a file or directory. If the cmd is to list then I can give directories as input to be listed.
 
-`$ ls -a ~/Desktop`, in this command, `ls` is the name of the command, `-a` is an option that will list hidden files as well, and `~/Desktop` is the argument, which is the directory that the command will apply to. So the command will list all files and directories inside the desktop directory, including hidden ones.
+`ls -a ~/Desktop{:bash}`, in this command, `ls{:bash}` is the name of the command, `-a{:bash}` is an option that will list hidden files as well, and `~/Desktop{:plaintext}` is the argument, which is the directory that the command will apply to. So the command will list all files and directories inside the desktop directory, including hidden ones.
 
 
 ### Relative path
 
-If you are at the home directory `~`. The Documents directory is already inside it, no need to give an absolute path, we can give a relative path instead. I can just do it this way directly: `ls Desktop`, This is called a relative path. 
+If you are at the home directory `~{:bash}`. The Documents directory is already inside it, no need to give an absolute path, we can give a relative path instead. I can just do it this way directly: `ls Desktop{:bash}`, This is called a relative path. 
 
 If an absolute path uses the root as the reference, a relative path uses our current working directory as the reference. 
 
-The current working directory is referred to with a `.`, so you can `ls .` but there is no need to write it here as the `ls` command already lists the current working directory if given no argument.
+The current working directory is referred to with a `.{:plaintext}`, so you can `ls .{:bash}` but there is no need to write it here as the `ls{:bash}` command already lists the current working directory if given no argument.
 
-The parent directory is referred to using `..`. If your current working directory is the Desktop, and you `ls ..` this will list your home directory.
+The parent directory is referred to using `..{:bash}`. If your current working directory is the Desktop, and you `ls ..{:bash}` this will list your home directory.
 
-So, I can use the command `ls` with no arguments and it will list my current working directory. I can use it with a relative path as an argument `ls Documents` if I'm at the home directory. And, I can use it with an absolute path argument `ls ~/Downloads`. 
+So, I can use the command `ls{:bash}` with no arguments and it will list my current working directory. I can use it with a relative path as an argument `ls Documents{:bash}` if I'm at the home directory. And, I can use it with an absolute path argument `ls ~/Downloads{:bash}`. 
 
 ### `cd` - change working directory
 

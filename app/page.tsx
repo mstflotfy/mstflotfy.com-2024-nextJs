@@ -19,9 +19,10 @@ export default function Home() {
         title="Try 1Xercise (OneExercise)"
         name="OneExercise"
         aria-label="This iframe showcases my workout tracker app (1Xercsie)"
+        className="!mb-[9.3rem] xl:grid xl:grid-cols-[1fr_auto_1fr] xl:gap-[0rem]"
         left={
           <div
-            className="flex flex-col place-items-center gap-[0.6rem]"
+            className="flex flex-col place-items-center gap-[0.6rem] xl:-mr-40"
           >
             <OneExerciseLogo />
             <p
@@ -39,7 +40,7 @@ export default function Home() {
             className={
               cn(
                 gloria.className,
-                "flex flex-col gap-3 text-body-medium"
+                "flex flex-col gap-3 text-body-medium ml-8"
               )
             }
           >

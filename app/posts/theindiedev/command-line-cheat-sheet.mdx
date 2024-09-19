@@ -6,350 +6,264 @@ author: Mostafa Lotfy
 section: Dev
 image: /images/posts/terminalLogo.svg
 date: "2021-02-12"
+categories: ['dev']
+tags: ['commandline', 'cheat sheet']
 ---
 
 
 ## Navigate
 
-### $ ls
+### `ls{:bash}`
 
 list all files and folders inside your current working directory. The current working directory is the folder where your terminal is open.
 
+```bash title="shell" caption="Include hidden files in the list"
+ls -a
 ```
 
- $ ls -a   # Include hidden files in the list.
+### `cd{:bash}`
 
+```bash title="bash" caption="Navigate to a folder inside the current directory"
+cd folderName   # Change the current directory to a folder inside it. 
 ```
 
-### $ cd
+Example: `cd documents{:bash}` changes the directory from `~{:plaintext}` to `Documents{:plaintext}`.
 
-```
-
- $ cd folderName   # Change the current directory to a folder inside it. ```
-
-```
-
-Example: `cd documents` changes the directory from `~` to `Documents`.
-
-```
-
- $ cd ..   # Move up one directory. ```
-
+```bash title="shell" caption="move up one directory"
+cd ..
 ```
 
 Example: `cd ..` changes the directory from `~/Documents` to `~/`.
 
+```bash title="bash" caption="Navigate to the home directory"
+ $ cd ~    # The `~` sign is a shortcut to `/Users/yourUserName/`
 ```
 
- $ cd ~    # Navigate to the `home` directory. The `~` sign is a shortcut to `/Users/yourUserName/`.
-
-```
-
-```
-
+```bash title="bash"
  $ cd ~/Documents    # Make any folder your current working directory by writing its path from the root `/` directory or from the home `~` directory.  
-
 ```
-This command will make `Documents` the current working directory.
+This command will make `Documents{:plaintext}` the current working directory.
 
-```
-
+```bash title="bash"
  $ cd /    # Make the root folder the current directory.
-
 ```
 
-### $ pwd
+### `pwd{:bash}`
 
+```bash title="bash"
+pwd   # Print Working Directory. 
 ```
+Know which directory your terminal is open at. Get a path from the root `/{:plaintext}` folder down to your current working directory.
 
- $ pwd   # Print Working Directory. 
+### `clear{:bash}`
 
-```
-Know which directory your terminal is open at. Get a path from the root `/` folder down to your current working directory.
-
-### $ clear
-
-```
-
- $ clear    # Clears the terminal screen.
-
+```bash title="bash"
+clear    # Clears the terminal screen.
 ```
 
 ## Command Structure
 
-### `$ command -options arguments`
+### `command -options arguments{:bash}`
 
-```
-
- $ ls -a Documents   # `ls` is the command, `-a` is an option, and `Documents` is the argument.
-
+```bash title="bash"
+ls -a Documents   # `ls` is the command, `-a` is an option, and `Documents` is the argument.
 ```
 
 
 
 ## Edit
 
-### $ cat
+### `cat{:bash}`
 
+```bash title="bash"
+cat file.txt   # Read a text file inside the terminal.
 ```
 
- $ cat file.txt   # Read a text file inside the terminal.
+### `open{:bash}`
 
+```bash title="bash"
+open file.txt   # Open a file or folder inside the current directory. 
+```
+You can edit the file, save it, then get back to the terminal. Also, opens Folders in `Finder{:plaintext}` and any type of file. When opening a file, the extension must be added after the name.
+
+```bash title="bash"
+open file.pdf   # Open any type of file. Add the extension to the end of the name.
 ```
 
-### $ open
+```bash title="bash"
+open folder   # Can open folders in `Finder`. 
+```
+Example: `open ~/documents{:bash}` opens the documents folder in `Finder{:plaintext}`.
 
+### `touch{:bash}`
+
+```bash title="bash"
+touch newFile.txt   # Create a new empty text file inside the current directory.
 ```
 
- $ open file.txt   # Open a file or folder inside the current directory. 
-
+```bash title="bash"
+touch ~/desktop/newFile.txt   # Create a new empty text file inside any directory by adding a path. 
 ```
-You can edit the file, save it, then get back to the terminal. Also, opens Folders in `Finder` and any type of file. When opening a file, the extension must be added after the name.
+This command will create a new text file named `newFile.txt{:plaintext}` on the Desktop folder.
 
+### `nano{:bash}`
+
+```bash title="bash"
+nano fileName   # Create, read, or edit a text file inside the terminal. 
 ```
+`ctrl+x{:plaintext}` to exit, `Y{:plaintext}` to save changes, then confirm the name of the file.
 
- $ open file.pdf   # Open any type of file. Add the extension to the end of the name.
-
-```
-
-```
-
- $ open folder   # Can open folders in `Finder`. 
-
-```
-Example: `$ open ~/documents` opens the documents folder in `Finder`.
-
-### $ touch
-
+```bash title="bash"
+nano ~/desktop/fileName   # Create or edit a text file directly on the `Desktop` without changing the current working directory to Desktop first.
 ```
 
- $ touch newFile.txt   # Create a new empty text file inside the current directory.
+### `echo{:bash}`
 
+```bash title="bash"
+echo "line to add" >> <fileName>   # Add a line of text to a file on the fly (without opening the file)
 ```
 
-```
-
- $ touch ~/desktop/newFile.txt   # Create a new empty text file inside any directory by adding a path. 
-
-```
-This command will create a new text file named newFile.txt on the Desktop folder.
-
-### $ nano
-
-```
-
- $ nano fileName   # Create, read, or edit a text file inside the terminal. 
-
-```
-`ctrl+x` to exit, `Y` to save changes, then confirm the name of the file.
-
-```
-
- $ nano ~/desktop/fileName   # Create or edit a text file directly on the `Desktop` without changing the current working directory to Desktop first.
-
-```
-
-### $ echo
-
-```
-
- $ echo "line to add" >> <fileName>   # Add a line of text to a file on the fly (without opening the file)
-
-```
-
-```
-
- $ echo "alias ..='cd ..'" >> ~/.zshrc   # Add an alias directly without the need to open or navigate.
-
+```bash title="bash"
+echo "alias ..='cd ..'" >> ~/.zshrc   # Add an alias directly without the need to open or navigate.
 ```
 ## Organize
 
-### $ mkdir
+### `mkdir{:bash}`
 
+```bash title="bash"
+mkdir newFolder # Create a new folder in the current working directory. Stands for make directory.
 ```
 
- $ mkdir newFolder # Create a new folder in the current working directory. Stands for make directory.
-
+```bash title="bash"
+mkdir ~/Documents/newFolder   # Create a new folder inside `Documents` without changing the current working directory to `Documents`.
 ```
 
+### `rm-r{:bash}`
+
+```bash title="bash"
+rm -r folderName    # Delete files or folders without asking for confirmation!
+```
+### `mv{:bash}`
+
+```bash title="bash"
+mv Source Destination   # Move a file or folder from source to destination.
 ```
 
- $ mkdir ~/Documents/newFolder   # Create a new folder inside `Documents` without changing the current working directory to `Documents`.
-
+```bash title="bash"
+mv ~/Documents/folder1 ~/Desktop/folder1    # Cut and paste between two different directories. Move the folder `folder1` from Docouments to Desktop.
 ```
 
-### $ rm-r
-
+```bash title="bash"
+mv folder1 ~/Desktop/folder1    # Cut and paste from the current working directory. Move the folder `folder1` from the current working directory to the Desktop.
 ```
 
- $ rm -r folderName    # Delete files or folders without asking for confirmation!
-
+```bash title="bash"
+mv fileName.jpeg newFileName.jpeg    # Rename in the same folder.
 ```
-### $ mv
-
-```
-
- $ mv Source Destination   # Move a file or folder from source to destination.
-
+```bash title="bash"
+mv oldName ~/Documents/newName    # Move and rename, from the current directory to Documents.
 ```
 
+```bash title="bash"
+mv ~/Documents/oldName ~/Documents/newName    # Rename files and folders in any directory. Rename a folder in Documents.
 ```
 
- $ mv ~/Documents/folder1 ~/Desktop/folder1    # Cut and paste between two different directories. Move the folder `folder1` from Docouments to Desktop.
+### `cp{:bash}`
 
+```bash title="bash"
+cp Source Destination # Copy a file or folder, from a source to a destination.
 ```
 
+```bash title="bash"
+cp file.txt folder # Copy a file into a folder. Both are inside the current directory.
 ```
 
- $ mv folder1 ~/Desktop/folder1    # Cut and paste from the current working directory. Move the folder `folder1` from the current working directory to the Desktop.
-
+```bash title="bash"
+cp file.txt file2.txt   # Duplicate file.txt inside the current directory and name the duplicate `file2.txt`.
 ```
 
+```bash title="bash"
+cp ~/Desktop/file2.txt ~/Documents/file2.txt   # Copy a file from a directory to another without changing the current directory. file2.txt will be copied from Desktop to Documents.
 ```
 
- $ mv fileName.jpeg newFileName.jpeg    # Rename in the same folder.
-
-```
-```
-
- $mv oldName ~/Documents/newName    # Move and rename, from the current directory to Documents.
-
-```
-
-```
-
- $ mv ~/Documents/oldName ~/Documents/newName    # Rename files and folders in any directory. Rename a folder in Documents.
-
-```
-
-### $ cp
-
-```
-
- $ cp Source Destination # Copy a file or folder, from a source to a destination.
-
-```
-
-```
-
- $ cp file.txt folder # Copy a file into a folder. Both are inside the current directory.
-
-```
-
-```
-
- $ $ cp file.txt file2.txt   # Duplicate file.txt inside the current directory and name the duplicate `file2.txt`.
-
-```
-
-```
-
- $ cp ~/Desktop/file2.txt ~/Documents/file2.txt   # Copy a file from a directory to another without changing the current directory. file2.txt will be copied from Desktop to Documents.
-
-```
-
-```
-
+```bash title="bash"
  $ cp -R folder1 ~/Documents/folder1   # Copy folders, by adding the `-R` option to the `cp` command. The `cp` command works on files by default. To make it work on folders, add the `-R` option.
-
 ```
 
-### $ du
+### `du{:bash}`
 
+```bash title="bash"
+du -sh    # Get the total size of the current directory.
 ```
 
- $ du -sh    # Get the total size of the current directory.
-
+```bash title="bash"
+du -sh ~/Documents    # Get the total size of any directory writing its address.
 ```
 
+```bash title="bash"
+du -sh *    # Get the size of each file and folder in the current directory.
 ```
 
- $ du -sh ~/Documents    # Get the total size of any directory writing its address.
-
-```
-
-```
-
- $ du -sh *    # Get the size of each file and folder in the current directory.
-
-```
-
-```
-
- $ du -sh ~/documents/*    # Get the size of each file and folder in any direcotry.
-
+```bash title="bash"
+du -sh ~/documents/*    # Get the size of each file and folder in any direcotry.
 ```
 
 ## Be More Efficient
 
 ### Wildcards
 
+```bash title="bash"
+cd  ~/Doc*    # Use wildcards to be lazy and avoid writing long names. This command will change the current directory to the `Documents` folder. Could also just press tab for autocompletion.
 ```
 
- $ cd  ~/Doc*    # Use wildcards to be lazy and avoid writing long names. This command will change the current directory to the `Documents` folder. Could also just press tab for autocompletion.
-
-```
-
-```
-
- $ ls *.pdf    # Use wildcards creatively with other commands to do more. This command will only list pdf files inside our current directory.
-
+```bash title="bash"
+ls *.pdf    # Use wildcards creatively with other commands to do more. This command will only list pdf files inside our current directory.
 ```
 
 ### Aliases
 
+```bash title="bash"
+alias name='command'    # Shortcuts to write a shorter version to a command.
 ```
 
- $ alias name='command'    # Shortcuts to write a shorter version to a command.
-
-```
-
-```
-
- $ alias ..='cd ..'    # Make an alias `..` as a shortcut to `cd ..`
-
+```bash title="bash"
+alias ..='cd ..'    # Make an alias `..` as a shortcut to `cd ..`
 ```
 
 To make an alias permenant add it to one of those text files:
-`~/.bash_profile` 
-`~/.zshrc` 
+`~/.bash_profile{:plaintext}` 
+`~/.zshrc{:plaintext}` 
 
 ### Tabs
 
-`cmd + T` To open a new tab.
+`cmd + T{:plaintext}` To open a new tab.
 
-`cmd + 2` Cmd and the tab number, to switch between tabs.
+`cmd + 2{:plaintext}` Cmd and the tab number, to switch between tabs.
 
 
 
 ### A minimal look
 
-```
-
+```plaintext title="text"
  ps1='$ '    # Remove everything before the `$` sign by adding this line to the `.zshrc`, or `.bash_profile` files.
-
 ```
 
 
 ### Dealing with spaces
 
+```bash title="bash"
+touch 'new file.txt'    # Wrap the name of a file or folder in '' if they have spaces in their names.
 ```
 
- $ touch 'new file.txt'    # Wrap the name of a file or folder in '' if they have spaces in their names.
+### `man{:bash}`
 
+```bash title="bash"
+man du    # Use the `man` command on any command to open the manual and read more about how it works.
 ```
 
-### $ man
+### `alt + click{:plaintext}`
 
-```
-
- $ man du    # Use the `man` command on any command to open the manual and read more about how it works.
-
-```
-
-### alt + click
-
-`alt + click`  To specify where to write instead of using the keyboard arrows.
+`alt + click{:plaintext}`  To specify where to write instead of using the keyboard arrows.
 
 
 

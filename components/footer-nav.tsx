@@ -48,23 +48,28 @@ const FooterNav = () => {
         </Link>
       </NavigationMenuItem>
       
-      <NavigationMenuItem>
-        <Link href="/selfmastery" legacyBehavior passHref>
-          <NavigationMenuLink
-            className={cn(
-               navigationMenuTriggerStyle(),
-               "justify-center"
-            )
-            }
-          >
-            <LogoDisplay
-              description="Sharing practical productivity & self lessons."
+        {
+        /*
+        // Hide SelfMastery links, for now!
+        <NavigationMenuItem>
+          <Link href="/selfmastery" legacyBehavior passHref>
+            <NavigationMenuLink
+              className={cn(
+                 navigationMenuTriggerStyle(),
+                 "justify-center"
+              )
+              }
             >
-              <SelfMasteryLogo />
-            </LogoDisplay>
-          </NavigationMenuLink>
-        </Link>
-      </NavigationMenuItem>
+              <LogoDisplay
+                description="Sharing practical productivity & self lessons."
+              >
+                <SelfMasteryLogo />
+              </LogoDisplay>
+            </NavigationMenuLink>
+          </Link>
+        </NavigationMenuItem>
+        */
+      }
         
       <NavigationMenuItem>
         <Link href="/theindiedev" legacyBehavior passHref>
