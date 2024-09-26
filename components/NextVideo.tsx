@@ -26,7 +26,7 @@ const NextVideo: React.FC<NextVideoProps> = ({
 return (
   <div
     aria-label='Video showcasing OneExercise feature'
-    className='outline outline-8 outline-m3-sys-light-outline rounded-3xl pb-2 bg-black w-[21vw] h-auto overflow-clip'
+    className='outline outline-[0.6rem]  md:outline-[0.8rem] outline-m3-sys-light-outline rounded-3xl pb-2 bg-black w-[60vw] min-h-[100vw] md:min-h-[40vw] lg:w-[21vw] h-auto overflow-clip'
   >
     <Player
         src={src}
