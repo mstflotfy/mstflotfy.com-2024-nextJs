@@ -65,7 +65,7 @@ export default async function PostPage({ params }: PostPageProps ) {
       <header
         className={
           cn(
-            "-mt-[7rem] pt-[10.6rem] md:pt-[14rem] md:p-[12rem] pb-[4.6rem] md:pb-[17.8rem] flex flex-col justify-center text-center items-center bg-[#002022] text-[#DAE4E5] space-y-[3.2rem]" ,
+            "-mt-[7rem] pt-[10.6rem] md:pt-[14rem] md:p-[12rem] pb-[4.6rem] md:pb-[17.8rem] flex flex-col justify-center text-center items-center bg-m3-black text-[#DAE4E5] space-y-[3.2rem]" ,
             dosis.className
           )
         }
