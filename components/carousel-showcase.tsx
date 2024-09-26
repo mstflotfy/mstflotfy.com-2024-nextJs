@@ -12,6 +12,7 @@ import * as React from "react"
 import { Feature } from "@/lib/data"
 import DeviceFrame from "./custom_ui/device"
 import externalLinks from "@/lib/external-links"
+import NextVideo from "./NextVideo"
 
 interface CarouselShowcaseProps {
   data: Feature[]
@@ -73,20 +74,24 @@ const CarouselShowcase: React.FC<CarouselShowcaseProps> =
               <small
                 className="text-center"
               >{index + 1} of {contentLength}</small>
-              
-              <DeviceFrame 
-                src={externalLinks.OneExercise}
-                small
-                name="OneExercise"
-                customWidth="w-[80%]"
-              >
-                <Image
-                  src={data[current].src}
-                  alt={`OneExercise app feature: ${data[current].name}`}
-                  width={314}
-                  height={594}
-                />
-              </DeviceFrame>
+              { 
+                // <DeviceFrame 
+                //   src={externalLinks.OneExercise}
+                //   small
+                //   name="OneExercise"
+                //   customWidth="w-[80%]"
+                // >
+                //   <Image
+                //     src={data[current].src}
+                //     alt={`OneExercise app feature: ${data[current].name}`}
+                //     width={314}
+                //     height={594}
+                //   />
+                // </DeviceFrame>
+              }
+              <NextVideo 
+                src={data[current].src} 
+              />
               
             </CarouselItem>
           ))
