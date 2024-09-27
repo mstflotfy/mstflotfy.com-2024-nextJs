@@ -7,6 +7,7 @@ import DeviceFrame from "./custom_ui/device"
 import { useState, useEffect } from "react"
 import { oneExerciseContent } from "@/lib/data"
 import CarouselShowcase from "./carousel-showcase"
+import NextVideo from "./NextVideo"
 
 
 export default function InfoDisplay()  {
@@ -62,19 +63,23 @@ export default function InfoDisplay()  {
         </div>
         
         </div>
-        <DeviceFrame 
-          src={externalLinks.OneExercise}
-          small
-          name="OneExercise"
-          className="hidden ll:flex"
-        >
-          <Image
-            src={oneExerciseContent[activeContent].src}
-            alt={`OneExercise app feature: ${oneExerciseContent[activeContent].name}`}
-            width={314}
-            height={594}
-          />
-        </DeviceFrame>
+        {
+          oneExerciseContent[activeContent].src ?
+            <NextVideo 
+              src={oneExerciseContent[activeContent].src} 
+            />
+          :
+            <DeviceFrame 
+              small
+              name="OneExercise"
+              className="hidden ll:flex"
+              src={externalLinks.OneExercise}
+              title="Try 1Xercise (OneExercise)"
+              aria-label="This iframe showcases my workout tracker app (1Xercsie)"
+              labelTop="Try it here!"
+            >
+            </DeviceFrame>
+        }
       
       {/* for smaller devices switch to a carousel */}
       <CarouselShowcase 
