@@ -9,11 +9,30 @@ import Image from "next/image";
 import { formatDate } from "@/lib/stringUtils";
 import { getSortedPosts } from "@/lib/getPosts";
 
-// replace with a <head> tag later if you continue to use this comp client-side!
-// export const metadata: Metadata = {
-//   title: "The indieDev",
-//   description: "Sharing some of the lessons I learn while building my own indie apps",
-// };
+export const metadata = {
+  title: "The indieDev - Indie Development and Design Insights",
+  description: 'Explore valuable insights and lessons learned in indie app development and design from Mostafa Lotfy.',
+  keywords: ['indie development', 'app design', 'dev insights', 'Mostafa Lotfy', 'blog', 'ui', 'ux'],
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    siteName: 'mstflotfy',
+    title: 'The indieDev - Insights on Indie Development and Design',
+    description: 'Discover insights and lessons from Mostafa Lotfy on indie app development and design.',
+    url: 'https://mstflotfy.com/theindiedev',
+    images: [
+      {
+        url: 'https://mstflotfy.com/images/The-indieDev-Card.png',
+        width: 1200,
+        height: 630,
+        alt: "The indieDev Insights",
+      },
+    ],
+  },
+  alternates: {
+    canonical: 'https://mstflotfy.com/theindiedev',
+  }
+};
 
 export default function TheIndieDev() {
   

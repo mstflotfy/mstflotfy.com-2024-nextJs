@@ -5,6 +5,32 @@ import externalLinks from "@/lib/external-links"
 import { gloria } from "@/lib/fonts";
 import FeatureShowcase from "@/components/feature-showcase";
 import InfoDisplay from "@/components/infoDisplay";
+import type { Metadata } from "next";
+
+export const metadata = {
+  title: "OneExercise - Minimal Workout Tracker",
+  description: 'OneExercise is a minimal workout tracker that helps you start slow and build up one exercise at a time, making fitness accessible and manageable.',
+  keywords: ['workout tracker', 'fitness app', 'exercise', 'OneExercise', 'indie app', 'Mostafa Lotfy'],
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    siteName: 'mstflotfy',
+    title: 'OneExercise - Your Personal Workout Tracker',
+    description: 'Discover OneExercise, the minimal workout tracker designed to help you improve one exercise at a time.',
+    url: 'https://mstflotfy.com/oneexercise',
+    images: [
+      {
+        url: 'https://mstflotfy.com/images/OneExercise-workout-tracker.png', // Replace with actual image URL
+        width: 1200,
+        height: 630,
+        alt: "OneExercise App Screenshot",
+      },
+    ],
+  },
+  alternates: {
+    canonical: 'https://mstflotfy.com/oneexercise',
+  }
+};
 
 export default function OneExercise() {
   return (

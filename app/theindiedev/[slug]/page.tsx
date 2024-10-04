@@ -26,6 +26,33 @@ export async function generateStaticParams() {
   }));
 }
 
+export async function generateMetadata({ params }: PostPageProps) {
+  const markdownWithMeta = fs.readFileSync(path.join(process.cwd(), 'app/posts/theindiedev', `${params.slug}.mdx`), 'utf-8');
+  const { data: frontmatter } = matter(markdownWithMeta);
+
+  return {
+    title: frontmatter.title,
+    description: frontmatter.description || 'Dev & Design blog post by the indieDev',
+    keywords: frontmatter.tags || ['dev', 'design', 'indieDev'],
+    alternates: {
+      canonical: `https://mstflotfy.com/theindiedev/${params.slug}`,
+    },
+    openGraph: {
+      title: frontmatter.title,
+      description: frontmatter.description || 'Dev & Design blog post by the indieDev',
+      url: `https://mstflotfy.com/theindiedev/${params.slug}`,
+      images: [
+        {
+          url: frontmatter.image || 'https://mstflotfy.com/images/The-indieDev-Card.png',
+          width: 1200,
+          height: 630,
+          alt: frontmatter.title,
+        },
+      ],
+    },
+  };
+}
+
 const components = {
   h2: (props: React.HTMLProps<HTMLHeadingElement>) => <h2 className='text-headline-medium' style={{ }} {...props} />,
   p: (props: React.HTMLProps<HTMLParagraphElement>) => <p className='mb-[3.2rem]' style={{ }} {...props} />,
@@ -56,7 +83,6 @@ export default async function PostPage({ params }: PostPageProps ) {
   // Read the specific markdown file based on the slug
   const markdownWithMeta = fs.readFileSync(path.join(process.cwd(), 'app/posts/theindiedev', `${params.slug}.mdx`), 'utf-8');
   
-  console.log('mark: ', markdownWithMeta)
   // Use gray-matter to parse the frontmatter and content
   const { data: frontmatter, content } = matter(markdownWithMeta);
 
