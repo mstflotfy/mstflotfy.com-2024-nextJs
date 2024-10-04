@@ -1,4 +1,3 @@
-import Video from 'next-video';
 import Player from 'next-video/player';
 
 interface NextVideoProps {
