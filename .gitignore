@@ -40,4 +40,4 @@ next-env.d.ts
 # !public/videos/*.json
 # !public/videos/*.js
 # !public/videos/*.ts
-# public/_next-video
+public/_next-video
