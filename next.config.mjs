@@ -15,12 +15,22 @@ const nextConfig = {
       {
         source: '/dev/:slug*', // Matches any article under /dev/
         destination: '/theindiedev/:slug*', // Redirects to the new path
-        permanent: true, // 301 redirect
+        permanent: true, // 308 redirect (should preserve request and pass seo link juice)
       },
       {
         source: '/design/:slug*', // Matches any article under /design/
         destination: '/theindiedev/:slug*', // Redirects to the new path
-        permanent: true, // 301 redirect
+        permanent: true, // 308 redirect
+      },
+      {
+        source: '/dev',
+        destination: '/theindiedev',
+        permanent: true
+      },
+      {
+        source: '/design',
+        destination: '/theindiedev',
+        permanent: true
       },
     ];
   },
