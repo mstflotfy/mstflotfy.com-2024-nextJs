@@ -59,7 +59,7 @@ const CarouselShowcase: React.FC<CarouselShowcaseProps> =
         {
           data.map((content, index) => (
             <CarouselItem
-              className="flex flex-col items-center gap-[0.8rem] basis-[90%]"
+              className="flex flex-col items-center gap-[1.6rem] basis-[90%]"
               key={index}
             >
             
@@ -75,24 +75,11 @@ const CarouselShowcase: React.FC<CarouselShowcaseProps> =
                 className="text-center"
               >{index + 1} of {contentLength}</small>
               { 
-                // <DeviceFrame 
-                //   src={externalLinks.OneExercise}
-                //   small
-                //   name="OneExercise"
-                //   customWidth="w-[80%]"
-                // >
-                //   <Image
-                //     src={data[current].src}
-                //     alt={`OneExercise app feature: ${data[current].name}`}
-                //     width={314}
-                //     height={594}
-                //   />
-                // </DeviceFrame>
+                data[current].src &&
+                  <NextVideo 
+                    src={data[current].src} 
+                  />
               }
-              <NextVideo 
-                src={data[current].src} 
-              />
-              
             </CarouselItem>
           ))
         }

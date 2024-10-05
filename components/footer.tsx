@@ -35,11 +35,12 @@ const Footer = () => {
         
         <div
           aria-label="Site Information"
-          className="flex space-x-4 justify-center"
+          className="flex space-x-4 justify-center items-center"
         >
           <small aria-label="copy rights">
-            &copy; Mostafa Lotfy (mstflotfy) {new Date().getFullYear()}. All rights reserved. |  
+            &copy; Mostafa Lotfy (mstflotfy) {new Date().getFullYear()}. All rights reserved.
           </small>
+          |
           <Link 
             href="/about"
             className="text-label-large text-m3-sys-light-secondary transition-all duration-200 hover:text-m3-sys-light-on-surface delay-75 "
