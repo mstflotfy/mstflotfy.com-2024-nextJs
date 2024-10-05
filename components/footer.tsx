@@ -4,6 +4,7 @@ import { MdEmail } from "react-icons/md";
 import { IoLogoFigma } from "react-icons/io5";
 import CustomLink from "@/components/custom_ui/custom-external-link-icon"
 import FooterNav from "./footer-nav";
+import Link from "next/link";
 
 const Footer = () => {
   
@@ -16,7 +17,7 @@ const Footer = () => {
     <FooterNav />
     
     <section>
-      <section aria-label="Social Medi Links" className="flex space-x-8 text-title-large p-10 justify-center">
+      <section aria-label="Social Medi Links" className="flex space-x-8 text-title-large p-10 justify-center items-center">
         <CustomLink naked href={externalLinks.indieDev} target="_blank" rel="noopener" aria-label="youtube">
           <FaYoutube />
         </CustomLink>
@@ -29,9 +30,24 @@ const Footer = () => {
           <CustomLink naked href={externalLinks.figma} target="_blank" rel="noopener" aria-label="Figma">
             <IoLogoFigma />
           </CustomLink>
+          
         </section>
         
-        <small aria-label="copy rights">&copy; Mostafa Lotfy (mstflotfy) {new Date().getFullYear()}. All rights reserved.</small>
+        <div
+          aria-label="Site Information"
+          className="flex space-x-4 justify-center"
+        >
+          <small aria-label="copy rights">
+            &copy; Mostafa Lotfy (mstflotfy) {new Date().getFullYear()}. All rights reserved. |  
+          </small>
+          <Link 
+            href="/about"
+            className="text-label-large text-m3-sys-light-secondary transition-all duration-200 hover:text-m3-sys-light-on-surface delay-75 "
+            aria-label="Learn more about Mostafa Lotfy"
+          >
+            About
+          </Link>
+        </div>
       </section>
       
     </footer>

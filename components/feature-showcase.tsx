@@ -7,6 +7,7 @@ import { useState } from "react"
 import { oneexerciseFeatures } from "@/lib/data"
 import FeatureCard from "./feature-card"
 import CarouselShowcase from "./carousel-showcase"
+import NextVideo from "./NextVideo"
 
 export default function FeatureShowcase()  {
   const [ activeFeature, setActiveFeature ] = useState(0)
@@ -23,18 +24,44 @@ export default function FeatureShowcase()  {
         className="hidden ll:flex gap-[0.6rem] space-x-[5.2rem] place-items-center"
       >
       
-        <DeviceFrame 
-          src={externalLinks.OneExercise}
-          small
-          name="OneExercise"
-        >
-          <Image
-            src={oneexerciseFeatures[activeFeature].src}
-            alt={`OneExercise app feature: ${oneexerciseFeatures[activeFeature].name}`}
-            width={313.7}
-            height={594.44}
-          />
-        </DeviceFrame>
+        {
+        // <video 
+        //   className='outline outline-8 outline-m3-sys-light-outline rounded-3xl pb-2 bg-black'
+        //   key={oneexerciseFeatures[activeFeature].src}
+        //   controls
+        //   loop
+        //   muted
+        //   autoPlay 
+        //   width={300}
+        //   height="auto"
+        // >
+        //   <source 
+        //     src={oneexerciseFeatures[activeFeature].src} 
+        //     type="video/mp4" 
+        //   />
+        //   Your browser does not support the video tag.
+        // </video>
+        
+        }
+        <NextVideo 
+          src={oneexerciseFeatures[activeFeature].src} 
+        />
+
+        
+        {
+          // <DeviceFrame 
+          //   src={externalLinks.OneExercise}
+          //   small
+          //   name="OneExercise"
+          // >
+          //   <Image
+          //     src={oneexerciseFeatures[activeFeature].src}
+          //     alt={`OneExercise app feature: ${oneexerciseFeatures[activeFeature].name}`}
+          //     width={313.7}
+          //     height={594.44}
+          //   />
+          // </DeviceFrame>
+        }
       
         <div
           aria-label="features"
