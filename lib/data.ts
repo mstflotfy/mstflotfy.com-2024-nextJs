@@ -51,7 +51,7 @@ export const oneExerciseContent: Feature[] = [
 {
 name: 'Intro',
 description: `Hello! My name is Mostafa Lotfy, an indie app maker. I used to track my workouts manually or through apps that offered basic history.
-\nI like to start slowl and gradually build up my progress, reviewing each workout to see how many reps or how much weight I used previously.
+\nI like to start slow and gradually build up my progress, reviewing each workout to see how many reps or how much weight I used previously.
 \nSo, I created OneExercise, a minimal workout tracker that provides instant feedback for each set while also giving quick access to the full history and some additional simple stats. This way, I can aim to improve one of these stats with each workout.
 \nIn this quick guide, I will show you how to use OneExercise to easily track your workouts.`,
 src: ''
