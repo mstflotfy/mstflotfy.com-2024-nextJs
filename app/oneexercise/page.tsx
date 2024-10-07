@@ -85,6 +85,7 @@ export default function OneExercise() {
         
         <section
          className="bg-m3-custom-light-yellow pt-[6.3rem] space-y-[4.6rem] pb-[4.6rem] md:pt-[10rem] md:pb-[21.8rem]" 
+         id="OneExercise-features"
         >
           <h2
           className={
@@ -100,6 +101,7 @@ export default function OneExercise() {
 
         <section
          className="bg-m3-custom-light-red pt-[6.3rem] space-y-[4.6rem] pb-[4.6rem] md:pt-[10rem] md:pb-[21.8rem]" 
+         id="how-to-use-OneExercise"
         >
           <h2
           className={
