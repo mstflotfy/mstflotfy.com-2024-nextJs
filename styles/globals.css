@@ -84,6 +84,7 @@
   }
   html {
     font-size: 62.5%; /* This sets 1rem to 10px, making calculations easier */
+    scroll-behavior: smooth;
   }
   body {
     font-size: 1.6rem;

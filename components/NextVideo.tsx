@@ -10,6 +10,7 @@ interface NextVideoProps {
   loop?: boolean
   muted?: boolean
   playsInline?: boolean
+  preload?: string
 }
 const NextVideo: React.FC<NextVideoProps> = ({
   src,
@@ -21,6 +22,7 @@ const NextVideo: React.FC<NextVideoProps> = ({
   loop = true,
   muted = false,
   playsInline = true,
+  preload = 'true'
 }) => {
 return (
   <div
@@ -34,6 +36,7 @@ return (
         autoPlay={autoPlay}
         loop={loop}
         muted={muted}
+        preload={preload}
       />
   </div>
     )
